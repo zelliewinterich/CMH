@@ -1,0 +1,38 @@
+
+# start off with song and the two main parts of the song which is metadata and lyics
+start = song 
+song = element song {metadata+, lyrics+, text} 
+
+# metadata has several other tags in it so you have to ID title, characters, artist, and source
+metadata = element metadata {title+, characters+, artist+, source+}
+title = element title {type, text} #in this case title has a type
+type = attribute type { "musical" | "song" }
+characters = element characters {character+, text}
+character = element character {actor, text} #character is within characters and also has a type
+actor = attribute actor { "Nikki M James" | "Gabriel Ebert" }
+artist = element artist {text}
+source = element source {text}
+# that will finish off the first section of the XML document 
+
+# next you have to go through each subsection so lyrics has mini tags and stanza has other tags within it
+# you also have to address all of the different attributes that the other tags have within them
+lyrics = element lyrics {direction+, section+, toneshift+}
+direction = element direction {text}
+section = element section { tone, mixed { ( stanza+ ) } }
+tone = attribute tone { "neutral" | "positive" | "negative" }
+toneshift = element toneshift {text}
+
+# after doing the larger tags, I went in and marked up each mini tag after, noting the attributes that these tags also had
+stanza = element stanza { text, speaker+, delivery+, action+, mixed { ( line+ ) } }
+speaker = attribute speaker { "RACH" | "NATALYA" } 
+delivery = attribute delivery { "sung" | "spoken" }
+action = attribute action { "bringing in more lilacs" }
+
+# i repeated steps from before until i had succesfully noted each tag with either an element or attribute tag
+line = element line { text | mixed { ( place+ | chara+ ) } }
+place = element place { kind, text }
+kind = attribute kind { "city" | "building" | "nature" }
+chara = element chara { ref, text }
+ref = attribute ref { "DAHL" | "TSAR" | "RACH" | "NATALYA" }
+
+# then i checked the schema and it came up green so i saved it and checked with the XML and kept working with the code until eventually both sides were valid 

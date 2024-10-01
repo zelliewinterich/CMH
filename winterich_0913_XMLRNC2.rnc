@@ -1,0 +1,17 @@
+
+start = SherlockHolmes
+SherlockHolmes = element SherlockHolmes {paragraph*, characterRef*}
+paragraph = element paragraph {sentence+, text}
+sentence = element sentence { mixed { ( noun+ | verb+ | adjective+ | speech+ | simile+ )* } }
+
+noun = element noun {type, text}
+verb = element verb {type, text}
+adjective = element adjective {type, text}
+speech = element speech { type, mixed { ( noun+ | verb+ | adjective+ )* } }
+simile = element simile {type, text}
+
+type = attribute type { "character" | "action" | "thing" | "subject" | "time" | "item" | "area" | "description" | "alert" | "group" | "place" | "comparison" | "dialouge" | "question" | "investigator" }
+
+characterRef = element characterRef { id, type, living, empty }
+id = attribute xml:id { xsd:ID }
+living = attribute living { "yes" | "no" | "unknown" }

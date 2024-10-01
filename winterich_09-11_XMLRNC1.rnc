@@ -1,0 +1,17 @@
+
+start = HungerGames
+
+HungerGames = element HungerGames {title*, paragraph*}
+
+title = element title {type, text}
+
+paragraph = element paragraph {sentence+, text}
+sentence = element sentence { mixed { ( verb+ | noun+ | adjective+ )* } }
+
+verb = element verb {type+, text+}
+noun = element noun {type+, text+}
+adjective = element adjective {type+, text+}
+
+type = attribute type { "name" | "action" | "place" | "description" | "thing" | "character" | "group" | "item" | "event"}
+
+ 

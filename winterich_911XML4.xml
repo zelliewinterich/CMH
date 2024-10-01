@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="winterich_911XML4.rnc" type="application/relax-ng-compact-syntax"?>
+
+<HungerGames>
+    <title type="name">The Hunger Games</title>
+            
+               <paragraph> 
+                   <sentence>
+                    Even though <verb type="action">trespassing</verb> in the <noun type="place"
+                    >woods</noun> is <adjective type="description">illegal</adjective> and <verb type="action">poaching</verb>
+                <verb type="action">carries</verb> the <adjective type="description"
+                    >severest</adjective> of <noun type="thing">penalties</noun>, more <noun
+                    type="group">people</noun> would <verb type="action">risk</verb> it if <noun
+                    type="group">they</noun> had <noun type="item">weapons</noun>.
+                </sentence>
+        
+            <sentence>
+                But most are not <adjective type="description">bold</adjective> enough to
+                    <verb type="action">venture</verb> out with just a <noun type="item">knife</noun>.
+            </sentence>
+        
+            <sentence>
+                <noun type="character">My</noun>
+                <noun type="item">bow</noun> is a <adjective type="description">rarity</adjective>,
+                    <verb type="action">crafted</verb> by <noun type="character">my</noun>
+                <noun type="character">father</noun> along with a few others that <noun
+                    type="character">I</noun> keep well <verb type="action">hidden</verb> in the
+                    <noun type="place">woods</noun>, <adjective type="description"
+                    >carefully</adjective>
+                <verb type="action">wrapped</verb> in <adjective type="description"
+                    >waterproof</adjective>
+                <noun type="item">covers</noun>.
+            </sentence>
+        
+            <sentence>
+                <noun type="character">My</noun>
+                <noun type="character">father</noun> could have made <adjective type="description"
+                    >good</adjective>
+                <noun type="thing">money</noun>
+                <verb type="action">selling</verb> them, but if the <noun type="group"
+                    >officials</noun>
+                <verb type="action">found</verb> out <noun type="character">he</noun> would have
+                been <adjective type="description">publicly</adjective>
+                <verb type="action">executed</verb> for <verb type="action">inciting</verb> a <noun
+                    type="event">rebellion</noun>.
+            </sentence>
+        
+            <sentence>Most of the <noun type="group">Peacekeepers</noun>
+                <verb type="action">turn</verb> a <adjective type="description">blind</adjective>
+                <noun type="thing">eye</noun> to the few of <noun type="group">us</noun> who <verb
+                    type="action">hunt</verb> because <noun type="group">they’re</noun> as
+                    <adjective type="description">hungry</adjective> for <adjective
+                    type="description">fresh</adjective>
+                <noun type="item">meat</noun> as anybody is.
+            </sentence>
+        
+            <sentence>
+                In fact, <noun type="group">they’re</noun> among <noun type="group">our</noun>
+                <adjective type="description">best</adjective>
+                <noun type="group">customers</noun>.
+            </sentence></paragraph>
+
+</HungerGames>
+
+<!-- The Hunger Games by Suzanne Collins -->

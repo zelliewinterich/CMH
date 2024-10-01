@@ -1,0 +1,26 @@
+default namespace = ""
+
+start =
+  element HungerGames {
+    element title {
+      attribute type { xsd:NCName },
+      text
+    },
+    element paragraph {
+      element sentence {
+        (text
+         | element adjective {
+             attribute type { xsd:NCName },
+             xsd:NCName
+           }
+         | element noun {
+             attribute type { xsd:NCName },
+             text
+           }
+         | element verb {
+             attribute type { xsd:NCName },
+             xsd:NCName
+           })+
+      }+
+    }
+  }
