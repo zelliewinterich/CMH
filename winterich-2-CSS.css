@@ -14,6 +14,7 @@ p {
     text-align: left;
     color: black;
     font-size: 20px;
+    flex-basis: 40%;
 }
 h2 {
     text-align: center;
@@ -38,3 +39,19 @@ th, td {
     border-bottom: 2px solid;
 }
 tr:hover {background-color: coral;}
+
+.stage_directions:hover {
+    background-color: darkblue;
+}
+.column-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+}
+.row-container {
+    display: flex;
+    flex-direction: row;
+    border: 4px solid blue;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
