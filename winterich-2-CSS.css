@@ -41,7 +41,7 @@ th, td {
 tr:hover {background-color: coral;}
 
 .stage_directions:hover {
-    background-color: darkblue;
+    background-color: red;
 }
 .column-container {
     display: flex;
