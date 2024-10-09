@@ -1,8 +1,27 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
-start = element SOL {title, book, text}
+start = element SOL {title, book+, text}
 title = element title {text}
-book = element book {(text | heading | chapter | subheading)}
+book = element book {(text | heading+ | chapter+ | subheading+ | p+)*}
 
-heading = element heading {(text | chapter | subheading)}
-chapter = element chapter {(text | subheading)}
-subheading = element subheading {(text)}
+
+heading = element heading {(text | chapter+)*}
+chapter = element chapter {(text | subheading+)*}
+subheading = element subheading {(text | p+)*}
+p = element p {(text | natural_law | laws | rationale | driving_factors | religious | person | separation_of_powers | checks_and_balances | governments | policy | society | place | human_behavior | legal_documents | rights | characteristics )*}
+
+natural_law = element natural_law {attribute type { "freedoms" | "life" | "liberty" | "property" | "pursuit_of_happiness" | "humanity_based" | "equality" }, text }
+laws = element laws {attribute type { "general" | "religiously_driven" | "governmental" | "fixed" }, text }
+rationale = element rationale {attribute type { "logical" | "philosophy" | "previously_stated" | "political" }, text}
+driving_factors = element driving_factors {attribute type { "physical" | "mental" | "societal" | "federal" | "national" | "international" }, text }
+religious = element religious {attribute type { "diety" | "idea_or_belief" | "practice" }, text}
+person = element person {attribute type { "Hobbes" | "Sylla" | "Hannibal" | "Demetrius" | "Philip" | "Demosthenes" | "Providence" | "Antipater" | "Solon" | "Servius" },text}
+separation_of_powers = element separation_of_powers {attribute type { "legislative" | "executive" | "judicial" | "generally_referenced" }, text}
+checks_and_balances = element checks_and_balances {attribute type { "practiced" | "theoretical" | "legislative_to_executive" | "executive_to_legislative" | "legislative_to_judicial" | "judicial_to_legislative" | "judicial_to_executive" | "executive_to_judicial" }, text}
+governments = element governments {attribute type { "groups_of_government" | "democratic" | "monarchial" | "outdated" | "oligarchy" | "republic" | "nationally_governed" | "religiously_governed" | "despotic" | "aristocracy" },text}
+policy = element policy {attribute type { "acted" | "thought" | "observed" | "needed" | "extinct" },text}
+society = element society {attribute type { "state_group" | "religious_sect" | "philosophical_group" | "city_state" },text}
+place = element place {attribute type { "area" | "capitol" | "city" | "state" },text}
+human_behavior = element human_behavior {attribute type { "human_nature" },text}
+legal_documents = element legal_documents {attribute type { "constitution" | "declaration" | "bill_of_rights" },text}
+rights = element rights {attribute type { "individual_rights" | "race_based" | "gender_based" | "voting" | "governmental_rights" | "state_rights" | "federal_rights" | "judicial_rights" | "legislative_rights" },text}
+characteristics = element characteristics {attribute type { "ideals" },text}
