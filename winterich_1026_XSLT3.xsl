@@ -15,12 +15,11 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <title>Skyrim</title>
-                <link rel="stylesheet" type="text/css" href="winterich_1026_XSLT3.css"/>
+                <link rel="stylesheet" type="text/css" href="winterichxslt3.css"/>
             <style>
                 
             </style>
             </head>
-            
             <body>
                 
                 <xsl:apply-templates select="//body"/>
@@ -30,33 +29,59 @@
         
     </xsl:template>
     
-    <xsl:template match="paragraph/*">
-        <p>
+    <xsl:template match="paragraph">
+        <p style="color:black;">
             <xsl:apply-templates/>
         </p>
         
     </xsl:template>
     
+    <xsl:template match="QuestItem">
+       <questitem>
+           <xsl:apply-templates/>
+       </questitem>   
+    </xsl:template>
+    
     <xsl:template match="QuestEvent">
+        <em>
+            <xsl:apply-templates/>
+        </em> 
+    </xsl:template>
+    
+    <xsl:template match="character">
+        <b style="color:blue;">
+            <xsl:apply-templates/>
+           
+        </b>
+    </xsl:template>
+    
+    <xsl:template match="epithet">
         <strong>
-         <xsl:apply-templates/>
-        </strong>   
+        <xsl:apply-templates/>
+        </strong>
     </xsl:template>
     
-   
-    <xsl:template match="faction">
-        <span class="quest" >
-            <strong>
-        <xsl:apply-templates/>
-            </strong>
+    <xsl:template match="faction[@ref='MythicDawn']">
+       <strong>
+        <span class="MythicDawn">
+            <xsl:value-of select="."/>
         </span>
+       </strong>
     </xsl:template>
     
-    <xsl:template match="//QuestEvent/character">
-        <xsl:apply-templates/>
+    <xsl:template match="location">
+        <i>
+            <xsl:apply-templates/>
+        </i>
     </xsl:template>
-    
-    
     
 </xsl:stylesheet>
+    
+   
+    
+   
+    
+    
+    
+
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- const -->
+<amendment><natural_rights type="freedom_of_speech">I Congress shall make no law
+    respecting an establishment of religion, or prohibiting the free exercise
+    thereof; or abridg- ing the freedom of speech, or of the press, or the right of
+    the people peaceably to assemble, and to petition the Government for a redress
+    of grievances. </natural_rights></amendment>
+
+<!-- spirit -->
+
+<chapter>CHAP. XII.
+    <subheading>Of Indiscreet Speeches.</subheading>
+    <p>
+        <amendment_connection type="1st"/>
+        <purposes_of_law type="individual_rights">NOTHING renders the crime of high-treason more arbitrary than declaring people guilty of it for indiscreet speeches</purposes_of_law>. Speech is so subject to interpretation; there is so great a difference between indiscretion and malice; and frequently so little is there of the latter <natural_law type="freedoms">in the freedom of expression</natural_law>, that the law can hardly subject people to a capital punishment for words, unless it expressly declares what words they are* .
+        Words do not constitute an overt act; they remain only in idea. When considered by themselves, they have generally no determinate signification; for this depends on the tone in which they are uttered. It often happens that, in repeating the same words, they have not the same meaning: this depends on their connection with other things; and sometimes more is signified by silence than by any expression whatever. 
+        Since there can be nothing so equivocal and ambiguous as all this, how is it possible to convert it into a crime of high-treason? <natural_law type="liberty">Wherever this law is established, there is an end, not only of liberty, but even of its very shadow</natural_law>.
+        In the manifesto of the late Czarina against the family of the D’Olgoruckys† , one of these princes is condemned to death for having uttered some indecent words concerning her person; another, for having maliciously interpreted her imperial laws, and for having offended her sacred person by disrespectful expressions.
+        Not that I pretend to diminish the just indignation of the public against those who presume to stain the glory of their sovereign: what I mean is, that, if despotic princes are willing to moderate their power, a milder chastisement would be more proper, on those occasions, than the charge of high-treason, a thing always terrible even to innocence itself‡ .
+        Overt acts do not happen every day; they are exposed to the eye of the public; and a false charge with regard to matters of fact may be easily detected. Words, carried into action, assume the nature of that action. Thus a man, who goes into a public market- place to incite the subject to revolt, incurs the guilt of high-treason, because the words are joined to the action, and partake of its nature. 
+        It is not the words that are punished, but an action in which words are employed. They do not become criminal, but when they are annexed to a criminal action. <justice type="cruel_and_unusual_punishment">Every thing is confounded if words are construed into a capital crime, instead of considering them only as a mark of that crime</justice>.
+        The emperors, Theodosius, Arcadius, and Honorius, wrote thus to Rufinus, who was præfectus prætorio: “Though a man should happen to speak amiss of our person, or government, we do not intend to punish him§ : if he has spoken through levity, we must despise him; if through folly, we must pity him; and, if he wrongs us, we must forgive him. Therefore, leaving things as they are, you are to inform us accordingly,
+        that we may be able to judge of words by persons, and that we may duly consider whether we ought to punish or overlook them.”
+        <!-- freedom of speech 1st amendment -->
+    </p>
+</chapter>
+
+<!-- connections -->
+<purposes_of_law type="individual_rights"> = <amendment><natural_rights type="freedom_of_speech">
+- rights
+- natural law
+- freedoms 
+- 
