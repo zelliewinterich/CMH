@@ -1,0 +1,35 @@
+
+body {
+    color: black;
+    background-color: lightblue;   
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 70px;
+    text-align: center;
+    color: black;
+}
+
+ol li {
+    padding: 10px;
+    color: darkblue;
+}
+h3 {
+    text-align: left;
+    font-size: 40px;
+}
+h4 {
+    text-align: left;
+    font-size: 25px;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
