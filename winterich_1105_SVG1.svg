@@ -4,11 +4,9 @@
     <head>
         <title>stoogie hw</title>
     </head>
+    <!-- I was playing around with this a lot from W3 with shadows, colors, fonts, etc -->
     <body>
-        
-        
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="700">
-            
             
             <line x1="50" y1="350" x2="415" y2="350" stroke="black" stroke-width="4"/> 
             <line x1="50" y1="351" x2="50" y2="35" stroke="black" stroke-width="4"/>
