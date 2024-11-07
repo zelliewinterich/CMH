@@ -53,6 +53,9 @@
                 <xsl:text>. </xsl:text>
                 </a>
             </number>
+            <i>
+                <xsl:value-of select="sub_section"/>
+            </i>
         </li>
     </xsl:template>
     
