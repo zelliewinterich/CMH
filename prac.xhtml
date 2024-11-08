@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        
+                <title>Dropdown Navigation</title>
+                <link rel="stylesheet" href="style.css"/> <!-- Include your CSS file if any -->
+    </head>           
+    <body>
+        
+        <div class="navbar">
+            <a href="#home">Home</a> <!-- Link to the same page (home section) -->
+            
+            <div class="dropdown">
+                <button class="dropbtn">The US Constitution
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <!-- Link to load the Constitution HTML page in the same window -->
+                    <a href="https://zelliewinterich.github.io/CMH/Constitution_html.xhtml">Constitution Document</a>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Welcome to Our Website</h1>
+                <p>Here you can navigate through different pages of our site using the navbar above.</p>
+            </div>
+        </div>
+        
+        <!-- Content Area where the iframe will load the page -->
+        <div id="content-area">
+            <iframe name="contentFrame" src="about:blank"></iframe> <!-- Initial empty iframe -->
+        </div>
+        
+    </body>
+</html>
