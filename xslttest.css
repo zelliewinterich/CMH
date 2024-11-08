@@ -1,0 +1,37 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    color: black;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    margin-bottom: 15px;
+    text-align:left;
+}
+h1 {
+    text-decoration:underline;
+}
+h2 {
+    margin: 0;
+    text-decoration:underline;
+    color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+    color:darkblue;
+}
+a:hover {
+    color: red;
+}
+a:visited {
+    color:CornflowerBlue;
+}
