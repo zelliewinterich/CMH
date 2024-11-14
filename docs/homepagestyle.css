@@ -1,69 +1,56 @@
 
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* stylesheet for homepage of the project */
-
-/* body style */
 body {
     background-color: lightBlue;
+    font-family: Arial, sans-serif;
 }
-h1 {
-    text-decoration: underline;
-}
-h2 {
+
+/* Headings */
+h1, h2, h3, p {
+    text-align: center;
     text-decoration: underline;
 }
 
-/* table style */
+/* Table Styling */
 table, th, td {
-  border: 1px solid black;
+    border: 1px solid black;
+    padding: 10px;
 }
 
-/* dropdown bar css styling */
+/* Navbar */
 .navbar {
     background-color: #333;
-    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 8px 20px;
 }
-.navbar a {
-    float: left;
+
+.navbar a, .dropdown {
+    float: none; /* Remove float */
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-.navbar a:hover {
+
+.navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #ddd;
     color: black;
 }
 
-/* Dropdown container */
+/* Dropdown Styling */
 .dropdown {
-    float: left;
-    overflow: hidden;
+    position: relative;
 }
 
-/* Dropdown button */
-.dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -88,36 +75,63 @@ table, th, td {
     color: black;
 }
 
-div.polaroid {
-  width: 25%;
-  
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-  border-top: 10px solid white;
+/* Polaroids */
+.polaroid-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-div.container {
-  text-align: center;
-  padding: 8px 15px;
+.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    border-top: 10px solid white;
+    width: 20%;
+    max-width: 300px; /* Optional: add a max-width */
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+.polaroid img {
+    width: 100%;
+    height: auto;
 }
-.polaroid-container {
-  display: flex;
-  justify-content: center; /* Align polaroids horizontally in the center */
-  gap: 20px; /* Space between each polaroid */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  margin-top: 50px; /* Space from the top */
+
+.container {
+    text-align: center;
+    padding: 8px 15px;
 }
+
+/* Table Container */
 .table-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     padding: 20px;
-    box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+    }
+
+    .polaroid-container {
+        flex-direction: column;
+    }
+
+    .polaroid {
+        width: 45%;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .polaroid {
+        width: 90%; /* Stack images on mobile */
+    }
 }
