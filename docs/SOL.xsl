@@ -12,7 +12,7 @@
     <xsl:template match="/">
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
-                <title>Constitution Document</title>
+                <title>Spirit of Laws</title>
                 <link rel="stylesheet" type="text/css" href="constitutionstyle.css"/>
             </head>
             <body>
@@ -58,7 +58,7 @@
                     <i>
                         <a href="#{@number}">
                             <xsl:value-of select="@number"/>
-                        </a>
+                        </a> 
                     </i>
                 </xsl:for-each>
             </li>
@@ -78,8 +78,6 @@
     <!-- this is for the metadata text -->
     
    
-   
-    
     <xsl:template match="//section">
         <div class="section">
             <hr/>
