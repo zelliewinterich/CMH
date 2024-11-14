@@ -72,6 +72,12 @@ table, th, td {
     color: black;
 }
 
+/* Remove the "focus" outline or "white bubble" on the dropdown button */
+.dropdown .dropbtn:focus {
+    outline: none;
+    box-shadow: none; /* Remove any box-shadow or focus ring */
+}
+
 /* Dropdown content */
 .dropdown-content {
     display: none;
