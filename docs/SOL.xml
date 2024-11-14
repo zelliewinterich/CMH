@@ -4,13 +4,34 @@
 <content>
     
     <meta_data>
-        <title>THE SPIRIT OF LAWS.</title>
+        <title>THE SPIRIT OF LAWS Volume 1</title>
         
-        <author>Montesquieu</author>
+        <author>Written by: Baron de Montesquieu</author>
     </meta_data>
     
-<body> Spirt of Laws
-    
+<body>
+    <preamble>
+        <sub_section>
+    <subsection_name number="1.0">PREFACE.</subsection_name>
+    IF, amidst the infinite number of subjects contained in this book, there is any thing which, contrary to my expectation, may possibly offend, I can at least assure the public that it was not inserted with an ill intention, for I am not naturally of a captious temper. Plato thanked Heaven that he was born in the same age with Socrates; and, for my part, I give thanks to God that I was born a subject of that government under which I live, and that it is his pleasure I should obey those whom he has made me love.
+    I beg one favour of my readers, which I fear will not be granted me; this is, that they will not judge by a few hours reading of the labour of twenty years; that they will approve or condemn the book entire, and not a few particular phrases. If they would search into the design of the author, they can do it no other way so completely as by searching into the design of the work.
+    I have first of all considered mankind; and the result of my thoughts has been, that, amidst such an infinite diversity of laws and manners, they were not solely conducted by the caprice of fancy.
+    I have laid down the first principles, and have found that the particular cases apply naturally to them; that the histories of all nations are only consequences of them; and that every particular law is connected with another law, or depends on some other of a more general extent.
+    When I have been obliged to look back into antiquity, I have endeavoured to assume the spirit of the ancients, lest I should consider those things as alike which are really different, and lest I should miss the difference of those which appear to be like.
+    I have not drawn my principles from my prejudices, but from the nature of things.
+    Here a great many truths will not appear till we have seen the chain which connects them with others. The more we enter into particulars, the more we shall perceive the certainty of the principles on which they are founded. I have not even given all these particulars; for who could mention them all without a most insupportable fatigue!
+    The reader will not here meet with any of those bold flights which seem to characterise the works of the present age. When things are examined with ever so small a degree of extent, the sallies of imagination must vanish; these generally arise from the mind’s collecting all its powers to view only one side of the subject, while it leaves the other unobserved.
+    I write not to censure any thing established in any country whatsoever. Every nation will here find the reasons on which its maxims are founded; and this will be the natural inference, that to propose alterations belongs only to those who are so happy
+       as to be born with a genius capable of penetrating into the entire constitution of a state.
+    It is not a matter of indifference that the minds of people be enlightened. The prejudices of the magistrate have arisen from national prejudice. In a time of ignorance they have committed even the greatest evils without the least scruple; but, in an enlightened age, they even tremble while conferring the greatest blessings. They perceive the ancient abuses, they see how they must be reformed, but they are sensible also of the abuses of the reformation. They let the evil continue if they fear a worse; they are content with a lesser good if they doubt of a greater. They examine into the parts to judge of them in connection; and they examine all the causes to discover their different effects.
+    Could I but succeed so as to afford new reasons to every man to love his duty, his prince, his country, his laws; new reasons to render him more sensible, in every nation and government, of the blessings he enjoys, I should think myself the most happy of mortals.
+    Could I but succeed so as to persuade those who command to increase their knowlege in what they ought to prescribe; and those who obey, to find a new pleasure resulting from their obedience; I should think myself the most happy of mortals.
+    The most happy of mortals should I think myself, could I contribute to make mankind recover from their prejudices. By prejudice, I here mean, not that which renders men ignorant of some particular things, but whatever renders them ignorant of themselves.
+    It is in endeavouring to instruct mankind that we are best able to practise that general virtue which comprehends the love of all. Man, that flexible being, conforming in society to the thoughts and impressions of others, is equally capable of knowing his own nature, whenever it is laid open to his view, and of losing the very sense of it, when this idea is banished from his mind.
+    Often have I begun and as often have I laid aside this undertaking. I have a thousand times given the leaves I have written to the * winds; I every day felt my paternal hands fall† . I have followed my object without any fixed plan; I have known neither rules nor exceptions; I have found the truth only to lose it again. But, when I had once discovered my first principles, every thing I sought for appeared; and, in the course of twenty years, I have seen my work begun, growing up, advancing to maturity, and finished.
+    If this work meets with success, I shall owe it chiefly to the grandeur and majesty of the subject. However, I do not think that I have been totally deficient in point of genius. When I have seen what so many great men both in France and Germany have written before me, I have been lost in admiration, but I have not lost my courage; I have said, with Corregio, And I also am a painter.*
+        </sub_section>
+    </preamble>
 <section>    
     <section_name number="Book_1">BOOK I. OF LAWS IN GENERAL.</section_name> 
     

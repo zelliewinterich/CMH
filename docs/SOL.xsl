@@ -76,6 +76,36 @@
         </div>
     </xsl:template> 
     <!-- this is for the metadata text -->
+    <xsl:template match="preamble">
+        <div class="preamble">
+            <hr/>
+            <h2 style="text-align:center;">
+                <xsl:value-of select="section_name"/>
+            </h2>
+            <xsl:for-each select="section_name">
+                <h2>
+                   <xsl:value-of select="section_name[@type='article' or @type='amendment' or @type='preamble']"/>
+                </h2>
+            </xsl:for-each>
+            <xsl:for-each select="sub_section">
+                <div class="sub_section">
+                    <h3 style="text-align:center;">
+                        <xsl:value-of select="subsection_name"/>
+                    </h3>
+                    <xsl:for-each select="subsection_name">
+                        <h3>
+                            <xsl:value-of select="subsection_name"/>
+                        </h3>
+                    </xsl:for-each>
+                    <p style="text-align:center; font-style:italic;">
+                        <xsl:value-of select="text() | (consent_of_governed | inherent_rights | criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power)"/>
+                    </p>
+                </div> 
+            </xsl:for-each>
+            <hr/>
+        </div>
+    </xsl:template>
+    <!-- this is for the preamble text -->
     
    
     <xsl:template match="//section">
