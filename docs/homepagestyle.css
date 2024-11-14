@@ -1,4 +1,3 @@
-
 /* Universal Reset */
 * {
     margin: 0;
@@ -39,6 +38,12 @@ table, th, td {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+/* Remove white border around links and dropdown buttons */
+.navbar a, .dropdown .dropbtn {
+    border: none;    /* Remove any borders */
+    outline: none;   /* Remove the focus outline */
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
