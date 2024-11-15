@@ -70,9 +70,9 @@
                     <!-- links for SVG and XPATH work-->
                 </button>
                 <div class="dropdown-content">
-                    <a href="https://zelliewinterich.github.io/CMH/SVGpage.xhtml">SVG</a>
-                    
                     <a href="https://zelliewinterich.github.io/CMH/section_significance.html">Attribute Data</a>
+                    <a href="https://zelliewinterich.github.io/CMH/opinionpoll.html">Opinion Poll</a>
+                    <a href="https://zelliewinterich.github.io/CMH/SVGpage.xhtml">SVG</a>
                 </div>
             </div> 
             
@@ -191,6 +191,7 @@
             </div>
         </div>
         </section>
+        <!-- java script for quote/fact generators -->
         <script type="text/javascript">
             function generateFunFact() {
                 const facts = [
@@ -215,7 +216,7 @@
             }
         </script>
         <script type="text/javascript">
-    // Array of quotes
+    
     const quotes = [
         { text: "All men are liable to error; and most men are, in many points, by passion or interest, under temptation to it.", author: "John Locke" },
         { text: "He that judges without informing himself to the utmost that he is capable, cannot acquit himself of judging amiss.", author: "John Locke" },
@@ -230,12 +231,12 @@
         { text: "I have sworn upon the altar of God eternal hostility against every form of tyranny over the mind of man.", author: "Thomas Jefferson" }
     ];
 
-    // Function to generate a random quote
+    
     function generateQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);  // Randomly select an index
         const selectedQuote = quotes[randomIndex];  // Get the quote object
 
-        // Display the quote and the author in the page
+        
         document.getElementById("quote-text").innerHTML = `"${selectedQuote.text}"`;
         document.getElementById("quote-author").innerHTML = `- ${selectedQuote.author}`;
     }
