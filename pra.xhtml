@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+     
+    <!-- general layout for homepage -->
+    <head>
+        <title>Constitution Thinkers Project</title>
+        <!-- link title -->
+        <link rel="stylesheet" type="text/css" href="homepage.css"/>
+        <!-- link to css -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Fun Fact Generator CSS -->
+        <style>
+            /* Fun Fact Generator Section */
+            #fun-fact {
+                margin-top: 40px;
+                text-align: center;
+                padding: 20px;
+                background-color: #f4f4f4;  /* Light background for generator */
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #fun-fact button {
+                padding: 12px 24px;
+                font-size: 18px;
+                background-color: #333;  /* Dark background for consistency with navbar */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 20px;
+            }
+
+            #fun-fact button:hover {
+                background-color: #555;  /* Lighter on hover */
+            }
+
+            #fun-fact p {
+                font-size: 20px;
+                font-style: italic;
+                color: #333;  /* Dark text for readability */
+                margin-top: 20px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 1.5;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 style="text-align:center;">Constitutional Thinkers Project</h1>
+        
+        <p style="text-align:center;">Creators: Zellie Winterich, Anna Costello, Ryan Pavlone, and James Paul</p>
+        
+        <!-- Fun Fact Generator Section -->
+        <section id="fun-fact">
+            <button onclick="generateFunFact()">Generate Fun Fact</button>
+            <p id="fact-display">Click the button to see a fun fact!</p>
+        </section>
+        
+        <script type="text/javascript">
+            function generateFunFact() {
+                const facts = [
+                    "George Washington was the first President of the United States.",
+                    "James Madison is known as the 'Father of the Constitution'.",
+                    "Alexander Hamilton was the first Secretary of the Treasury.",
+                    "Thomas Hobbes authored 'Leviathan', a foundational work in political theory.",
+                    "John Locke's ideas heavily influenced the American Revolution."
+                ];
+
+                const randomFact = facts[Math.floor(Math.random() * facts.length)];
+                document.getElementById("fact-display").textContent = randomFact;
+            }
+        </script>
+        
+        <!-- Your existing HTML and sections go here -->
+        <section id="navigation">
+            <div class="navbar">
+                <a href="#home">Home</a> <!-- no need for drop down aspect -->
+                
+                <div class="dropdown">
+                    <button class="dropbtn">The US Constitution
+                        <i class="fa fa-caret-down"></i>
+                        <!-- links for the constitution document-->
+                    </button>
+                    
+                    <div class="dropdown-content">
+                        <!-- Link to load the Constitution HTML page in the same window -->
+                        <a href="https://zelliewinterich.github.io/CMH/Constitution_html.xhtml">Constitution Document</a>
+                    </div>
+                    
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Seminal Works 
+                        <i class="fa fa-caret-down"></i>
+                        <!-- links for seminal works -->
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://zelliewinterich.github.io/CMH/DeCive.xhtml">De Cive</a>
+                        <a href="https://zelliewinterich.github.io/CMH/Locke.xhtml">Second Treatise</a>
+                        <a href="https://zelliewinterich.github.io/CMH/social_contract.xhtml">Social Contract</a>
+                        <a href="https://zelliewinterich.github.io/CMH/SOL.xhtml">Spirit of Laws</a>
+                        <!-- for each seminal work -->
+                    </div>
+                </div> 
+                
+                <div class="dropdown">
+                    <button class="dropbtn">About 
+                        <i class="fa fa-caret-down"></i>
+                        <!-- links for the about section -->
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://zelliewinterich.github.io/CMH/about.xhtml">Methodology</a>
+                        <!-- methodology page -->     
+                        <a href="https://zelliewinterich.github.io/CMH/thinkers.xhtml">Thinkers</a>
+                        <!-- thinkers page -->
+                    </div>
+                </div> 
+                
+                
+                <!-- about us page --> 
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Data and Graphs 
+                        <i class="fa fa-caret-down"></i>
+                        <!-- links for SVG and XPATH work-->
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://zelliewinterich.github.io/CMH/SVGpage.xhtml">SVG</a>
+                        
+                        <a href="https://zelliewinterich.github.io/CMH/section_significance.html">Attribute Data</a>
+                    </div>
+                </div> 
+                
+                <a href="https://zelliewinterich.github.io/CMH/citation.xhtml">Work Cited</a>
+            </div>
+        </section>
+        
+        <!-- images -->
+        <section id="pics">
+            <div class="polaroid-container">
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/440px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg" alt="washington" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>George Washington</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/James_Madison_1816.jpg/440px-James_Madison_1816.jpg" alt="madison" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>James Madison</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Alexander_Hamilton_%28cropped%29.jpg/440px-Alexander_Hamilton_%28cropped%29.jpg" alt="hamilton" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>Alexander Hamilton</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- home page code -->
+        <section id="table">
+            <h2 style="text-align:center;">Enlightenment Thinkers Information</h2>
+            <h3 style="text-align:center;">A quick rundown of our philsophical thinkers and their basic backgrounds</h3>
+            <div class="table-container">
+                <table style="width:95%; height:95%;">
+                    <tr>
+                        <th>Thinker</th>
+                        <th>Country of Origin</th>
+                        <th>Dates</th>
+                        <th>Seminal Work</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">Jean-Jacques Rousseau</td>
+                        <td style="text-align:center;">France/Switzerland</td>
+                        <td style="text-align:center;">June 28, 1712, to July 2, 1778</td>
+                        <td style="text-align:center;"><i>The Social Contract, 1762</i></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">John Locke</td>
+                        <td style="text-align:center;">United Kingdom</td>
+                        <td style="text-align:center;">August 29, 1632 to October 28, 1704</td>
+                        <td style="text-align:center;"><i>Second Treatise of Government, 1689</i></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">Charles Louis de Secondat, baron de La Brède et de Montesquieu</td>
+                        <td style="text-align:center;">France</td>
+                        <td style="text-align:center;">January 18, 1689 to February 10, 1755</td>
+                        <td style="text-align:center;"><i>The Spirit of Laws, 1748</i></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">Thomas Hobbes</td>
+                        <td style="text-align:center;">United Kingdom</td>
+                        <td style="text-align:center;">April 5, 1588 to December 4, 1679</td>
+                        <td style="text-align:center;"><i>De Cive, 1642</i></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+        <!-- images pt 2 -->
+        <section id="photos">
+            <div class="polaroid-container">
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Thomas_Hobbes_by_John_Michael_Wright.jpg/440px-Thomas_Hobbes_by_John_Michael_Wright.jpg" alt="hobbes" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>Thomas Hobbes</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/John_Locke.jpg/440px-John_Locke.jpg" alt="locke" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>John Locke</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Charles_Montesquieu.jpg/440px-Charles_Montesquieu.jpg" alt="mont" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>Montesquieu</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg/440px-Jean-Jacques_Rousseau_%28painted_portrait%29.jpg" alt="rousseau" class="center" width="325" height="350"/>
+                    <div class="container">
+                        <p>Jean-Jacques Rousseau</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

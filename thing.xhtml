@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fun Fact Generator</title>
+        <style type="text/css">
+        /* CSS styles for fun fact generator */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+        
+        <!-- JavaScript embedded directly in XHTML -->
+        <script type="text/javascript">
+        // JavaScript for generating random facts
+        function generateFunFact() {
+            var facts = [
+                "The U.S. Constitution was signed on September 17, 1787.",
+                "James Madison is known as the 'Father of the Constitution'.",
+                "The Bill of Rights was added to the Constitution in 1791.",
+                "The U.S. Constitution is the oldest written national constitution still in use today.",
+                "The original document of the U.S. Constitution is kept in the National Archives in Washington, D.C.",
+                "There were 55 delegates to the Constitutional Convention in 1787.",
+                "The Constitution was written in Philadelphia at Independence Hall.",
+                "The Preamble to the Constitution starts with 'We the People'.",
+                "Benjamin Franklin was the oldest signer of the U.S. Constitution at age 81.",
+                "The Constitution originally allowed for slavery in the United States, which was later abolished by the 13th Amendment."
+            ];
+
+            // Generate a random index for the facts array
+            var randomIndex = Math.floor(Math.random() * facts.length);
+
+            // Display the fact in the 'funFactDisplay' paragraph
+            document.getElementById('funFactDisplay').textContent = facts[randomIndex];
+        }
+    </script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Constitution Fun Fact Generator</h1>
+            <button onclick="generateFunFact()">Generate Fun Fact</button>
+            <p id="funFactDisplay">Click the button to get a fun fact!</p>
+        </div>
+    </body>
+</html>

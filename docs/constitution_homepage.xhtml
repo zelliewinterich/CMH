@@ -9,7 +9,8 @@
         <link rel="stylesheet" type="text/css" href="homepage.css"/>
         <!-- link to css -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            
+           
+           
     </head>
     
     <body>
@@ -77,6 +78,11 @@
             
             <a href="https://zelliewinterich.github.io/CMH/citation.xhtml">Work Cited</a>
         </div>
+        </section>
+        
+        <section id="fun-fact" style="text-align:center; margin-top: 40px;">
+            <button onclick="generateFunFact()" style="padding: 12px 24px; font-size: 18px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Generate Fun Fact</button>
+            <p id="fact-display" style="font-size: 20px; font-style: italic; color: #333; margin-top: 20px; font-family: Arial, sans-serif;">Click the button to see a fun fact!</p>
         </section>
         
         <!-- images -->
@@ -177,5 +183,19 @@
             </div>
         </div>
         </section>
+        <script type="text/javascript">
+            function generateFunFact() {
+                const facts = [
+                    "George Washington was the first President of the United States.",
+                    "James Madison is known as the 'Father of the Constitution'.",
+                    "Alexander Hamilton was the first Secretary of the Treasury.",
+                    "Thomas Hobbes authored 'Leviathan', a foundational work in political theory.",
+                    "John Locke's ideas heavily influenced the American Revolution."
+                ];
+
+                const randomFact = facts[Math.floor(Math.random() * facts.length)];
+                document.getElementById("fact-display").textContent = randomFact;
+            }
+        </script>
     </body>
 </html>
