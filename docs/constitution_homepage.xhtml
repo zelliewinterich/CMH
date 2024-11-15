@@ -151,6 +151,14 @@
         </div>
         </section>
         
+        <section id="quote-generator" style="text-align:center; margin-top: 40px;">
+            <h2>Random Quote Generator</h2>
+            <p id="quote-text" style="font-size: 20px; font-style: italic;">Click the button below to get a random quote.</p>
+            <p id="quote-author" style="font-size: 18px; font-style: normal; font-weight: bold;"></p>
+            <button onclick="generateQuote()">Get Quote</button>
+        </section>
+        
+        
         <!-- images pt 2 -->
         <section id="photos">
         <div class="polaroid-container">
@@ -206,5 +214,33 @@
                 document.getElementById("fact-display").textContent = randomFact;
             }
         </script>
+        <script type="text/javascript">
+    // Array of quotes
+    const quotes = [
+        { text: "All men are liable to error; and most men are, in many points, by passion or interest, under temptation to it.", author: "John Locke" },
+        { text: "He that judges without informing himself to the utmost that he is capable, cannot acquit himself of judging amiss.", author: "John Locke" },
+        { text: "New opinions are always suspected, and usually opposed, without any other reason but because they are not already common.", author: "John Locke" },
+        { text: "Wherever Law ends, Tyranny begins.", author: "John Locke" },
+        { text: "We hold these truths to be self-evident, that all men are created equal.", author: "Thomas Jefferson" },
+        { text: "Liberty is the right to do whatever the laws permit.", author: "Montesquieu" },
+        { text: "I have always observed that to succeed in the world one should seem a fool, but be wise.", author: "Montesquieu" },
+        { text: "Liberty, when it begins to take root, is a plant of rapid growth.", author: "George Washington" },
+        { text: "Man is born free, and everywhere he is in chains.", author: "Jean-Jacques Rousseau" },
+        { text: "No arts; no letters; no society; and which is worst of all, continual fear and danger of violent death; and the life of man, solitary, poor, nasty, brutish, and short.", author: "Thomas Hobbes" },
+        { text: "I have sworn upon the altar of God eternal hostility against every form of tyranny over the mind of man.", author: "Thomas Jefferson" }
+    ];
+
+    // Function to generate a random quote
+    function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);  // Randomly select an index
+        const selectedQuote = quotes[randomIndex];  // Get the quote object
+
+        // Display the quote and the author in the page
+        document.getElementById("quote-text").innerHTML = `"${selectedQuote.text}"`;
+        document.getElementById("quote-author").innerHTML = `- ${selectedQuote.author}`;
+    }
+</script>
+        
+        
     </body>
 </html>
