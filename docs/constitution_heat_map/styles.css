@@ -1,0 +1,59 @@
+/* styles.css */
+
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Style for the main heading */
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Styles for the dropdown and label */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+    margin-top: 10px; /* Move the selection box up */
+
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+
+}
+
+/* Styles for each section */
+.section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border-color: black;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    margin-top: 10px;/* Default light blue color with low opacity */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+/* Style for section headings */
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Style for the significance paragraphs */
+.section p {
+    margin: 5px 0;
+}
+
+strong {
+    color: black;
+}

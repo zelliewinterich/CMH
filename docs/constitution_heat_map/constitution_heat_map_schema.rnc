@@ -1,0 +1,29 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+start = element content {meta_data?, table_of_contents?, body, text}
+meta_data = element meta_data {(text | title | author | table_of_contents | section)*}
+title = element title {text}
+author = element author {text}
+table_of_contents = element table_of_contents {(text | section | section_name | sub_section )*}
+ 
+body = element body {(text | section)*}
+section = element section {attribute number { "0" | "Preamble" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "13" | "14" | "15" | "16" | "17" | "18" | "19" | "20" | "21" | "22" | "23" | "24" | "25" | "26" | "27" | "One" | "Two" | "Three" | "Four" | "Five" | "Six" | "Seven" }?, 
+attribute type { "amendment" | "article" | "preamble" | "chapter" | "book" | "section" }?, attribute id { "CONST" | "BOR" | "CONST_Amendments" }?,
+(text | section_name | sub_section | subsection_name | consent_of_governed | inherent_rights| criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power )*}
+
+section_name = element section_name {attribute type { "amendment" | "article" | "preamble" | "chapter" | "book" | "section" }?, attribute id { "CONST" | "BOR" | "CONST_Amendments" }?, ( subsection_name | text )*}
+sub_section = element sub_section {attribute number { "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" |  "12" | "13" | "14" | "15" | "16" | "17" | "18" | "19" }?, (text| subsection_name | consent_of_governed | inherent_rights| criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power)*}
+subsection_name = element subsection_name {attribute type { "section" }?, text}
+
+consent_of_governed = element consent_of_governed {attribute type { "right_to_petition" | "elections" | "amendment_process" | "representative_government" | "laws_passed" | "popular_sovereignty" | "eligibility_guidelines" | "state_rights" }?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+inherent_rights = element inherent_rights {attribute type { "life" | "liberty" | "pursuit_of_happiness" | "property" | "equality" | "freedom_of_speech" | "bear_arms" | "religion" | "voting" | "freedom_of_religion" | "freedom_of_the_press" | "freedom_of_assembly" | "individual_protection" | "other_amendment_topics" | "free_will" }?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+criminal_justice = element criminal_justice {attribute type { "due_process" | "trial_by_jury" | "habeas_corpus" | "speedy_trial" | "cruel_and_unusual_punishment" | "double_jeopardy" | "self_incrimination" | "legal_representation" | "warrants" | "bail" | "slavery" }?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+purposes_of_law = element purposes_of_law {attribute type { "democracy" | "strengthen_previous_law" | "repeal_previous_law" | "set_criminal_code"}?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+legal_documents = element legal_documents {attribute type { "constitution" | "criminal_code" | "province_laws"}?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+legislative_body = element legislative_body {attribute type { "propose_laws" | "bicameral" | "amendment_process" | "representative_government" | "laws_passed" | "right_to_tax" | "uphold_laws"}?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+judicial_body = element judicial_body{attribute type { "court_hierarchy" | "overule" | "set_precedence"}?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+executive_body = element executive_body {attribute type { "veto_power" | "appointment_power" | "pardon_power" | "presidential_limits" | "elected" | "presidential_powers" }?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+limits_of_power = element limits_of_power {attribute type { "rebellion" | "impeachment" | "fixed_terms" | "checks_and_balances" | "protection_of_the_individual" | "transition_of_power" }?, attribute person { "Hobbes" | "Rosseau" | "Montesquieu" | "Locke" | "all" }?, text}
+
+
+
+

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <element name="content">
+      <optional>
+        <ref name="meta_data"/>
+      </optional>
+      <optional>
+        <ref name="table_of_contents"/>
+      </optional>
+      <ref name="body"/>
+      <text/>
+    </element>
+  </start>
+  <define name="meta_data">
+    <element name="meta_data">
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="title"/>
+          <ref name="author"/>
+          <ref name="table_of_contents"/>
+          <ref name="section"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="title">
+    <element name="title">
+      <text/>
+    </element>
+  </define>
+  <define name="author">
+    <element name="author">
+      <text/>
+    </element>
+  </define>
+  <define name="table_of_contents">
+    <element name="table_of_contents">
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="section_name"/>
+          <ref name="sub_section"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="body">
+    <element name="body">
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="section"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="section">
+    <element name="section">
+      <optional>
+        <attribute name="number">
+          <choice>
+            <value>0</value>
+            <value>Preamble</value>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+            <value>13</value>
+            <value>14</value>
+            <value>15</value>
+            <value>16</value>
+            <value>17</value>
+            <value>18</value>
+            <value>19</value>
+            <value>20</value>
+            <value>21</value>
+            <value>22</value>
+            <value>23</value>
+            <value>24</value>
+            <value>25</value>
+            <value>26</value>
+            <value>27</value>
+            <value>One</value>
+            <value>Two</value>
+            <value>Three</value>
+            <value>Four</value>
+            <value>Five</value>
+            <value>Six</value>
+            <value>Seven</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>amendment</value>
+            <value>article</value>
+            <value>preamble</value>
+            <value>chapter</value>
+            <value>book</value>
+            <value>section</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="id">
+          <choice>
+            <value>CONST</value>
+            <value>BOR</value>
+            <value>CONST_Amendments</value>
+          </choice>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="section_name"/>
+          <ref name="sub_section"/>
+          <ref name="subsection_name"/>
+          <ref name="consent_of_governed"/>
+          <ref name="inherent_rights"/>
+          <ref name="criminal_justice"/>
+          <ref name="purposes_of_law"/>
+          <ref name="legal_documents"/>
+          <ref name="legislative_body"/>
+          <ref name="judicial_body"/>
+          <ref name="executive_body"/>
+          <ref name="limits_of_power"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="section_name">
+    <element name="section_name">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>amendment</value>
+            <value>article</value>
+            <value>preamble</value>
+            <value>chapter</value>
+            <value>book</value>
+            <value>section</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="id">
+          <choice>
+            <value>CONST</value>
+            <value>BOR</value>
+            <value>CONST_Amendments</value>
+          </choice>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="subsection_name"/>
+          <text/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="sub_section">
+    <element name="sub_section">
+      <optional>
+        <attribute name="number">
+          <choice>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+            <value>13</value>
+            <value>14</value>
+            <value>15</value>
+            <value>16</value>
+            <value>17</value>
+            <value>18</value>
+            <value>19</value>
+          </choice>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="subsection_name"/>
+          <ref name="consent_of_governed"/>
+          <ref name="inherent_rights"/>
+          <ref name="criminal_justice"/>
+          <ref name="purposes_of_law"/>
+          <ref name="legal_documents"/>
+          <ref name="legislative_body"/>
+          <ref name="judicial_body"/>
+          <ref name="executive_body"/>
+          <ref name="limits_of_power"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="subsection_name">
+    <element name="subsection_name">
+      <optional>
+        <attribute name="type">
+          <value>section</value>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="consent_of_governed">
+    <element name="consent_of_governed">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>right_to_petition</value>
+            <value>elections</value>
+            <value>amendment_process</value>
+            <value>representative_government</value>
+            <value>laws_passed</value>
+            <value>popular_sovereignty</value>
+            <value>eligibility_guidelines</value>
+            <value>state_rights</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="inherent_rights">
+    <element name="inherent_rights">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>life</value>
+            <value>liberty</value>
+            <value>pursuit_of_happiness</value>
+            <value>property</value>
+            <value>equality</value>
+            <value>freedom_of_speech</value>
+            <value>bear_arms</value>
+            <value>religion</value>
+            <value>voting</value>
+            <value>freedom_of_religion</value>
+            <value>freedom_of_the_press</value>
+            <value>freedom_of_assembly</value>
+            <value>individual_protection</value>
+            <value>other_amendment_topics</value>
+            <value>free_will</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="criminal_justice">
+    <element name="criminal_justice">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>due_process</value>
+            <value>trial_by_jury</value>
+            <value>habeas_corpus</value>
+            <value>speedy_trial</value>
+            <value>cruel_and_unusual_punishment</value>
+            <value>double_jeopardy</value>
+            <value>self_incrimination</value>
+            <value>legal_representation</value>
+            <value>warrants</value>
+            <value>bail</value>
+            <value>slavery</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="purposes_of_law">
+    <element name="purposes_of_law">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>democracy</value>
+            <value>strengthen_previous_law</value>
+            <value>repeal_previous_law</value>
+            <value>set_criminal_code</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="legal_documents">
+    <element name="legal_documents">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>constitution</value>
+            <value>criminal_code</value>
+            <value>province_laws</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="legislative_body">
+    <element name="legislative_body">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>propose_laws</value>
+            <value>bicameral</value>
+            <value>amendment_process</value>
+            <value>representative_government</value>
+            <value>laws_passed</value>
+            <value>right_to_tax</value>
+            <value>uphold_laws</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="judicial_body">
+    <element name="judicial_body">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>court_hierarchy</value>
+            <value>overule</value>
+            <value>set_precedence</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="executive_body">
+    <element name="executive_body">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>veto_power</value>
+            <value>appointment_power</value>
+            <value>pardon_power</value>
+            <value>presidential_limits</value>
+            <value>elected</value>
+            <value>presidential_powers</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="limits_of_power">
+    <element name="limits_of_power">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>rebellion</value>
+            <value>impeachment</value>
+            <value>fixed_terms</value>
+            <value>checks_and_balances</value>
+            <value>protection_of_the_individual</value>
+            <value>transition_of_power</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="person">
+          <choice>
+            <value>Hobbes</value>
+            <value>Rosseau</value>
+            <value>Montesquieu</value>
+            <value>Locke</value>
+            <value>all</value>
+          </choice>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+</grammar>
