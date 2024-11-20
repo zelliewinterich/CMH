@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('https://www.archives.gov/files/founding-docs/downloads/Constitution_Pg1of4_AC.jpg');
+  background-image: url('https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/images/1600/page_masthead/Constitution.jpg');
   background-size: cover; /* Ensures the image covers the whole page */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
