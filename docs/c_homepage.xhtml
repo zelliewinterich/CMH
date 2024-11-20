@@ -11,47 +11,20 @@
                                 #b2e3d9);   
     background-size: 100% 325%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
     } h1, h2, h3, p { text-align: center; text-decoration: underline; margin-top: 25px; margin-bottom: 25px; line-height: 1.5; padding-top: 5px; padding-bottom: 5px;
-    } table, th, td { border: 1px solid black; padding: 10px;
-    } .navbar { background-color: #333; display: flex; justify-content: space-evenly; align-items: center; padding: 8px 20px;
-    } .navbar a, .dropdown { float: none;  display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;
-    } .navbar a { border: none; outline: none;   
-    } .navbar a:hover { background-color: #ddd; color: black;
-    } .dropdown { position: relative;
-    } .dropdown .dropbtn { background-color: #333; border: none; outline: none; color: white; padding: 14px 16px; font-size: 16px; cursor: pointer;
-    } .dropdown:hover .dropbtn { background-color: #ddd; color: black;
-    } .dropdown .dropbtn:focus { outline: none; box-shadow: none; 
+    } table, th, td { border: 1px solid black; padding: 10px; } .navbar { background-color: #333; display: flex; justify-content: space-evenly; align-items: center; padding: 8px 20px; font-family: Georgia, serif;
+    } .navbar a, .dropdown { float: none;  display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; font-family: Georgia, serif;
+    } .navbar a { border: none; outline: none; } .navbar a:hover { background-color: #ddd; color: black; } .dropdown { position: relative;
+    } .dropdown .dropbtn { background-color: #333; border: none; outline: none; color: white; padding: 14px 16px; font-size: 16px; cursor: pointer; font-family: Georgia, serif;
+    } .dropdown:hover .dropbtn { background-color: #ddd; color: black; } .dropdown .dropbtn:focus { outline: none; box-shadow: none; 
     } .dropdown-content { display: none; position: absolute; background-color: #333; min-width: 160px; z-index: 1;
-    } .dropdown:hover .dropdown-content {
-        display: block;
-    } .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block;
-    } .dropdown-content a:hover { background-color: #ddd; color: black;
-    } .polaroid-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 50px;
+    } .dropdown:hover .dropdown-content { display: block; } .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; font-family: Georgia, serif;
+    } .dropdown-content a:hover { background-color: #ddd; color: black; } .polaroid-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 50px;
     } .polaroid { background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px; border-top: 10px solid white; width: 20%;  max-width: 300px; } 
-    .polaroid img { width: 100%; height: auto;} .container { text-align: center; padding: 8px 15px;} 
-    .table-container { display: flex; justify-content: center; align-items: center; padding: 20px; }
-    @media screen and (max-width: 768px) {
-    .navbar { flex-direction: column; }
-    .polaroid-container { flex-direction: column; }
-    .polaroid { width: 45%; }
-    .table-container { padding: 10px; }
-    }
-    @media screen and (max-width: 480px) {
-    .polaroid { width: 90%; }
-    }
-    #quote-generator {
-        margin-top: 40px; padding: 20px; background-color: #f0f8ff;  border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 60%; margin-left: auto; margin-right: auto;
-    }
-    #quote-generator h2 {
-        font-size: 24px; margin-bottom: 15px;
-    }
-    #quote-generator p {
-        font-size: 20px; margin-top: 10px;
-    }
-    button { margin-top: 20px; padding: 10px 20px; background-color: #333; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;
-    }
-    button:hover {
-        background-color: #444;
-    }
+    .polaroid img { width: 100%; height: auto;} .container { text-align: center; padding: 8px 15px;} .table-container { display: flex; justify-content: center; align-items: center; padding: 20px; }
+    @media screen and (max-width: 768px) { .navbar { flex-direction: column; } .polaroid-container { flex-direction: column; } .polaroid { width: 45%; } .table-container { padding: 10px; }
+    } @media screen and (max-width: 480px) { .polaroid { width: 90%; } } #quote-generator { margin-top: 40px; padding: 20px; background-color: #f0f8ff;  border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 60%; margin-left: auto; margin-right: auto;
+    } #quote-generator h2 { font-size: 24px; margin-bottom: 15px; } #quote-generator p { font-size: 20px; margin-top: 10px; } button { margin-top: 20px; padding: 10px 20px; background-color: #333; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;
+    } button:hover { background-color: #444; }
         </style>
     </head>
     <body>
@@ -114,9 +87,9 @@
             </div>
         </section>
         <!-- fun fact generator -->
-        <section id="fun-fact" style="text-align:center; margin-top: 40px;">
-            <button onclick="generateFunFact()" style="padding: 12px 24px; font-size: 18px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Generate Fun Fact</button>
-            <p id="fact-display" style="font-size: 20px; font-style: italic; color: #333; margin-top: 20px; font-family: Arial, sans-serif;">Click the button to see a fun fact!</p>
+        <section id="fun-fact" style="text-align:center; margin-top: 40px; font-family: Georgia, serif;">
+            <button onclick="generateFunFact()" style="padding: 12px 24px; font-size: 18px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; font-family: Georgia, serif;">Generate Fun Fact</button>
+            <p id="fact-display" style="font-size: 20px; font-style: italic; color: #333; margin-top: 20px; font-family: Georgia, serif;">Click the button to see a fun fact!</p>
         </section>
         
         <!-- images -->
@@ -184,11 +157,11 @@
         </section>
         
         <!-- quote generator -->
-        <section id="quote-generator" style="text-align:center; margin-top: 40px;">
+        <section id="quote-generator" style="text-align:center; margin-top: 40px; font-family: Georgia, serif;">
             <h2>Random Quote Generator</h2>
-            <p id="quote-text" style="font-size: 20px; font-style: italic;">Click the button below to get a quote from one of the thinkers.</p>
-            <p id="quote-author" style="font-size: 18px; font-style: normal; font-weight: bold;"></p>
-            <button onclick="generateQuote()">Get Quote</button>
+            <p id="quote-text" style="font-size: 20px; font-style: italic; font-family: Georgia, serif;">Click the button below to get a quote from one of the thinkers.</p>
+            <p id="quote-author" style="font-size: 18px; font-style: normal; font-weight: bold; font-family: Georgia, serif;"></p>
+            <button onclick="generateQuote()" style="font-family: Georgia, serif;">Get Quote</button>
         </section>
         
         <!-- images pt 2 -->
@@ -238,6 +211,13 @@
                     "John Locke's writings were partially responsible for the inclusion of life, liberty, and property within the American Constitution.",
                     "The original Bill of Rights was only ten amendments, with the other seventeen being included throughout American history.",
                     "The Supreme Court of the United States acts on precedent, meaning they can only rule on the words provided to them in the Constitution and its amendments, or past rulings.",
+                    "The United States Constitution is the oldest written National Constitution.",
+                    "Locke is also known as the 'Father of Liberalism'.",
+                    "Locke's philosophy also had a large impact on psychology, especially his 'Tabula Rasa'.",
+                    "When Montesquieu first wrote the 'Persian Letters' he published it under a pen name.",
+                    "Montesquieu and fellow Enlightenment thinker, Voltaire, were friends.",
+                    "Zellie's go-to coffee order is a large vanilla (not vanilla bean) cold brew with half and half, light ice (extremely light), and 2 espresso shots. During the winter months, she'll add dark chocolate peppermint too. Sometimes she'll top with cold foam if she's feeling risky. And of course she gets this from her work place, Saxbys!",
+                    "Thomas Hobbes, while having writing that could be viewed as pro-democracy, was actually a royalist and believed in the power of the monarchy.",
                     "The United States of America was founded in 1776 but the Constitution was not written until after."
                 ];
 
