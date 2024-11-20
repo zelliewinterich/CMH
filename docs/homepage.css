@@ -6,17 +6,12 @@
 }
 
 body {
-  background: #f5e1a4; /* Light tan background */
-  background-image:
-    radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 5px 5px, 10px 10px; /* Creates a subtle grainy texture */
-  background-position: 0 0, 2.5px 2.5px; /* Slightly offset for a random pattern */
-  margin: 0;
-  height: 100vh; /* Ensure it covers the full screen */
-  font-family: 'Georgia', serif; /* Optional: Classic vintage font */
-  color: black; /* Black text for good contrast */
+    background-color: lightBlue;
+  font-family: 'Georgia', serif; /* Optional: Vintage font for old paper feel */
+  color: black; /* Black text for readability */
+ 
 }
+
 
 
 
