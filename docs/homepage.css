@@ -5,14 +5,19 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: linear-gradient(lightblue, white);
-  font-family: 'Georgia', serif; 
-  
- 
+ body {
+    /* Create a smooth gradient with multiple light blue shades */
+    background: linear-gradient(to bottom, 
+                                #add8e6,    /* Light blue */
+                                #bfefff,    /* Lighter blue */
+                                #cfe2f3,    /* Even lighter blue */
+                                #d0f0c0);   /* Pale cyan (almost white) for the final ombre effect */
+    
+    font-family: 'Georgia', serif; /* Optional: Vintage font for old paper feel */
+    color: black; /* Black text for readability */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Ensure the gradient fills the entire height of the viewport */
 }
-
-
 
 
 /* Headings */
