@@ -6,12 +6,13 @@
 }
 
 body {
-    background-color: lightBlue;
-  font-family: 'Georgia', serif; /* Optional: Vintage font for old paper feel */
-  color: black; /* Black text for readability */
- 
+    background: linear-gradient(to bottom, #0000FF, #87CEEB); /* Blue to light blue gradient */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Optional, for centering content */
+    justify-content: center; /* Optional, for centering content */
+    align-items: center; /* Optional, for centering content */
 }
-
 
 
 
