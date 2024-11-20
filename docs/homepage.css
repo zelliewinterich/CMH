@@ -6,13 +6,12 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #0000FF, #87CEEB); /* Blue to light blue gradient */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Optional, for centering content */
-    justify-content: center; /* Optional, for centering content */
-    align-items: center; /* Optional, for centering content */
+    background-image: linear-gradient(lightblue, white);
+  font-family: 'Georgia', serif; 
+  
+ 
 }
+
 
 
 
