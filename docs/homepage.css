@@ -6,11 +6,13 @@
 }
 
 body {
-  background-image: url('https://media.istockphoto.com/id/494293677/photo/rusty-old-paper.jpg?s=612x612&w=0&k=20&c=ilLm0hKkVUZ75XwrJ3RpsxXkybUzNpfOVArgPmvmGHE=');
-  background-size: cover; /* Ensures the image covers the whole page */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-color: #e3c19e; /* Lighter tan color */
+  margin: 0;
+  height: 100vh; /* Ensures the background covers the entire screen */
+  font-family: 'Georgia', serif; /* Optional: Vintage font for a classic look */
+  color: black; /* Set the text color to black */
 }
+
 
 
 /* Headings */
