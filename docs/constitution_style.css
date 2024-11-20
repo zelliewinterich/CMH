@@ -43,9 +43,8 @@ a:visited {
 }
 
 svg {
-    transform: translateY(110px);
-    margin-top: 0px;
-    margin-bottom: 0px;
+    transform: translateY(15px);
+    
     /* Slightly adjust the position to align with the select box */
 }
 .center {
