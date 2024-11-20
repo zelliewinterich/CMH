@@ -6,9 +6,12 @@
 }
 
 body {
-    background-image: url("https://www.archives.gov/files/founding-docs/downloads/Constitution_Pg1of4_AC.jpg");
-    font-family: Arial, sans-serif;
+  background-image: url('https://www.archives.gov/files/founding-docs/downloads/Constitution_Pg1of4_AC.jpg');
+  background-size: cover; /* Ensures the image covers the whole page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
 
 /* Headings */
 h1, h2, h3, p {
