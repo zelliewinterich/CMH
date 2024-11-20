@@ -42,8 +42,10 @@ a:visited {
     padding: 0 10px; /* Adjust padding if necessary to match proportions */
 }
 
-svg* {
-    transform: translateY(300px) translateX(30px);
+svg {
+    transform: translateY(110px);
+    margin-top: 0px;
+    margin-bottom: 0px;
     /* Slightly adjust the position to align with the select box */
 }
 .center {
@@ -60,7 +62,7 @@ hr {
   margin-right: auto;
   border-style: inset;
   border-width: 5px;
-  border: 5px solid black;
+  border: 2px solid black;
   border-top: red;
   border-radius: 2px;
 }
