@@ -1,6 +1,4 @@
-body {
-                background-color: lightBlue;
-            }
+
 
             .polaroid-container {
                 display: flex;
@@ -18,7 +16,7 @@ body {
                 width: 20%;
                 max-width: 300px;
                 margin-top: 40px;
-                margin-right: 20px; /* Adds space to the right of each image */
+                margin-right: 20px; 
                 margin-left: 20px;
             }
 
@@ -61,6 +59,6 @@ body {
 
             @media screen and (max-width: 480px) {
                 .polaroid {
-                    width: 90%; /* Stack images on mobile */
+                    width: 90%; 
                 }
             }
