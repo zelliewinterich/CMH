@@ -4,16 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    /* Create a smooth gradient with slightly darker light blue shades */
-    background: linear-gradient(to bottom, 
+    /* Create a diagonal gradient background with light blue ombre shades */
+    background: linear-gradient(to bottom right, 
                                 #87cefa,    /* Light blue, slightly darker */
                                 #a4d7f5,    /* Slightly darker lighter blue */
                                 #9ecbe8,    /* Slightly darker even lighter blue */
                                 #a3d9e3);   /* Pale cyan, slightly darker */
     
-    font-family: 'Georgia', serif; /* Optional: Vintage font for an old paper feel */
+    font-family: 'Georgia', serif; /* Vintage font for an old paper feel */
     color: black; /* Black text for readability */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
