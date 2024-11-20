@@ -5,30 +5,23 @@
     box-sizing: border-box;
 }
 
-body {
-    /* Linear gradient that goes from a darker light blue to a lighter light blue */
+ body {
+    /* Darker light blue to lighter light blue gradient */
     background: linear-gradient(to bottom, 
                                 #4682b4,    /* Darker light blue (steel blue) */
                                 #5f9ea0,    /* Medium-dark blue (cadet blue) */
                                 #7ec8e3,    /* Light cyan (lighter blue) */
                                 #add8e6);   /* Very light blue (almost pastel) */
-
-    /* Ensure the gradient fills the entire screen */
-    background-size: 100% 100%; /* Make sure it covers the full body without repeating */
     
-    /* Remove any background repetition */
-    background-repeat: no-repeat; 
-
     font-family: 'Georgia', serif; /* Optional: Vintage font for old paper feel */
     color: black; /* Black text for readability */
     margin: 0; /* Remove default margin */
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh; /* Ensure the gradient fills the entire height of the viewport */
     display: flex; /* Flexbox centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     text-align: center; /* Center text */
 }
-
 
 
 
