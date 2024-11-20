@@ -11,7 +11,7 @@ body {
                                 #a4d7f5,    /* Slightly darker lighter blue */
                                 #9ecbe8,    /* Slightly darker even lighter blue */
                                 #a3d9e3);   /* Pale cyan, slightly darker */
-    
+    background-size: cover;
     font-family: 'Georgia', serif; /* Vintage font for an old paper feel */
     color: black; /* Black text for readability */
     margin: 0; /* Remove default margin */
