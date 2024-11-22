@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Constitution Opinion Poll</title>
+        <link rel="stylesheet" type="text/css" href="poll.css">
+    </head>
+    
+    <body>
+        <h1>Constitution Influence Poll</h1>
+        
+        <section id="poll-section">
+            <h2>Who do you think influenced the U.S. Constitution the most?</h2>
+            
+            <form id="poll-form">
+                <label>
+                    <input type="radio" name="poll" value="Hobbes"> Thomas Hobbes
+                </label><br><br>
+                
+                <label>
+                    <input type="radio" name="poll" value="Locke"> John Locke
+                </label><br><br>
+                
+                <label>
+                    <input type="radio" name="poll" value="Rousseau"> Jean-Jacques Rousseau
+                </label><br><br>
+                
+                <label>
+                    <input type="radio" name="poll" value="Montesquieu"> Montesquieu
+                </label><br><br>
+                
+                <button type="button" onclick="submitPoll()">Submit Vote</button>
+            </form>
+            
+            <!-- Results Display -->
+            <div id="poll-results" style="display: none;">
+                <h3>Poll Results:</h3>
+                <p><strong>Thomas Hobbes:</strong> <span id="hobbes-count">0</span></p>
+                <p><strong>John Locke:</strong> <span id="locke-count">0</span></p>
+                <p><strong>Jean-Jacques Rousseau:</strong> <span id="rousseau-count">0</span></p>
+                <p><strong>Montesquieu:</strong> <span id="montesquieu-count">0</span></p>
+            </div>
+        </section>
+        
+        <script>
+        // Initialize poll counts
+        let pollResults = {
+            "Hobbes": 0,
+            "Locke": 0,
+            "Rousseau": 0,
+            "Montesquieu": 0
+        };
+
+        // Function to submit the poll
+        function submitPoll() {
+            const pollForm = document.getElementById('poll-form');
+            const pollOptions = document.getElementsByName('poll');  // Access the radio buttons by their name
+            let selectedOption = null;
+
+            // Loop through all radio buttons and find the checked one
+            for (let i = 0; i < pollOptions.length; i++) {
+                if (pollOptions[i].checked) {
+                    selectedOption = pollOptions[i].value;
+                    break;
+                }
+            }
+
+            // If no answer is selected, alert the user
+            if (!selectedOption) {
+                alert('Please select an option before submitting.');
+                return;
+            }
+
+            // Update the poll results count
+            pollResults[selectedOption]++;
+
+            // Display the poll results
+            document.getElementById('poll-results').style.display = 'block';
+            document.getElementById('hobbes-count').textContent = pollResults['Hobbes'];
+            document.getElementById('locke-count').textContent = pollResults['Locke'];
+            document.getElementById('rousseau-count').textContent = pollResults['Rousseau'];
+            document.getElementById('montesquieu-count').textContent = pollResults['Montesquieu'];
+
+            // Hide the poll form after submission
+            document.getElementById('poll-form').style.display = 'none';
+        }
+    </script>
+    </body>
+</html>
