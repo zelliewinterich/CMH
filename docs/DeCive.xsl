@@ -79,11 +79,7 @@
                 <h3 style="text-align:center;">
                     <xsl:value-of select="subsection_name"/>
                 </h3>
-                <xsl:for-each select="subsection_name">
-                    <h3 id="{@number}">
-                        <xsl:value-of select="subsection_name"/>
-                    </h3>
-                </xsl:for-each>
+                
             </div>
             <p> 
                 <xsl:value-of select="text() | (consent_of_governed | inherent_rights | criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power)"/>
