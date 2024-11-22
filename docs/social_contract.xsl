@@ -14,70 +14,10 @@
             <head>
                 <title>Social Contract</title>
                 <link rel="stylesheet" type="text/css" href="constitutionstyle.css"/>
-                <style>.navbar a, .dropdown { float: none;  display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; font-family: Georgia, serif;
-                    } .navbar a { border: none; outline: none; } .navbar a:hover { background-color: #ddd; color: black; } .dropdown { position: relative;
-                    } .dropdown .dropbtn { background-color: #333; border: none; outline: none; color: white; padding: 14px 16px; font-size: 16px; cursor: pointer; font-family: Georgia, serif;
-                    } .dropdown:hover .dropbtn { background-color: #ddd; color: black; } .dropdown .dropbtn:focus { outline: none; box-shadow: none; 
-                    } .dropdown-content { display: none; position: absolute; background-color: #333; min-width: 160px; z-index: 1;
-                    } .dropdown:hover .dropdown-content { display: block; } .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; font-family: Georgia, serif;
-                    } .dropdown-content a:hover { background-color: #ddd; color: black; } .navbar { background-color: #333; display: flex; justify-content: space-evenly; align-items: center; padding: 8px 20px; font-family: Georgia, serif; } </style>
+                
             </head>
             <body>
-                <!-- dropdown menu code -->
-                <section id="navigation">
-                    <div class="navbar">
-                        <a href="#home">Home</a> <!-- no need for drop down aspect --> 
-                        <div class="dropdown">
-                            <button class="dropbtn">The US Constitution
-                                <i class="fa fa-caret-down"></i>
-                                <!-- links for the constitution document-->
-                            </button>
-                            
-                            <div class="dropdown-content">
-                                <!-- Link to load the Constitution HTML page in the same window -->
-                                <a href="https://zelliewinterich.github.io/CMH/final_const.html">Constitution Document</a>
-                            </div>
-                            
-                        </div> 
-                        <div class="dropdown">
-                            <button class="dropbtn">Seminal Works 
-                                <i class="fa fa-caret-down"></i>
-                                <!-- links for seminal works -->
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="https://zelliewinterich.github.io/CMH/DeCive.xhtml">De Cive</a>
-                                <a href="https://zelliewinterich.github.io/CMH/Locke.xhtml">Second Treatise</a>
-                                <a href="https://zelliewinterich.github.io/CMH/social_contract.xhtml">Social Contract</a>
-                                <a href="https://zelliewinterich.github.io/CMH/SOL.xhtml">Spirit of Laws</a>
-                                <!-- for each seminal work -->
-                            </div>
-                        </div> 
-                        <div class="dropdown">
-                            <button class="dropbtn">About 
-                                <i class="fa fa-caret-down"></i>
-                                <!-- links for the about section -->
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="https://zelliewinterich.github.io/CMH/about.xhtml">Methodology</a>
-                                <!-- methodology page -->     
-                                <a href="https://zelliewinterich.github.io/CMH/thinkers.xhtml">Thinkers</a>
-                                <!-- thinkers page -->
-                            </div>
-                        </div> 
-                        <div class="dropdown">
-                            <button class="dropbtn">Data and Graphs 
-                                <i class="fa fa-caret-down"></i>
-                                <!-- links for SVG, heatmap, and poll-->
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="https://zelliewinterich.github.io/CMH/const-test.html">Attribute Data</a>
-                                <a href="https://zelliewinterich.github.io/CMH/opinionpoll.html">Opinion Poll</a>
-                                <a href="https://zelliewinterich.github.io/CMH/SVGdata_sig.xhtml">SVG Graphs</a>
-                            </div>
-                        </div> 
-                        <a href="https://zelliewinterich.github.io/CMH/citation.xhtml">Work Cited</a>
-                    </div>
-                </section>
+                
                 <h1 style="text-align:center;">The Social Contract and Discourses by Jean Jacques Rousseau</h1>
     
                 
