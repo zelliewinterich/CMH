@@ -16,8 +16,49 @@
                                 #8fbce0,   
                                 #b2e3d9);   
     background-size: 100% 3975%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
-}         
+}         ul.toc {
+            list-style-type: none;
+            padding: 0;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 20%;
+        }
+        ul.toc li {
+            padding: 8px;
+            margin: 4px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 100%;
+                                border: 2px solid black;
+        }
+        ul.toc ul {
+            display: none;
+            margin-left: 20px;
+           
+        }
+        ul.toc li:hover {
+            background-color: #e0e0e0;
+        }
       </style>
+         <script type="text/javascript">
+        // Function to toggle the visibility of the chapter list under each book
+        function toggleChapter(chapterId) {
+            var chapter = document.getElementById(chapterId);
+            if (chapter.style.display === "none") {
+                chapter.style.display = "block";
+            } else {
+                chapter.style.display = "none";
+            }
+        }
+         </script>
    </head>
    <body>
          
@@ -166,10 +207,10 @@
       </div>
       <h2 style="text-align:left; margin: 20px;">Table of Contents</h2>
       <hr/>
-      <ul>
-         <li>
+      <ul class="toc">
+            <li onclick="toggleChapter('Chapter1')">
             <h2 style="font-style:italic;"><a href="#Chapter_1">Chapter_1.</a></h2>
-         </li>
+         <ul id="Chapter1" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#1.1">1.1</a></i></li>
@@ -179,9 +220,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#1.3">1.3</a></i></li>
-         <li>
+         </ul>
+            </li>
+            <li onclick="toggleChapter('Chapter2')">
             <h2 style="font-style:italic;"><a href="#Chapter_2">Chapter_2.</a></h2>
-         </li>
+         <ul id="Chapter2" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#2.1">2.1</a></i></li>
@@ -218,9 +261,10 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#2.12">2.12</a></i></li>
-         <li>
+         </ul></li>
+            <li onclick="toggleChapter('Chapter3')">
             <h2 style="font-style:italic;"><a href="#Chapter_3">Chapter_3.</a></h2>
-         </li>
+         <ul id="Chapter3" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#3.1">3.1</a></i></li>
@@ -239,9 +283,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#3.6">3.6</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter4')">
             <h2 style="font-style:italic;"><a href="#Chapter_4">Chapter_4.</a></h2>
-         </li>
+         <ul id="Chapter4" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#4.1">4.1</a></i></li>
@@ -251,9 +297,10 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#4.3">4.3</a></i></li>
-         <li>
+         </ul></li>
+            <li onclick="toggleChapter('Chapter5')">
             <h2 style="font-style:italic;"><a href="#Chapter_5">Chapter_5.</a></h2>
-         </li>
+         <ul id="Chapter5" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#5.1">5.1</a></i></li>
@@ -335,9 +382,10 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#5.27">5.27</a></i></li>
-         <li>
+         </ul></li>
+            <li onclick="toggleChapter('Chapter6')">
             <h2 style="font-style:italic;"><a href="#Chapter_6">Chapter_6.</a></h2>
-         </li>
+         <ul id="Chapter6" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#6.1">6.1</a></i></li>
@@ -413,9 +461,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#6.25">6.25</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter7')">
             <h2 style="font-style:italic;"><a href="#Chapter_7">Chapter_7.</a></h2>
-         </li>
+         <ul id="Chapter7" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#7.1">7.1</a></i></li>
@@ -470,9 +520,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#7.18">7.18</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter8')">
             <h2 style="font-style:italic;"><a href="#Chapter_8">Chapter_8.</a></h2>
-         </li>
+         <ul id="Chapter8" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#8.1">8.1</a></i></li>
@@ -557,9 +609,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#8.28">8.28</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter9')">
             <h2 style="font-style:italic;"><a href="#Chapter_9">Chapter_9.</a></h2>
-         </li>
+         <ul id="Chapter9" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#9.1">9.1</a></i></li>
@@ -587,18 +641,22 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#9.9">9.9</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter10')">
             <h2 style="font-style:italic;"><a href="#Chapter_10">Chapter_10.</a></h2>
-         </li>
+         <ul id="Chapter10" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#10.1">10.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#10.2">10.2</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter11')">
             <h2 style="font-style:italic;"><a href="#Chapter_11">Chapter_11.</a></h2>
-         </li>
+         <ul id="Chapter11" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#11.1">11.1</a></i></li>
@@ -626,9 +684,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#11.9">11.9</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter12')">
             <h2 style="font-style:italic;"><a href="#Chapter_12">Chapter_12.</a></h2>
-         </li>
+         <ul id="Chapter12" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#12.1">12.1</a></i></li>
@@ -647,9 +707,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#12.6">12.6</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter13')">
             <h2 style="font-style:italic;"><a href="#Chapter_13">Chapter_13.</a></h2>
-         </li>
+         <ul id="Chapter13" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#13.1">13.1</a></i></li>
@@ -680,9 +742,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#13.10_">13.10_</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter14')">
             <h2 style="font-style:italic;"><a href="#Chapter_14">Chapter_14.</a></h2>
-         </li>
+         <ul id="Chapter14" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#14.1">14.1</a></i></li>
@@ -713,9 +777,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#14.10_">14.10_</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter15')">
             <h2 style="font-style:italic;"><a href="#Chapter_15">Chapter_15.</a></h2>
-         </li>
+         <ul id="Chapter15" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#15.1">15.1</a></i></li>
@@ -734,9 +800,10 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#15.6">15.6</a></i></li>
-         <li>
+         </ul></li>
+            <li onclick="toggleChapter('Chapter16')">
             <h2 style="font-style:italic;"><a href="#Chapter_16">Chapter_16.</a></h2>
-         </li>
+         <ul id="Chapter16" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#16.1">16.1</a></i></li>
@@ -803,18 +870,22 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#16.22">16.22</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter17')">
             <h2 style="font-style:italic;"><a href="#Chapter_17">Chapter_17.</a></h2>
-         </li>
+         <ul id="Chapter17" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#17.1">17.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#17.2">17.2</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter18')">
             <h2 style="font-style:italic;"><a href="#Chapter_18">Chapter_18.</a></h2>
-         </li>
+         <ul id="Chapter18" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#18.1">18.1</a></i></li>
@@ -851,9 +922,11 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#18.12">18.12</a></i></li>
-         <li>
+         </ul></li>
+            
+            <li onclick="toggleChapter('Chapter19')">
             <h2 style="font-style:italic;"><a href="#Chapter_19">Chapter_19.</a></h2>
-         </li>
+         <ul id="Chapter19" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#19.1">19.1</a></i></li>
@@ -953,6 +1026,7 @@
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#19.33">19.33</a></i></li>
+         </ul></li>
       </ul>
       <hr/>
       <div class="section">

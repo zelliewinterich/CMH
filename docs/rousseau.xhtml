@@ -16,8 +16,49 @@
                                 #8fbce0,   
                                 #b2e3d9);   
     background-size: 100% 4625%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
-}      
+}      ul.toc {
+            list-style-type: none;
+            padding: 0;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 20%;
+        }
+        ul.toc li {
+            padding: 8px;
+            margin: 4px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 100%;
+                                border: 2px solid black;
+        }
+        ul.toc ul {
+            display: none;
+            margin-left: 20px;
+           
+        }
+        ul.toc li:hover {
+            background-color: #e0e0e0;
+        }
          </style>
+         <script type="text/javascript">
+        // Function to toggle the visibility of the chapter list under each book
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
    </head>
    <body>
          
@@ -92,163 +133,163 @@
       <hr/>
       <h2 style="text-align:left; margin: 20px;">Table of Contents</h2>
       <hr/>
-      <ul>
-         <li>
+      <ul class="toc">
+         <li onclick="toggleSection('Section1')">
             <h2 style="font-style:italic;"><a href="#Section_1">Section_1.</a></h2>
-         </li>
+         <ul id="Section1" style="display:none;">
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.1">1.1</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.2">1.2</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.3">1.3</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.4">1.4</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.5">1.5</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.6">1.6</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.7">1.7</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#1.8">1.8</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.9">1.9</a></i></li>
-         <li>
+               Chapter:
+               </i><i><a href="#1.9">1.9</a></i></li></ul></li>
+         <li onclick="toggleSection('Section2')">
             <h2 style="font-style:italic;"><a href="#Section_2">Section_2.</a></h2>
-         </li>
+         <ul id="Section2" style="display:none;">
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.1">2.1</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.2">2.2</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#2.3">2.3</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.4">2.4</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.5">2.5</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.6">2.6</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.7">2.7</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.8">2.8</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.9">2.9</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.10_">2.10_</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#2.11">2.11</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.12">2.12</a></i></li>
-         <li>
+               Chapter:
+               </i><i><a href="#2.12">2.12</a></i></li></ul></li>
+         <li onclick="toggleSection('Section3')">
             <h2 style="font-style:italic;"><a href="#Section_3">Section_3.</a></h2>
-         </li>
+         <ul id="Section3" style="display:none;">
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.1">3.1</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.2">3.2</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.3">3.3</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.4">3.4</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.5">3.5</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.6">3.6</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.7">3.7</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.8">3.8</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.9">3.9</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.10_">3.10_</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.11">3.11</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.12">3.12</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.13">3.13</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.14">3.14</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.15">3.15</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.16">3.16</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#3.17">3.17</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.18">3.18</a></i></li>
-         <li>
+               Chapter:
+               </i><i><a href="#3.18">3.18</a></i></li></ul></li>
+         <li onclick="toggleSection('Section4')">
             <h2 style="font-style:italic;"><a href="#Section_4">Section_4.</a></h2>
-         </li>
+         <ul id="Section4" style="display:none;">
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.1">4.1</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.2">4.2</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.3">4.3</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.4">4.4</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.5">4.5</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.6">4.6</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.7">4.7</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
+               Chapter:
                </i><i><a href="#4.8">4.8</a></i></li>
          <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.9">4.9</a></i></li>
+               Chapter:
+               </i><i><a href="#4.9">4.9</a></i></li></ul></li>
       </ul>
       <hr/>
       <div class="section">

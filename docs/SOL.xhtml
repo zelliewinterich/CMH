@@ -10,7 +10,56 @@
                     } .dropdown-content { display: none; position: absolute; background-color: #333; min-width: 160px; z-index: 1;
                     } .dropdown:hover .dropdown-content { display: block; } .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; font-family: Georgia, serif;
                     } .dropdown-content a:hover { background-color: #ddd; color: black; } .navbar { background-color: #333; display: flex; justify-content: space-evenly; align-items: center; padding: 8px 20px; font-family: Georgia, serif;}
-                </style>
+        body { background: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+    background-size: 100% 13475%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
+}         
+ ul.toc {
+            list-style-type: none;
+            padding: 0;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 20%;
+        }
+        ul.toc li {
+            padding: 8px;
+            margin: 4px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 100%;
+                                border: 2px solid black;
+        }
+        ul.toc ul {
+            display: none;
+            margin-left: 20px;
+           
+        }
+        ul.toc li:hover {
+            background-color: #e0e0e0;
+        }
+      </style>
+      <script type="text/javascript">
+        // Function to toggle the visibility of the chapter list under each book
+        function toggleBook(bookId) {
+            var book = document.getElementById(bookId);
+            if (book.style.display === "none") {
+                book.style.display = "block";
+            } else {
+                book.style.display = "none";
+            }
+        }
+    </script>
    </head>
    <body>
       
@@ -78,7 +127,7 @@
                Written by: Baron de Montesquieu
                </i></p>
       </div>
-      Edited By: Zellie Winterich
+    <p style="margin: 20px;">Edited By: Zellie Winterich</p>
       
       <hr/>
       <div class="preamble">
@@ -87,7 +136,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">PREFACE.</h3>
             <h3></h3>
-            <p style="text-align:center; font-style:italic;">
+            <p style="text-align:center; font-style:italic; margin: 20px;">
                
                IF, amidst the infinite number of subjects contained in this book, there is any thing
                which, contrary to my expectation, may possibly offend, I can at least assure the
@@ -167,12 +216,14 @@
          </div>
          <hr/>
       </div>
-      <h2 style="text-align:left;">Table of Contents</h2>
+      <h2 style="text-align:left; margin: 20px;">Table of Contents</h2>
       <hr/>
-      <ul>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_1">Book_1.</a></h2>
-         </li>
+      <ul class="toc">
+         <!-- book 1 -->
+         <li onclick="toggleBook('Book1')">
+            <h2 style="font-style:italic;"><a href="#Book_1">Book_1.</a></h2> (click here for chapters)
+         <ul id="Book1" style="display:none;">
+        
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#1.1">1.1</a></i></li>
@@ -182,9 +233,13 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#1.3">1.3</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_2">Book_2.</a></h2>
+         </ul>
          </li>
+         <!-- book 2 -->
+         <li onclick="toggleBook('Book2')">
+            <h2 style="font-style:italic;"><a href="#Book_2">Book_2.</a></h2>
+        (click here for chapters)
+        <ul id="Book2" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#2.1">2.1</a></i></li>
@@ -200,9 +255,12 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#2.5">2.5</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_3">Book_3.</a></h2>
+        </ul>
          </li>
+         
+         <li onclick="toggleBook('Book3')">
+            <h2 style="font-style:italic;"><a href="#Book_3">Book_3.</a></h2> (click here for chapters)
+         <ul id="Book3" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#3.1">3.1</a></i></li>
@@ -236,9 +294,12 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#3.11">3.11</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_4">Book_4.</a></h2>
+         </ul>
          </li>
+         
+         <li onclick="toggleBook('Book4')">
+            <h2 style="font-style:italic;"><a href="#Book_4">Book_4.</a></h2> (click here for chapters)
+         <ul id="Book4" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#4.1">4.1</a></i></li>
@@ -263,9 +324,12 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#4.8">4.8</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_5">Book_5.</a></h2>
+         </ul>
          </li>
+         
+         <li onclick="toggleBook('Book5')">
+            <h2 style="font-style:italic;"><a href="#Book_5">Book_5.</a></h2> (click here for chapters)
+         <ul id="Book5" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#5.1">5.1</a></i></li>
@@ -323,9 +387,12 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#5.19">5.19</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_6">Book_6.</a></h2>
+         </ul>
          </li>
+         
+         <li onclick="toggleBook('Book6')">
+            <h2 style="font-style:italic;"><a href="#Book_6">Book_6.</a></h2> (click here for chapters)
+         <ul id="Book6" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#6.1">6.1</a></i></li>
@@ -389,9 +456,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#6.21">6.21</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_7">Book_7.</a></h2>
-         </li>
+         </ul></li>
+         
+         <li onclick="toggleBook('Book7')">
+            <h2 style="font-style:italic;"><a href="#Book_7">Book_7.</a></h2> (click here for chapters)
+         <ul id="Book7" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#7.1">7.1</a></i></li>
@@ -443,9 +512,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#7.17">7.17</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_8">Book_8.</a></h2>
-         </li>
+         </ul></li>
+         
+         <li onclick="toggleBook('Book8')">
+            <h2 style="font-style:italic;"><a href="#Book_8">Book_8.</a></h2> (click here for chapters)
+            <ul id="Book8" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#8.1">8.1</a></i></li>
@@ -509,9 +580,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#8.21">8.21</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_9">Book_9.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book9')">
+            <h2 style="font-style:italic;"><a href="#Book_9">Book_9.</a></h2> (click here for chapters)
+            <ul id="Book9" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#9.1">9.1</a></i></li>
@@ -542,9 +615,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#9.10_">9.10_</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_10">Book_10.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book10')">
+            <h2 style="font-style:italic;"><a href="#Book_10">Book_10.</a></h2> (click here for chapters)
+            <ul id="Book10" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#10.1">10.1</a></i></li>
@@ -596,9 +671,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#10.17">10.17</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_11">Book_11.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book11')">
+            <h2 style="font-style:italic;"><a href="#Book_11">Book_11.</a></h2> (click here for chapters)
+            <ul id="Book11" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#11.1">11.1</a></i></li>
@@ -659,9 +736,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#11.20_">11.20_</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_12">Book_12.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book12')">
+            <h2 style="font-style:italic;"><a href="#Book_12">Book_12.</a></h2> (click here for chapters)
+            <ul id="Book12" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#12.1">12.1</a></i></li>
@@ -752,9 +831,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#12.30_">12.30_</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_13">Book_13.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book13')">
+            <h2 style="font-style:italic;"><a href="#Book_13">Book_13.</a></h2> (click here for chapters)
+            <ul id="Book13" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#13.1">13.1</a></i></li>
@@ -815,9 +896,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#13.20_">13.20_</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_14">Book_14.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book14')">
+            <h2 style="font-style:italic;"><a href="#Book_14">Book_14.</a></h2> (click here for chapters)
+            <ul id="Book14" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#14.1">14.1</a></i></li>
@@ -863,9 +946,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#14.15">14.15</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_15">Book_15.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book15')">
+            <h2 style="font-style:italic;"><a href="#Book_15">Book_15.</a></h2> (click here for chapters)
+            <ul id="Book15" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#15.1">15.1</a></i></li>
@@ -920,9 +1005,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#15.18">15.18</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_16">Book_16.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book16')">
+            <h2 style="font-style:italic;"><a href="#Book_16">Book_16.</a></h2> (click here for chapters)
+            <ul id="Book16" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#16.1">16.1</a></i></li>
@@ -971,9 +1058,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#16.16">16.16</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_17">Book_17.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book17')">
+            <h2 style="font-style:italic;"><a href="#Book_17">Book_17.</a></h2> (click here for chapters)
+            <ul id="Book17" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#17.1">17.1</a></i></li>
@@ -998,9 +1087,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#17.8">17.8</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_18">Book_18.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book18')">
+            <h2 style="font-style:italic;"><a href="#Book_18">Book_18.</a></h2> (click here for chapters)
+            <ul id="Book18" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#18.1">18.1</a></i></li>
@@ -1094,9 +1185,11 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#18.31">18.31</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Book_19">Book_19.</a></h2>
-         </li>
+            </ul></li>
+         
+         <li onclick="toggleBook('Book19')">
+            <h2 style="font-style:italic;"><a href="#Book_19">Book_19.</a></h2> (click here for chapters)
+            <ul id="Book19" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#19.1">19.1</a></i></li>
@@ -1178,13 +1271,14 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#19.27">19.27</a></i></li>
+            </ul></li>
       </ul>
       <hr/>
       <div class="section">
          <hr/>
          <h2 style="text-align:center;">BOOK I. OF LAWS IN GENERAL.</h2>
          <h2 id="Book_1"></h2>
-         <p>    
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">    
             
             
             
@@ -1198,7 +1292,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Of The Relation Of Laws To Different Beings.</h3>
             <h3 id="1.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 LAWS, in their most general signification, are the necessary relations arising from
@@ -1271,7 +1365,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of The Laws Of Nature.</h3>
             <h3 id="1.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                ANTECEDENT to the above-mentioned laws are those of nature; so called because they
@@ -1312,7 +1406,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. Of Positive Laws.</h3>
             <h3 id="1.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                AS soon as mankind enter into a state of society, they lose the sense of their weakness;
                equality ceases, and then commences the state of war.
@@ -1388,7 +1482,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK II. OF LAWS DIRECTLY DERIVED FROM THE NATURE OF GOVERNMENT.</h2>
          <h2 id="Book_2"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -1403,7 +1497,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Of The Nature Of Three Different Governments.</h3>
             <h3 id="2.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THERE are three species of government; republican, monarchical, and despotic. In order
                to discover their nature, it is sufficient to recollect the common notion, which supposes
@@ -1418,7 +1512,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of The Republican Government, And The Laws Relative To Democracy.</h3>
             <h3 id="2.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 WHEN the body of the people is possessed of the supreme power, this is called a democracy . When the supreme power is lodged in the hands of a part of the people, it is then
@@ -1540,7 +1634,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. Of The Laws Relative To The Nature Of Aristocracy.</h3>
             <h3 id="2.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 IN an aristocracy the supreme power is lodged in the hands of a certain number of
@@ -1616,7 +1710,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. Of The Relation Of Laws To The Nature Of Monarchical Government.</h3>
             <h3 id="2.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THE intermediate, subordinate, and dependent powers constitute the nature of monarchical
                government; I mean of that in which a single person governs by fundamental laws. I
@@ -1685,7 +1779,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. Of The Laws Relative To The Nature Of A Despotic Government.</h3>
             <h3 id="2.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 FROM the nature of despotic power it follows, that the single person, invested with
@@ -1720,7 +1814,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK III. OF THE PRINCIPLES OF THE THREE KINDS OF GOVERNMENT.</h2>
          <h2 id="Book_3"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -1740,7 +1834,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Difference Between The Nature And Principle Of Government.</h3>
             <h3 id="3.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                AFTER having examined the laws relative to the nature of each government, we must
@@ -1756,7 +1850,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of The Principle Of Different Governments.</h3>
             <h3 id="3.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                I have already observed,  that it is the nature of a republican government, that either the collective body
@@ -1769,7 +1863,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. Of The Principle Of Democracy.</h3>
             <h3 id="3.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 THERE is no great share of probity necessary to support a monarchical or despotic
@@ -1839,7 +1933,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. Of The Principle Of Aristocracy.</h3>
             <h3 id="3.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                AS virtue is necessary in a popular government, it is requisite, also, under an aristocracy.
                True it is, that, in the latter, it is not so absolutely requisite.
@@ -1867,7 +1961,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. That Virtue Is Not The Principle Of A Monarchical Government.</h3>
             <h3 id="3.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN monarchies, policy effects great things with as little virtue as possible. Thus,
                in the nicest machines, art has reduced the number of movements, springs, and wheels.
@@ -1908,7 +2002,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VI. In What Manner Virtue Is Supplied In A Monarchical Government.</h3>
             <h3 id="3.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                BUT it is high time for me to have done with this subject, lest I should be suspected
                of writing a satire against monarchical government. Far be it from me; if monarchy
@@ -1925,7 +2019,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VII. Of The Principle Of Monarchy.</h3>
             <h3 id="3.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                A monarchical government supposeth, as we have already observed, pre-eminences and
                ranks, as likewise a noble descent. Now, since it is the nature of honour to aspire
@@ -1949,7 +2043,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VIII. That Honour Is Not The Principle Of Despotic Government.</h3>
             <h3 id="3.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                HONOUR is far from being the principle of despotic government: mankind being here
                all upon a level, no one person can prefer himself to another; and as, on the other
@@ -1970,7 +2064,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IX. Of The Principle Of Despotic Government.</h3>
             <h3 id="3.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                AS virtue is necessary in a republic, and, in a monarchy, honour, so fear is necessary
                in a despotic government: with regard to virtue, there is no occasion for it, and
@@ -2002,7 +2096,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. X. Difference Of Obedience In Moderate And Despotic Governments.</h3>
             <h3 id="3.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN despotic states, the nature of government requires the most passive obedience;
                and, when once the prince’s will is made known, it ought infallibly to produce its
@@ -2043,7 +2137,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XI. Reflections On The Preceding Chapters.</h3>
             <h3 id="3.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                SUCH are the principles of the three sorts of government: which does not imply, that,
                in a particular republic, they actually are, but that they ought to be, virtuous:
@@ -2058,7 +2152,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK IV. THAT THE LAWS OF EDUCATION OUGHT TO BE RELATIVE TO THE PRINCIPLES OF GOVERNMENT.</h2>
          <h2 id="Book_4"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -2072,7 +2166,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Of The Laws Of Education.</h3>
             <h3 id="4.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THE laws of education are the first impressions we receive; and, as they prepare us
                for civil life, every private family ought to be governed by the plan of that great
@@ -2086,7 +2180,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of Education In Monarchies.</h3>
             <h3 id="4.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN monarchies the principal branch of education is not taught in colleges or academies:
                it commences, in some measure, at our setting out in the world; for this is the school
@@ -2181,7 +2275,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. Of Education In A Despotic Government.</h3>
             <h3 id="4.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                AS education in monarchies tends to raise and ennoble the mind, in despotic governments
                its only aim is to debase it. Here it must necessarily be servile: even in power such
@@ -2207,7 +2301,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. Difference Between The Effects Of Ancient And Modern Education.</h3>
             <h3 id="4.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                MOST of the ancients lived under governments that had virtue for their principle;
                and, when this was in full vigour, they performed actions unusual in our times, and
@@ -2225,7 +2319,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. Of Education In A Republican Government.</h3>
             <h3 id="4.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 IT is in a republican government that the whole power of education is required. The
@@ -2252,7 +2346,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VI. Of Some Institutions Among The Greeks.</h3>
             <h3 id="4.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THE ancient Greeks, convinced of the necessity that people who live under a popular
                government should be trained up to virtue, made very singular institutions in order
@@ -2313,7 +2407,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VII. In What Case These Singular Institutions May Be Of Service.</h3>
             <h3 id="4.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                INSTITUTIONS of this kind may be proper in republics, because they have virtue for
                their principle: but, to excite men to honour, in monarchies, or to imprint fear,
@@ -2334,7 +2428,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VIII. Explication Of A Paradox Of The Ancients, In Respect To Manners.</h3>
             <h3 id="4.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THAT judicious writer, Polybius, informs us, that music was necessary to soften the
                manners of the Arcadians, who lived in a cold gloomy country; that the inhabitants
@@ -2405,7 +2499,7 @@
          <h2 style="text-align:center;">BOOK V. THAT THE LAWS, GIVEN BY THE LEGISLATOR, OUGHT TO BE RELATIVE TO THE PRINCIPLE
             OF GOVERNMENT.</h2>
          <h2 id="Book_5"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -2435,7 +2529,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Idea Of This Book.</h3>
             <h3 id="5.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THAT the laws of education ought to be relative to the principle of each government
                has been shewn in the preceding book. Now, the same may be said of those which the
@@ -2450,7 +2544,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. What Is Meant By Virtue In A Political State.</h3>
             <h3 id="5.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 VIRTUE in a republic is a most simple thing; it is a love of the republic; it is a
@@ -2472,7 +2566,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. What Is Meant By A Love Of The Republic, In A Democracy.</h3>
             <h3 id="5.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 A love of the republic, in a democracy, is a love of the democracy; as the latter
@@ -2505,7 +2599,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. In What Manner The Love Of Equality And Frugality Is Inspired.</h3>
             <h3 id="5.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 THE love of equality and of a frugal economy is greatly excited by equality and frugality
@@ -2526,7 +2620,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. In What Manner The Laws Establish Equality In A Democracy.</h3>
             <h3 id="5.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                SOME ancient legislators, as Lycurgus and Romulus, made an equal division of lands.
@@ -2609,7 +2703,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VI. In What Manner The Laws Ought To Maintain Frugality In A Democracy.</h3>
             <h3 id="5.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 IT is not sufficient, in a well-regulated democracy, that the divisions of land be
@@ -2648,7 +2742,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VII. Other Methods Of Favouring The Principle Of Democracy.</h3>
             <h3 id="5.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                AN equal division of lands cannot be established in all democracies. There are some
@@ -2722,7 +2816,7 @@
             <h3 style="text-align:center;">CHAP. VIII. In What Manner The Laws Ought To Be Relative To The Principle Of Government
                In An Aristocracy.</h3>
             <h3 id="5.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IF the people are virtuous in an aristocracy, they enjoy very near the same happiness
                as in a popular government, and the state grows powerful. But, as a great share of
@@ -2832,7 +2926,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IX. In What Manner The Laws Are Relative To Their Principle In Monarchies.</h3>
             <h3 id="5.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                AS honour is the principle of a monarchical government, the laws ought to be relative
                to this principle.
@@ -2871,7 +2965,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. X. Of The Expedition Peculiar To The Executive Power In Monarchies.</h3>
             <h3 id="5.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                GREAT is the advantage which a monarchical government has over a republic. As the
                state is conducted by a single person, the executive power is thereby enabled to act
@@ -2897,7 +2991,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XI. Of The Excellence Of A Monarchical Government.</h3>
             <h3 id="5.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                MONARCHY has a great advantage over a despotic government. As it naturally requires
                there should be several orders or ranks of subjects, the state is more permanent,
@@ -2942,7 +3036,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XII. The Same Subject Continued.</h3>
             <h3 id="5.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                LET us not look for magnanimity in despotic governments. The prince cannot impart
                a greatness which he has not himself: with him there is no such thing as glory.
@@ -2955,7 +3049,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIII. An Idea Of Despotic Power.</h3>
             <h3 id="5.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                WHEN the savages of Louisiana are desirous of fruit, they cut the tree to the root,
                and
@@ -2965,7 +3059,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIV. In What Manner The Laws Are Relative To The Principles Of Despotic Government.</h3>
             <h3 id="5.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                THE principle of despotic government is fear: but a timid, ignorant, and faint-spirited
                people have no occasion for a great number of laws.
@@ -3114,7 +3208,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XV. The Same Subject Continued.</h3>
             <h3 id="5.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN warm climates, where despotic power generally prevails, the passions disclose themselves
                earlier, and are sooner extinguished? ; the understanding is sooner ripened; they
@@ -3162,7 +3256,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVI. Of The Communication Of Power.</h3>
             <h3 id="5.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN a despotic government, the power is communicated entire to the person intrusted
                with it. The vizir himself is the despotic prince; and each particular officer is
@@ -3201,7 +3295,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVII. Of Presents.</h3>
             <h3 id="5.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IT is a received custom, in despotic countries, never to address any superior whomsoever,
                not excepting their kings, without making them a present. The Mogul† never receives
@@ -3233,7 +3327,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVIII. Of Rewards Conferred By The Sovereign.</h3>
             <h3 id="5.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN despotic governments, where, as we have already observed, the principal motive
                of action is the hope of the conveniences of life, the prince who confers rewards
@@ -3257,7 +3351,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIX. New Consequences Of The Principles Of The Three Governments.</h3>
             <h3 id="5.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                I cannot conclude this book without making some applications of my three principles.
@@ -3359,7 +3453,7 @@
             SIMPLICITY OF CIVIL AND CRIMINAL LAWS, THE FORM OF JUDGEMENTS, AND THE INFLICTING
             OF PUNISHMENTS.</h2>
          <h2 id="Book_6"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -3397,7 +3491,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Of The Simplicity Of Civil Laws In Different Governments.</h3>
             <h3 id="6.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                MONARCHIES do not permit of so great a simplicity of laws as despotic governments:
                for, in monarchies, there must be courts of judicature: these must give their decisions:
@@ -3473,7 +3567,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of The Simplicity Of Criminal Laws In Different Governments.</h3>
             <h3 id="6.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                WE hear it generally said, that justice ought to be administered with us as in Turkey.
@@ -3515,7 +3609,7 @@
             <h3 style="text-align:center;">CHAP. III. In What Governments, And In What Cases, The Judges Ought To Determine According
                To The Express Letter Of The Law.</h3>
             <h3 id="6.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THE nearer the government approaches towards a republic, the more the manner of judging
@@ -3541,7 +3635,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. Of The Manner Of Passing Judgement.</h3>
             <h3 id="6.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 HENCE arises the different manner of passing judgement. In monarchies the judges choose
@@ -3573,7 +3667,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. In What Governments The Sovereign May Be Judge.</h3>
             <h3 id="6.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                MACHIAVEL§ attributes the loss of the liberty of Florence to the people’s not judging
@@ -3657,7 +3751,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VI. That, In Monarchies, Ministers Ought Not To Sit As Judges.</h3>
             <h3 id="6.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 IT is, likewise, a very great inconveniency, in monarchies, for the ministers of the
@@ -3677,7 +3771,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VII. Of A Single Magistrate.</h3>
             <h3 id="6.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 A magistracy of this kind cannot take place but in a despotic government. We have
@@ -3693,7 +3787,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. VIII. Of Accusation In Different Governments.</h3>
             <h3 id="6.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                AT Rome§ it was lawful for one citizen to accuse another: this was agreeable to the
@@ -3717,7 +3811,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IX. Of The Severity Of Punishments In Different Governments.</h3>
             <h3 id="6.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THE severity of punishments is fitter for despotic governments, whose principle is
@@ -3758,7 +3852,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. X. Of The Ancient French Laws.</h3>
             <h3 id="6.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                IN the ancient French laws we find the true spirit of monarchy. In cases relating
                to pecuniary mulcts, the common people are less severely punished than the nobility‡
@@ -3770,7 +3864,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XI. That, When People Are Virtuous, Few Punishments Are Necessary.</h3>
             <h3 id="6.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THE people of Rome had some share of probity. Such was the force of this probity,
@@ -3788,7 +3882,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XII. Of The Power Of Punishments.</h3>
             <h3 id="6.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                EXPERIENCE shews, that, in countries remarkable for the lenity of their laws, the
@@ -3844,7 +3938,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Insufficiency Of The Laws Of Japan.</h3>
             <h3 id="6.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                EXCESSIVE punishments may even corrupt a despotic government: of this we have an instance
                in Japan.
                Here almost all crimes are punished with death,§ because disobedience to so great
@@ -3912,7 +4006,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Of The Spirit Of The Roman Senate.</h3>
             <h3 id="6.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                UNDER the consulate of Acilius Glabrio and Piso the Acilian law? was made, to prevent
                the intriguing for places. Dio says,§ that the senate engaged the consuls to propose
                it, by reason that C. Cornelius, the tribune, had resolved to cause more severe punishments
@@ -3927,7 +4021,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Of The Roman Laws In Respect To Punishments.</h3>
             <h3 id="6.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I am strongly confirmed in my sentiments, upon finding the Romans on my side; and
                I think that punishments are connected with the nature of government, when I behold
                this great people changing, in this respect, their civil laws, in proportion as they
@@ -3985,7 +4079,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVI. Of The Just Proportion Betwixt Punishments And Crimes.</h3>
             <h3 id="6.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 IT is an essential point, that there should be a certain proportion in punishments,
@@ -4026,7 +4120,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVII. Of The Rack.</h3>
             <h3 id="6.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THE wickedness of mankind makes it necessary for the laws to suppose them better than
@@ -4047,7 +4141,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVIII. Of Pecuniary And Corporal Punishments.</h3>
             <h3 id="6.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                OUR ancestors, the Germans, admitted of none but pecuniary punishments. Those free
@@ -4063,7 +4157,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIX. Of The Law Of Retaliation.</h3>
             <h3 id="6.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 THE use of the law of retaliation† is very frequent in despotic countries, where they
@@ -4079,7 +4173,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                Of The Punishment Of Fathers For The Crimes Of Their Children.</h3>
             <h3 id="6.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN China, fathers are punished for the crimes of their children. This was likewise
                the custom of Peru¶ ; a custom derived from the notion of despotic power.
                Little does it signify to say, that, in China, the father is punished for not having
@@ -4094,7 +4188,7 @@
             <h3 style="text-align:center;">CHAP. XXI.
                Of The Clemency Of The Prince.</h3>
             <h3 id="6.21"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                CLEMENCY is the characteristic of monarchs. In republics, whose principle is virtue,
                it is not so necessary. In despotic governments, where fear predominates, it is less
                customary, because the great men are to be restrained by examples of severity. It
@@ -4132,7 +4226,7 @@
          <h2 style="text-align:center;">BOOK VII. CONSEQUENCES OF THE DIFFERENT PRINCIPLES OF THE THREE GOVERNMENTS, WITH
             RESPECT TO SUMPTUARY LAWS, LUXURY, AND THE CONDITION OF WOMEN.</h2>
          <h2 id="Book_7"></h2>
-         <p>  
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">  
             
             
             
@@ -4156,7 +4250,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of Luxury.</h3>
             <h3 id="7.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LUXURY is ever in proportion to the inequality of fortunes. If the riches of a state
                are equally divided, there will be no luxury; for it is founded merely on the inconveniences
                acquired by the labour of others.
@@ -4207,7 +4301,7 @@
             <h3 style="text-align:center;">CHAP. II.
                Of Sumptuary Laws In A Democracy.</h3>
             <h3 id="7.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have observed, that, in a republic where riches are equally divided, there can
                be no such thing as luxury; and, as we have shewn, in the 5th book,¶ that this equal
                distribution constitutes the excellency of a republican government, hence it follows,
@@ -4238,7 +4332,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of Sumptuary Laws In An Aristocracy.</h3>
             <h3 id="7.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is this inconvenience in an ill-constituted aristocracy, that the wealth centers
                in the nobility, and yet they are not allowed to spend; for, as luxury is contrary
                to the spirit of moderation, it must be banished from thence. This government comprehends,
@@ -4258,7 +4352,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Of Sumptuary Laws In A Monarchy.</h3>
             <h3 id="7.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TACITUS says,‡ “That the Suiones, a German nation, have a particular respect for riches;
                for which reason they live under the government of one person.” This shews that luxury
                is extremely proper for monarchies, and that under this government there must be no
@@ -4305,7 +4399,7 @@
             <h3 style="text-align:center;">CHAP. V.
                In What Cases Sumptuary Laws Are Useful In A Monarchy.</h3>
             <h3 id="7.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHETHER it was from a republican spirit, or from some other particular circumstance,
                sumptuary laws were made in Arragon, in the middle of the thirteenth century. James
                the First ordained, that neither the king, nor any of his subjects, should have above
@@ -4334,7 +4428,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of The Luxury Of China.</h3>
             <h3 id="7.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SUMPTUARY laws may, in some governments, be necessary, for particular reasons. The
                people, by the influence of the climate, may grow so numerous, and the means of subsisting
                may be so uncertain, as to render an universal application to agriculture extremely
@@ -4373,7 +4467,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Fatal Consequences Of Luxury In China.</h3>
             <h3 id="7.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the history of China, we find it has had twenty-two successive dynasties; that
                is, it has experienced twenty-two general, without mentioning a prodigious number
                of particular, revolutions. The three first dynasties lasted a long time, because
@@ -4397,7 +4491,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Of Public Continency.</h3>
             <h3 id="7.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SO many are the imperfections that attend the loss of virtue in women, and so greatly
                are their minds depraved when this principal guard is removed, that, in a popular
                state, public incontinency may be considered as the last of miseries, and as a certain
@@ -4415,7 +4509,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of The Condition Or State Of Women In Different Governments.</h3>
             <h3 id="7.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN monarchies women are subject to very little restraint; because, as the distinction
                of ranks calls them to court, there they assume a spirit of liberty, which is almost
                the only one tolerated in that place. Each courtier avails himself of their charms
@@ -4446,7 +4540,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of The Domestic Tribunal Among The Romans.</h3>
             <h3 id="7.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Romans had no particular magistrates, like the Greeks, to inspect the conduct
                of women. The censors had not an eye over them but as over the rest of the republic.
                The institution of the domestic tribunal§ supplied the magistracy established among
@@ -4472,7 +4566,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                In What Manner The Institutions Changed At Rome Together With The Government.</h3>
             <h3 id="7.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS manners were supposed by the domestic tribunal, they were also supposed by the
                public accusation: and hence it is that these two things fell together with the public
                manners, and ended with the republic* .
@@ -4496,7 +4590,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of The Guardianship Of Women Among The Romans.</h3>
             <h3 id="7.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Roman laws subjected women to a perpetual guardianship, except they were under
                cover and subject to the authority of a husband* . This guardianship was given to
                the nearest of the male relations; and, by a vulgar expression† , it appears they
@@ -4511,7 +4605,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Of The Punishments Decreed By Emperors Against The Incontinency Of Women.</h3>
             <h3 id="7.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Julian law ordained a punishment against adultery. But so far was this law, any
                more than those afterwards made on the same account, from being a mark of regularity
                of manners, that, on the contrary, it was a proof of their depravation.
@@ -4553,7 +4647,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Sumptuary Laws Among The Romans.</h3>
             <h3 id="7.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have spoken of public incontinence, because it is the inseparable companion of
                luxury. If we leave the motions of the heart at liberty, how shall we be able to restrain
                the weaknesses of the mind?
@@ -4568,7 +4662,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XV.</h3>
             <h3 id="7.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                Of Dowries And Nuptial Advantages In Different Constitutions.
                DOWRIES ought to be considerable in monarchies, in order to enable husbands to support
                their rank and the established luxury. In republics, where luxury should never reign,*
@@ -4591,7 +4685,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                An Excellent Custom Of The Samnites.</h3>
             <h3 id="7.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Samnites had a custom, which, in so small a republic, and especially in their
                situation, must have been productive of admirable effects. The young people were all
                convened in one place, and their conduct was examined. He that was declared the best
@@ -4611,7 +4705,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of Female-Administration.</h3>
             <h3 id="7.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is contrary to reason and nature that women should reign in families, as was customary
                among the Ægyptians; but not that they should govern an empire. In the former case,
                the state of their natural weakness does not permit them to have the preeminence;
@@ -4632,7 +4726,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK VIII. OF THE CORRUPTION OF THE PRINCIPLES OF THE THREE GOVERNMENTS.</h2>
          <h2 id="Book_8"></h2>
-         <p> 
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;"> 
             
             
             
@@ -4660,7 +4754,7 @@
             <h3 style="text-align:center;">CHAP. I.
                General Idea Of This Book.</h3>
             <h3 id="8.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE corruption of each government generally begins with that of the principles.
                </p>
          </div>
@@ -4668,7 +4762,7 @@
             <h3 style="text-align:center;">CHAP. II.
                Of The Corruption Of The Principles Of Democracy.</h3>
             <h3 id="8.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE principle of democracy is corrupted, not only when the spirit of equality is extinct,
                but likewise when they fall into a spirit of extreme equality, and when each citizen
                would fain be upon a level with those whom he has chosen to command him. Then the
@@ -4733,7 +4827,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of The Spirit Of Extreme Equality.</h3>
             <h3 id="8.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS distant as heaven is from earth, so is the true spirit of equality from that of
                extreme equality. The former does not imply that every body should command, or that
                no one should be commanded, but that we obey or command our equals. It endeavours
@@ -4754,7 +4848,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Particular Cause Of The Corruption Of The People.</h3>
             <h3 id="8.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                GREAT success, especially when chiefly owing to the people, intoxicates them to such
                a degree that it is impossible to contain them within bounds. Jealous of their magistrates,
                they soon become jealous likewise of the magistracy; enemies to those who govern,
@@ -4769,7 +4863,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Of The Corruption Of The Principle Of Aristocracy.</h3>
             <h3 id="8.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ARISTOCRACY is corrupted if the power of the nobles becomes arbitrary: when this is
                the case, there can no longer be any virtue either in the governors or the governed.
                If the reigning families observe the laws, it is a monarchy with several monarchs,
@@ -4805,7 +4899,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of The Corruption Of The Principle Of Monarchy.</h3>
             <h3 id="8.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS democracies are subverted when the people despoil the senate, the magistrates,
                and judges, of their functions, so monarchies are corrupted when the prince insensibly
                deprives societies or cities of their privileges. In the former case, the multitude
@@ -4832,7 +4926,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                The Same Subject Continued.</h3>
             <h3 id="8.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE principle of monarchy is corrupted, when the first dignities are marks of the
                first servitude, when the great men are deprived of public respect, and rendered the
                low tools of arbitrary power.
@@ -4855,7 +4949,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Danger Of The Corruption Of The Principle Of Monarchical Government.</h3>
             <h3 id="8.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE danger is not when the state passes from one moderate to another moderate government,
                (as from a republic to a monarchy, or from a monarchy to a republic,) but when it
                precipitates from a moderate to a despotic government.
@@ -4871,7 +4965,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                How Ready The Nobility Are To Defend The Throne.</h3>
             <h3 id="8.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE English nobility buried themselves, with Charles the first, under the ruins of
                the throne; and, before that time, when Philip the second endeavoured to tempt the
                French with the allurement of liberty, the crown was constantly supported by a nobility
@@ -4892,7 +4986,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of The Corruption Of The Principle Of Despotic Government.</h3>
             <h3 id="8.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE principle of despotic government is subject to a continual corruption, because
                it is, even in its nature, corrupt. Other governments are destroyed by particular
                accidents, which do violence to the principles of each constitution; this is ruined
@@ -4908,7 +5002,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Natural Effects Of The Goodness And Corruption Of The Principles Of Government.</h3>
             <h3 id="8.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN once the principles of government are corrupted, the very best laws become bad,
                and turn against the state: but, when the principles are sound, even bad laws have
                the same effect as good; the force of the principle draws every thing to it.
@@ -4950,7 +5044,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                The Same Subject Continued.</h3>
             <h3 id="8.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN Rome the judges were chosen at first from the order of senators. This privilege
                the Gracchi transferred to the knights: Drusus gave it to the senators and knights;
                Sylla to the senators only; Cotta to the senators, knights, and public treasurers:
@@ -4979,7 +5073,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                The Effect Of An Oath Among Virtuous People.</h3>
             <h3 id="8.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is no nation, says Livy? , that has been longer uncorrupted than the Romans;
                no nation where moderation and poverty have been longer respected.
                Such was the influence of an oath among those people, that nothing bound them stronger
@@ -5009,7 +5103,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                How The Smallest Change Of The Constitution Is Attended With The Ruin Of Its Principles.</h3>
             <h3 id="8.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ARISTOTLE mentions the city of Carthage as a well regulated republic. Polybius tells
                us,* that there was this inconvenience, at Carthage, in the second Punic war, that
                the senate had lost almost all their authority. We are informed, by Livy, that, when
@@ -5029,7 +5123,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Sure Methods Of Preserving The Three Principles.</h3>
             <h3 id="8.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I shall not be able to make myself rightly understood, till the reader has perused
                the four following chapters.
                </p>
@@ -5038,7 +5132,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Distinctive Properties Of A Republic.</h3>
             <h3 id="8.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is natural for a republic to have only a small territory; otherwise it cannot long
                subsist. In an extensive republic there are men of large fortunes, and consequently
                of less moderation: there are trusts too considerable to be placed in any single subject;
@@ -5071,7 +5165,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Distinctive Properties Of A Monarchy.</h3>
             <h3 id="8.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A monarchical state ought to be of a moderate extent. Were it small, it would form
                itself into a republic; were it very large, the nobility, possessed of great estates,
                far from the eye of the prince, with a private court of their own, and secure moreover
@@ -5099,7 +5193,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                Particular Case Of The Spanish Monarchy.</h3>
             <h3 id="8.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LET not the example of Spain be produced against me; it rather proves what I affirm.
                To preserve America, she did what even despotic power itself does not attempt; she
                destroyed the inhabitants. To preserve her colony, she was obliged to keep it dependent
@@ -5117,7 +5211,7 @@
             <h3 style="text-align:center;">CHAP. XIX.
                Distinctive Properties Of A Despotic Government.</h3>
             <h3 id="8.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A large empire supposes a despotic authority in the person who governs. It is necessary
                that the quickness of the prince’s resolutions should supply the distance of the places
                they are sent to; that fear should prevent the remissness of the distant governor
@@ -5130,7 +5224,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                Consequence Of The Preceding Chapters.</h3>
             <h3 id="8.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF it be therefore the natural property of small states to be governed as a republic;
                of middling ones, to be subject to a monarch; and of large empires, to be swayed by
                a despotic prince; the consequence is, that, in order to preserve the principles of
@@ -5143,7 +5237,7 @@
             <h3 style="text-align:center;">CHAP. XXI.
                Of The Empire Of China.</h3>
             <h3 id="8.21"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                BEFORE I conclude this book, I shall answer an objection that may be made to the foregoing
                doctrine.
                Our missionaries inform us that the government of the vast empire of China is admirable,
@@ -5219,7 +5313,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK IX. OF LAWS, IN THE RELATION THEY BEAR TO A DEFENSIVE FORCE.</h2>
          <h2 id="Book_9"></h2>
-         <p> 
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;"> 
             
             
             
@@ -5236,7 +5330,7 @@
             <h3 style="text-align:center;">CHAP. I.
                In What Manner Republics Provide For Their Safety.</h3>
             <h3 id="9.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF a republic be small, it is destroyed by a foreign force; if it be large, it is
                ruined by an internal imperfection.
                To this twofold inconveniency democracies and aristocracies are equally liable, whether
@@ -5283,7 +5377,7 @@
                That A Confederate Government Ought To Be Composed Of States Of The Same Nature, Especially
                Of The Republican Kind.</h3>
             <h3 id="9.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Canaanites were destroyed by reason they were petty monarchies, that had no union
                nor confederacy for their common defence: and, indeed, a confederacy is not agreeable
                to the nature of petty monarchies.
@@ -5305,7 +5399,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Other Requisites In A Confederate Republic.</h3>
             <h3 id="9.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the republic of Holland, one province cannot conclude an alliance without the consent
                of the others. This law, which is an excellent one, and even necessary in a confederate
                republic, is wanting in the Germanic constitution, where it would prevent the misfortunes
@@ -5329,7 +5423,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                In What Manner Despotic Governments Provide For Their Security.</h3>
             <h3 id="9.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS republics provide for their security by uniting, despotic governments do it by
                separating, and by keeping themselves, as it were, single. They sacrifice a part of
                the country; and, by ravaging and desolating the frontiers, they render the heart
@@ -5350,7 +5444,7 @@
             <h3 style="text-align:center;">CHAP. V.
                In What Manner A Monarchical Government Provides For Its Security.</h3>
             <h3 id="9.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A monarchy never destroys itself like a despotic government. But a kingdom of a moderate
                extent is liable to sudden invasions: it must therefore have fortresses to defend
                its frontiers, and troops to garrison those fortresses. The least spot of ground is
@@ -5365,7 +5459,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of The Defensive Force Of States In General.</h3>
             <h3 id="9.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TO preserve a state in its due force, it must have such an extent, as to admit of
                a proportion between the celerity with which it may be invaded, and that with which
                it may defeat the invasion. As an invader may appear on every side, it is requisite
@@ -5404,7 +5498,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                A Reflexion.</h3>
             <h3 id="9.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE enemies of a great prince, whose reign was protracted to an unusual length, have
                very often accused him, rather, I believe, from their own fears, than upon any solid
                foundation, of having formed and carried on a project of universal monarchy. Had he
@@ -5429,7 +5523,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                A Particular Case, In Which The Defensive Force Of A State Is Inferior To The Offensive.</h3>
             <h3 id="9.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT was a saying of the lord of Coucy to king Charles V. “that the English are never
                weaker, nor easier overcome, than in their own country.” The same was observed of
                the Romans; the same of the Carthaginians; and the same will happen to every power
@@ -5446,7 +5540,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of The Relative Force Of States.</h3>
             <h3 id="9.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ALL grandeur, force, and power, are relative. Care, therefore, must be taken, that,
                in endeavouring to increase the real grandeur, the relative be not diminished.
                Under the reign of Lewis XIV. France was at its highest pitch of relative grandeur.
@@ -5461,7 +5555,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of The Weakness Of Neighbouring States.</h3>
             <h3 id="9.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHENSOEVER a state lies contiguous to another that happens to be in its decline, the
                former ought to take particular care not to precipitate the ruin of the latter, because
                this is the happiest situation imaginable; nothing being so convenient as for one
@@ -5476,7 +5570,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK X. OF LAWS, IN THE RELATION THEY BEAR TO OFFENSIVE FORCE.</h2>
          <h2 id="Book_10"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -5501,7 +5595,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of Offensive Force.</h3>
             <h3 id="10.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                OFFENSIVE force is regulated by the law of nations; which is the political law of
                each country, considered in its relation to every other.
                </p>
@@ -5510,7 +5604,7 @@
             <h3 style="text-align:center;">CHAP. II.
                Of War.</h3>
             <h3 id="10.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE life of governments is like that of man. The latter has a right to kill in case
                of natural defence; the former have a right to wage war for their own preservation.
                In the case of natural defence I have a right to kill, because my life is, in respect
@@ -5540,7 +5634,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of The Right Of Conquest.</h3>
             <h3 id="10.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                FROM the right of war comes that of conquest; which is the consequence of that right,
                and ought therefore to follow its spirit.
                The right the conqueror has over a conquered people is directed by four sorts of laws;
@@ -5606,7 +5700,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Some Advantages Of A Conquered People.</h3>
             <h3 id="10.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                INSTEAD of inferring such destructive consequences from the right of conquest, much
                better would it have been for politicians to mention the advantages which this very
                right may sometimes give to a conquered people; advantages which would be more sensibly
@@ -5648,7 +5742,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Gelon, King Of Syracuse.</h3>
             <h3 id="10.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE noblest treaty of peace ever mentioned in history is, in my opinion, that which
                Gelon made with the Carthaginians. He insisted upon their abolishing the custom of
                sacrificing their children‡ . Glorious indeed! After having defeated three hundred
@@ -5662,7 +5756,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of Conquests Made By A Republic.</h3>
             <h3 id="10.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is contrary to the nature of things, that, in a confederate government, one state
                should make any conquest over another, as in our days we have seen in Swisserland.§
                In mixt confederate republics, where the association is between petty republics and
@@ -5699,7 +5793,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                The Same Subject Continued.</h3>
             <h3 id="10.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is still another inconvenience in conquests made by democracies. Their government
                is ever odious to the conquered states. It is apparently monarchical: but, in reality,
                it is much more oppressive than monarchy, as the experience of all ages and countries
@@ -5713,7 +5807,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                The Same Subject Continued.</h3>
             <h3 id="10.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a republic, therefore, keeps another nation in subjection, it should endeavour
                to repair the inconveniences arising from the nature of its situation, by giving it
                good laws, both for the political and civil government of the people.
@@ -5730,7 +5824,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of Conquests Made By A Monarchy.</h3>
             <h3 id="10.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF a monarchy can long subsist before it is weakened by its increase, it will become
                formidable; and its strength will remain entire while pent up by the neighbouring
                monarchies.
@@ -5760,7 +5854,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of One Monarchy That Subdues Another.</h3>
             <h3 id="10.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SOMETIMES one monarchy subdues another. The smaller the latter, the better it is over-awed
                by fortresses; and, the larger it is, the better will it be preserved by colonies.
                </p>
@@ -5769,7 +5863,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of The Manners Of A Conquered People.</h3>
             <h3 id="10.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is not sufficient, in those conquests, to let the conquered nation enjoy their
                own laws; it is perhaps more necessary to leave them also their manners, because people
                in general have a stronger attachment to these than to their laws.
@@ -5784,7 +5878,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of A Law Of Cyrus.</h3>
             <h3 id="10.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                FAR am I from thinking that a good law which Cyrus made to oblige the Lydians to practise
                none but mean or infamous professions. It is true, he directed his attention to an
                object of the greatest importance; he thought of guarding against revolts, and not
@@ -5805,7 +5899,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Charles XII.</h3>
             <h3 id="10.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THIS prince, who depended entirely on his own strength, hastened his ruin by forming
                designs that could never be executed but by a long war; a thing which his kingdom
                was unable to support.
@@ -5853,7 +5947,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Alexander.</h3>
             <h3 id="10.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                HE did not set out upon his expedition till he had secured Macedonia against the neighbouring
                barbarians and completed the reduction of Greece; he availed himself of this conquest
                for no other end than for the execution of his grand enterprize; he rendered the jealousy
@@ -5949,7 +6043,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                New Methods Of Preserving A Conquest.</h3>
             <h3 id="10.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a monarch has subdued a large country, he may make use of an admirable method,
                equally proper for moderating despotic power and for preserving the conquest: it is
                a method practised by the conquerors of China.
@@ -5971,7 +6065,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Of Conquests Made By A Despotic Prince.</h3>
             <h3 id="10.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a conquest happens to be vastly large, it supposes a despotic power; and then
                the army dispersed in the provinces is not sufficient. There should be always a body
                of faithful troops near the prince, ready to fall instantly upon any part of the empire
@@ -5987,7 +6081,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                The Same Subject Continued.</h3>
             <h3 id="10.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have observed, that the countries subdued by a despotic monarch ought to be held
                by a vassal. Historians are very lavish of their praises on the generosity of those
                conquerors who restored the princes to the throne whom they had vanquished. Extremely
@@ -6010,7 +6104,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK XI. OF THE LAWS WHICH ESTABLISH POLITICAL LIBERTY, WITH REGARD TO THE CONSTITUTION.</h2>
          <h2 id="Book_11"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -6042,7 +6136,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. A General Idea.</h3>
             <h3 id="11.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 I make a distinction between the laws that establish political liberty, as it relates
@@ -6052,7 +6146,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Different Significations Of The Word, Liberty.</h3>
             <h3 id="11.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THERE is no word that admits of more various significations, and has made more different
@@ -6075,7 +6169,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. III. In What Liberty Consists.</h3>
             <h3 id="11.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                IT is true that, in democracies, the people seem to act as they please; but political
@@ -6090,7 +6184,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. The Same Subject Continued.</h3>
             <h3 id="11.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                DEMOCRATIC and aristocratic states are not in their own nature free.  Political liberty is to be found only in moderate governments; and even in these it
@@ -6107,7 +6201,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. V. Of The End Or View Of Different Governments.</h3>
             <h3 id="11.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THOUGH all governments have the same general end, which is that of preservation, yet
@@ -6129,7 +6223,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of The Constitution Of England.</h3>
             <h3 id="11.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN every government there are three sorts of power: the legislative; the executive
                in respect to things dependent on the law of nations; and the executive in regard
                to matters that depend on the civil law.
@@ -6458,7 +6552,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of The Monarchies We Are Acquainted With.</h3>
             <h3 id="11.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE monarchies we are acquainted with have not, like that we have been speaking of,
                liberty for their direct view: the only aim is the glory of the subject, of the state,
                and of the sovereign. But from hence there results a spirit of liberty, which, in
@@ -6474,7 +6568,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Why The Ancients Had Not A Clear Idea Of Monarchy.</h3>
             <h3 id="11.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE ancients had no notion of a government founded on a body of nobles, and much less
                on a legislative body composed of the representatives of the people. The republics
                of Greece and Italy were cities that had each their own form of government, and convened
@@ -6509,7 +6603,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Aristotle’S Manner Of Thinking.</h3>
             <h3 id="11.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ARISTOTLE is greatly puzzled in treating of monarchy* . He makes five species; and
                he does not distinguish them by the form of constitution, but by things merely accidental,
                as the virtues and vices of the prince; or by things extrinsecal, such as tyranny
@@ -6524,7 +6618,7 @@
             <h3 style="text-align:center;">CHAP. X.
                What Other Politicians Thought.</h3>
             <h3 id="11.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TO temper monarchy, Arybas, king† of Epirus, found no other remedy than a republic.
                The Molossi, not knowing how to limit the same power, made two kings‡ ; by which means
                the state was weakened more than the prerogative: they wanted rivals, and they created
@@ -6537,7 +6631,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of The Kings Of The Heroic Times Of Greece.</h3>
             <h3 id="11.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the heroic times of Greece, a kind of monarchy arose that was not of long duration?
                . Those, who had been inventors of arts, who had fought in their country’s cause,
                who had established societies, or distributed lands among the people, obtained the
@@ -6574,7 +6668,7 @@
                Of The Government Of The Kings Of Rome, And In What Manner The Three Powers Were There
                Distributed.</h3>
             <h3 id="11.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE government of the kings of Rome had some relation to that of the kings of the
                heroic times of Greece. Its subversion, like the latter’s, was owing to its general
                defect, though, in its own particular nature, it was exceeding good.
@@ -6621,7 +6715,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                General Reflections On The State Of Rome After The Expulsion Of Its Kings.</h3>
             <h3 id="11.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is impossible to be tired of so agreeable a subject as ancient Rome: thus strangers,
                at present, leave the modern palaces of that celebrated capital to visit the ruins;
                and thus the eye, after recreating itself with the view of flowery meads, is pleased
@@ -6666,7 +6760,7 @@
             <h3 style="text-align:center;">CHAP. XIV. In What Manner The Distribution Of The Three Powers Began To Change, After
                The Expulsion Of The Kings.</h3>
             <h3 id="11.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THERE were four things that greatly prejudiced the liberty of Rome. The patricians
@@ -6719,7 +6813,7 @@
                In What Manner Rome, In The Flourishing State Of That Republic, Suddenly Lost Its
                Liberty.</h3>
             <h3 id="11.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the heat of the contests between the patricians and plebeians, the latter insisted
                upon having fixt laws, to the end that the public judgements should no longer be the
                effects of capricious will or arbitrary power. The senate, after a great deal of resistance,
@@ -6755,7 +6849,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVI. Of The Legislative Power In The Roman Republic.</h3>
             <h3 id="11.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 THERE were no rights to contest under the decemvirs; but, upon the restoration of
@@ -6786,7 +6880,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XVII. Of The Executive Power In The Same Republic.</h3>
             <h3 id="11.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 JEALOUS as the people were of their legislative power, yet they had no great uneasiness
@@ -6830,7 +6924,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                Of The Judiciary Power In The Roman Government.</h3>
             <h3 id="11.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE judiciary power was given to the people, to the senate, to the magistrates, and
                to particular judges. We must see in what manner it was distributed, beginning with
                their civil affairs.
@@ -6988,7 +7082,7 @@
             <h3 style="text-align:center;">CHAP. XIX.
                Of The Government Of The Roman Provinces.</h3>
             <h3 id="11.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SUCH was the distribution of the three powers in Rome. But they were far from being
                thus distributed in the provinces: liberty prevailed in the center, and tyranny in
                the extreme parts.
@@ -7047,7 +7141,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                The End Of This Book.</h3>
             <h3 id="11.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I should be glad to inquire into the distribution of the three powers in all the moderate
                governments we are acquainted with, in order to calculate the degrees of liberty which
                each may enjoy. But we must not always exhaust a subject, so as to leave no work at
@@ -7060,7 +7154,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK XII. OF THE LAWS THAT FORM POLITICAL LIBERTY, AS RELATIVE TO THE SUBJECT.</h2>
          <h2 id="Book_12"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -7103,7 +7197,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. I. Idea Of This Book.</h3>
             <h3 id="12.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                IT is not sufficient to have treated of political liberty as relative to the constitution;
@@ -7126,7 +7220,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. II. Of The Liberty Of The Subject.</h3>
             <h3 id="12.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 PHILOSOPHICAL liberty consists in the free exercise of the will; or, at least, if
@@ -7159,7 +7253,7 @@
             <h3 style="text-align:center;">CHAP. III.
                The Same Subject Continued.</h3>
             <h3 id="12.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THOSE laws, which condemn a man to death on the deposition of a single witness, are
                fatal to liberty. In right reason there should be two; because a witness who affirms,
                and the accused who denies, make an equal balance, and a third must incline the scale.
@@ -7171,7 +7265,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. IV. That Liberty Is Favoured By The Nature And Proportion Of Punishments.</h3>
             <h3 id="12.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                 LIBERTY is in its highest perfection when criminal laws derive each punishment from
@@ -7254,7 +7348,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Of Certain Accusations That Require Particular Moderation And Prudence.</h3>
             <h3 id="12.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is an important maxim, that we ought to be very circumspect in the prosecution
                of witchcraft and heresy. The accusation of these two crimes may be vastly injurious
                to liberty, and productive of infinite oppression, if the legislator knows not how
@@ -7297,7 +7391,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of The Crime Against Nature.</h3>
             <h3 id="12.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                GOD forbid that I should have the least inclination to diminish the public horror
                against a crime which religion, morality, and civil government, equally condemn. It
                ought to be proscribed were it only for its communicating to one sex the weaknesses
@@ -7334,7 +7428,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of The Crime Of High-Treason.</h3>
             <h3 id="12.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is determined, by the laws of China, that whosoever shews any disrespect to the
                emperor is to be punished with death. As they do not mention in what this disrespect
                consists, every thing may furnish a pretext to take away a man’s life, and to exterminate
@@ -7356,7 +7450,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Of The Bad Application Of The Name Of Sacrilege And High- Treason.</h3>
             <h3 id="12.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is likewise a shocking abuse to give the appellation of high-treason to an action
                that does not deserve it. By an imperial law§ it was decreed, that those who called
                in question the prince’s judgement, or doubted of the merit of such as he had chosen
@@ -7391,7 +7485,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                The Same Subject Continued.</h3>
             <h3 id="12.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                PAULINUS having written to the emperor Alexander, that “he was preparing to prosecute,
                for high-treason, a judge who had decided contrary to his edict,” the emperor answered,
                “that under his reign there was no such thing as indirect high- treason* .”
@@ -7420,7 +7514,7 @@
             <h3 style="text-align:center;">CHAP. X.
                The Same Subject Continued.</h3>
             <h3 id="12.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE was a law passed in England, under Henry VIII. by which whoever predicted the
                king’s death was declared guilty of high-treason. This law was extremely vague: the
                terror of despotic power is so great, that it recoils upon those who exercise it.
@@ -7431,7 +7525,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XI. Of Thoughts.</h3>
             <h3 id="12.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                MARSYAS dreamt that he had cut Dionysius’s throat§ . Dionysius put him to death, pretending
                that he would never have dreamt of such a thing by night if he had not thought of
                it by day. This was a most tyrannical action; for, though it had been the subject
@@ -7442,7 +7536,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XII. Of Indiscreet Speeches.</h3>
             <h3 id="12.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                NOTHING renders the crime of high-treason more arbitrary than declaring people guilty
@@ -7488,7 +7582,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIII. Of Writings.</h3>
             <h3 id="12.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                IN writings there is something more permanent than in words; but, when they are no
@@ -7517,7 +7611,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XIV. Breach Of Modesty In Punishing Crimes.</h3>
             <h3 id="12.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THERE are rules of modesty observed by almost every nation in the world: now, it would
@@ -7539,7 +7633,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Of The Infranchisement Of Slaves, In Order To Accuse Their Master.</h3>
             <h3 id="12.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AUGUSTUS made a law, that the slaves of those who conspired against his person should
                be sold to the public, that they might depose against their master§ . Nothing ought
                to be neglected which may contribute to the discovery of a heinous crime: it is natural,
@@ -7558,7 +7652,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Of Calumny, With Regard To The Crime Of High-Treason.</h3>
             <h3 id="12.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TO do justice to the Cæsars, they were not the first devisers of the horrid laws which
                they enacted. It is Sylla* that taught them that calumniators ought not to be punished:
                but the abuse was soon carried to such excess as to reward them† .
@@ -7568,7 +7662,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of The Revealing Of Conspiracies.</h3>
             <h3 id="12.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF thy brother, the son of thy mother, or thy son, or thy daughter, or the wife of
                thy bosom, or thy friend, which is as thine own soul, entice thee secretly, saying,
                Let us go and serve other gods, thou shalt surely kill him, thou shalt stone him‡
@@ -7591,7 +7685,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                How Dangerous It Is, In Republics, To Be Too Severe In Punishing The Crime Of High-Treason.</h3>
             <h3 id="12.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS soon as a republic has compassed the destruction of those who wanted to subvert
                it, there should be an end of terrors, punishments, and even of rewards.
                Great punishments, and consequently great changes, cannot take place without investing
@@ -7631,7 +7725,7 @@
             <h3 style="text-align:center;">CHAP. XIX.
                In What Manner The Use Of Liberty Is Suspended In A Republic.</h3>
             <h3 id="12.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN countries where liberty is most esteemed there are laws by which a single person
                is deprived of it, in order to preserve it for the whole community. Such are, in England,
                what they call bills of attainder§ . These are relative to those Athenian laws by
@@ -7649,7 +7743,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XX. Of Laws Favourable To The Liberty Of The Subject In A Republic.</h3>
             <h3 id="12.20"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                IN popular governments it often happens that accusations are carried on in public,
@@ -7667,7 +7761,7 @@
             <h3 style="text-align:center;">CHAP. XXI.
                Of The Cruelty Of Laws, In Respect To Debtors, In A Republic.</h3>
             <h3 id="12.21"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                GREAT is the superiority which one fellow-subject has already over another, by lending
                him money, which the latter borrows in order to spend, and, of course, has no longer
                in his possession. What must be the consequence if the laws of a republic make a farther
@@ -7707,7 +7801,7 @@
             <h3 style="text-align:center;">CHAP. XXII.
                Of Things That Strike At Liberty In Monarchies.</h3>
             <h3 id="12.22"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LIBERTY often has been weakened in monarchies by a thing of the least use in the world
                to the prince: this is the naming of commissioners to try a private person.
                The prince himself derives so very little advantage from those commissioners, that
@@ -7724,7 +7818,7 @@
             <h3 style="text-align:center;">CHAP. XXIII.
                Of Spies In Monarchies.</h3>
             <h3 id="12.23"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SHOULD I be asked whether there is any necessity for spies in monarchies, my answer
                would be, that the usual practice of good princes is not to employ them. When a man
                obeys the laws, he has discharged his duty to his prince: he ought at least to have
@@ -7751,7 +7845,7 @@
             <h3 style="text-align:center;">CHAP. XXIV.
                Of Anonymous Letters.</h3>
             <h3 id="12.24"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Tartars are obliged to put their names to their arrows, that the arm may be known
                which shoots them. When Philip of Macedon was wounded at the siege of a certain town,
                these words were found on the javelin: After has given this mortal wound to Philip*
@@ -7772,7 +7866,7 @@
             <h3 style="text-align:center;">CHAP. XXV.
                Of The Manner Of Governing In Monarchies.</h3>
             <h3 id="12.25"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE royal authority is a spring that ought to move with the greatest freedom and ease.
                The Chinese boast of one of their emperors, who governed, they say, like the heavens;
                that is, by his example.
@@ -7792,7 +7886,7 @@
             <h3 style="text-align:center;">CHAP. XXVI.
                That, In A Monarchy, The Prince Ought To Be Of Easy Access.</h3>
             <h3 id="12.26"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE utility of this maxim will appear from the inconveniency attending the contrary
                practice. “The Czar Peter I. says the sieur Perry‡ , has published a new edict, by
                which he forbids any of his subjects to offer him a petition till after having presented
@@ -7805,7 +7899,7 @@
             <h3 style="text-align:center;">CHAP. XXVII.
                Of The Manners Of A Monarch.</h3>
             <h3 id="12.27"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE manners of a prince contribute as much as the laws themselves to liberty: like
                these, he may transfer men into brutes, and brutes into men. If he prefers free and
                generous spirits, he will have subjects: if he likes base dastardly souls, he will
@@ -7826,7 +7920,7 @@
             <h3 style="text-align:center;">CHAP. XXVIII.
                Of The Regard Which Monarchs Owe To Their Subjects.</h3>
             <h3 id="12.28"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                PRINCES ought to be extremely circumspect with regard to raillery. It pleases with
                moderation, because it is an introduction to familiarity; but a satirical raillery
                is less excusable in them than in the meanest of their subjects; for it is they alone
@@ -7852,7 +7946,7 @@
             <h3 style="text-align:center;">CHAP. XXIX. Of The Civil Laws Proper For Mixing Some Portion Of Liberty In A Despotic
                Government.</h3>
             <h3 id="12.29"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                
                THOUGH despotic governments are of their own nature every where the same, yet, from
@@ -7876,7 +7970,7 @@
             <h3 style="text-align:center;">CHAP. XXX.
                The Same Subject Continued.</h3>
             <h3 id="12.30_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                NOTHING but the very excess and rage of despotic power ordained that the father’s
                disgrace should drag after it that of his wife and children: they are wretched enough
                already, without being criminals. Besides, the prince ought to leave suppliants or
@@ -7907,7 +8001,7 @@
          <h2 style="text-align:center;">BOOK XIII. OF THE RELATION WHICH THE LEVYING OF TAXES AND THE GREATNESS OF THE PUBLIC
             REVENUES HAVE TO LIBERTY.</h2>
          <h2 id="Book_13"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -7934,7 +8028,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of The Public Revenues.</h3>
             <h3 id="13.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE public revenues are a portion that each subject gives of his property, in order
                to secure or enjoy the remainder.
                To fix these revenues in a proper manner, regard should be had both to the necessities
@@ -7956,7 +8050,7 @@
             <h3 style="text-align:center;">CHAP. II.
                That It Is Bad Reasoning To Say That The Greatness Of Taxes Is Good In Its Own Nature.</h3>
             <h3 id="13.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE have been instances, in particular monarchies, of petty states, exempt from
                taxes, that have been as miserable as the circumjacent places which groaned under
                the weight of exactions. The chief reason of this is, that the petty state can hardly
@@ -7983,7 +8077,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of Taxes In Countries Where Part Of The People Are Villains Or Bondmen.</h3>
             <h3 id="13.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE state of villainage is sometimes established after a conquest. In that case the
                bondman or villain that tills the land ought to have a kind of partnership with his
                master. Nothing but a communication of loss or profit can reconcile those who are
@@ -7994,7 +8088,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Of A Republic In The Like Case.</h3>
             <h3 id="13.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a republic has reduced a nation to the drudgery of cultivating her lands, she
                ought never to suffer the free subject to have a power of increasing the tribute of
                the bondman. This was not permitted at Sparta. Those brave people thought the Helotes*
@@ -8007,7 +8101,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Of A Monarchy In The Like Case.</h3>
             <h3 id="13.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN the nobles of a monarchical state cause the lands to be cultivated for their
                own use by a conquered people, they ought never to have a power of increasing the
                service or tribute* . Besides, it is right the prince should be satisfied with his
@@ -8023,7 +8117,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of A Despotic Government In The Like Case.</h3>
             <h3 id="13.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE foregoing rule is still more indispensably necessary in a despotic government.
                The lord, who is every moment liable to be stripped of his lands and his vassals,
                is not so eager to preserve them.
@@ -8038,7 +8132,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of Taxes In Countries Where Villainage Is Not Established.</h3>
             <h3 id="13.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN the inhabitants of a state are all free subjects, and each man enjoys his property
                with as much right as the prince his sovereignty, taxes may then be laid either on
                persons, on lands, on merchandizes, on two of these, or on all three together.
@@ -8094,7 +8188,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                In What Manner The Deception Is Preserved.</h3>
             <h3 id="13.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN order to make the purchaser confound the price of the commodity with the impost,
                there must be some proportion between the impost and the value of the commodity; for
                which reason there ought not to be an excessive duty upon merchandizes of little value.
@@ -8122,7 +8216,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of A Bad Kind Of Impost.</h3>
             <h3 id="13.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE shall here, by the way, take notice of an impost laid in particular countries on
                the different articles of civil contracts. As these are things subject to very nice
                disquisitions, a vast deal of knowledge is necessary to make any tolerable defence
@@ -8136,7 +8230,7 @@
             <h3 style="text-align:center;">CHAP. X.
                That The Greatness Of Taxes Depends On The Nature Of The Government.</h3>
             <h3 id="13.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TAXES ought to be very light in despotic governments; otherwise who would be at the
                trouble of tilling the land? Besides, how is it possible to pay heavy duties in a
                government that makes no manner of return to the different contributions of the subject?
@@ -8155,7 +8249,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of Confiscations.</h3>
             <h3 id="13.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WITH respect to confiscations, there is one thing very particular, that, contrary
                to the general custom, they are more severe in Europe than in Asia. In Europe not
                only the merchandizes, but even sometimes the ships and carriages are confiscated;
@@ -8180,7 +8274,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Relation Between The Weight Of Taxes And Liberty.</h3>
             <h3 id="13.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is a general rule that taxes may be heavier in proportion to the liberty of the
                subject, and that there is a necessity for reducing them in proportion to the increase
                of slavery. This has always been and always will be the case. It is a rule derived
@@ -8209,7 +8303,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                In What Government Taxes Are Capable Of Increase.</h3>
             <h3 id="13.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TAXES may be increased in most republics, because the citizen, who thinks he is paying
                himself, chearfully submits to them, and moreover is generally able to bear their
                weight from the nature of the government.
@@ -8223,7 +8317,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                That The Nature Of The Taxes Is Relative To The Government.</h3>
             <h3 id="13.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A CAPITATION is more natural to slavery; a duty on merchandizes is more natural to
                liberty, by reason it has not so direct a relation to the person.
                It is natural in a despotic government for the prince not to give money to his soldiers,
@@ -8253,7 +8347,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Abuse Of Liberty.</h3>
             <h3 id="13.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                TO these great advantages of liberty it is owing that liberty itself has been abused.
                Because a moderate government has been productive of admirable effects, this moderation
                has been laid aside; because great taxes have been raised, they wanted to carry them
@@ -8282,7 +8376,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Of The Conquests Of The Mahometans.</h3>
             <h3 id="13.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT was this excess of taxes* that occasioned the prodigious facility with which the
                Mahometans carried on their conquests. Instead of a continual series of extortions,
                devised by the subtle avarice of the Greek emperors, the people were subjected to
@@ -8295,7 +8389,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of The Augmentation Of Troops.</h3>
             <h3 id="13.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A NEW distemper has spread itself over Europe, infecting our princes, and inducing
                them to keep up an exorbitant number of troops. It has its redoublings, and of necessity
                becomes contagious. For, as soon as one prince augments his forces, the rest of course
@@ -8322,7 +8416,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                Of An Exemption From Taxes.</h3>
             <h3 id="13.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE maxim of the great eastern empires of exempting such provinces, as have very much
                suffered, from taxes, ought to be extended to monarchical states. There are some indeed
                where this practice is established; yet the country is more oppressed than if no such
@@ -8345,7 +8439,7 @@
                Which Is Most Suitable To The Prince And To The People, The Farming The Revenues,
                Or Managing Them By Commission?</h3>
             <h3 id="13.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE managing of the revenues by commission is like the conduct of a good father of
                a family, who collects his own rents himself with œconomy and order.
                By this management of the revenues the prince is at liberty to press or retard the
@@ -8385,7 +8479,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                Of The Farmers Of The Revenues.</h3>
             <h3 id="13.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN the lucrative profession of a farmer of the revenue becomes likewise a post of
                honour, the state is ruined. It may do well enough in despotic governments, where
                this employment is oftentimes exercised by the governors themselves. But it is by
@@ -8410,7 +8504,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK XIV. OF LAWS AS RELATIVE TO THE NATURE OF THE CLIMATE.</h2>
          <h2 id="Book_14"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -8432,7 +8526,7 @@
             <h3 style="text-align:center;">CHAP. I.
                General Idea.</h3>
             <h3 id="14.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF it be true, that the temper of the mind and the passions of the heart are extremely
                different in different climates, the laws ought to be relative both to the variety
                of those passions, and to the variety of those tempers.
@@ -8442,7 +8536,7 @@
             <h3 style="text-align:center;">CHAP. II.
                Of The Difference Of Men In Different Climates.</h3>
             <h3 id="14.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A cold air* constringes the extremities of the external fibres of the body; this increases
                their elasticity, and favours the return of the blood from the extreme parts to the
                heart. It contracts† those very fibres; consequently, it increases also their force.
@@ -8538,7 +8632,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Contradiction In The Tempers Of Some Southern Nations.</h3>
             <h3 id="14.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Indians* are naturally a pusillanimous people: even the children† of Europeans,
                born in India, lose the courage peculiar to their own climate. But how shall we reconcile
                this with their customs and penances so full of barbarity? The men voluntarily undergo
@@ -8566,7 +8660,7 @@
                Cause Of The Immutability Of Religion, Manners, Customs, And Laws, In The Eastern
                Countries.</h3>
             <h3 id="14.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF, to that delicacy of organs which renders the eastern nations so susceptible of
                every impression, you add likewise a sort of indolence of mind, naturally connected
                with that of the body, by means of which they grow incapable of any exertion or effort,
@@ -8581,7 +8675,7 @@
                That Those Are Bad Legislators Who Favour The Vices Of The Climate, And Good Legislators
                Who Oppose Those Vices.</h3>
             <h3 id="14.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Indians believe that repose and non-existence are the foundation of all things,
                and the end in which they terminate. Hence they consider entire inaction as the most
                perfect of all states, and the object of their desires. To the supreme Being they
@@ -8604,7 +8698,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of Agriculture In Warm Climates.</h3>
             <h3 id="14.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AGRICULTURE is the principal labour of man. The more the climate inclines him to shun
                this labour, the more the religion and laws of the country ought to excite him to
                it. Thus the Indian laws, which give the lands to the prince, and destroy the spirit
@@ -8616,7 +8710,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of Monkery.</h3>
             <h3 id="14.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE very same mischiefs result from monkery: it had its rise in the warm countries
                of the East, where they are less inclined to action than to speculation.
                In Asia, the number of dervises, or monks, seems to increase together with the warmth
@@ -8636,7 +8730,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                An Excellent Custom Of China.</h3>
             <h3 id="14.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE historical relations¶ of China mention a ceremony* of opening the grounds, which
                the emperor performs every year. The design of this public and solemn act is to excite†
                the people to tillage.
@@ -8651,7 +8745,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Means Of Encouraging Industry.</h3>
             <h3 id="14.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE shall shew, in the nineteenth book, that lazy nations are generally proud. Now,
                the effect might well be turned against the cause, and laziness be destroyed by pride.
                In the South of Europe, where people have such a high notion of the point of honour,
@@ -8665,7 +8759,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of The Laws Relative To The Sobriety Of The People.</h3>
             <h3 id="14.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN warm countries, the aqueous part of the blood loses itself greatly by perspiration?
                ; it must, therefore, be supplied by a like liquid. Water is there of admirable use;
                strong liquors would congeal the globules§ of blood that remain after the transuding
@@ -8706,7 +8800,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of The Laws Relative To The Distempers Of The Climate.</h3>
             <h3 id="14.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                HERODOTUS‡ informs us, that the Jewish laws, concerning the leprosy, were borrowed
                from the practice of the Egyptians. And, indeed, the same distemper required the same
                remedies. The Greeks and the primitive Romans were strangers to these laws, as well
@@ -8759,7 +8853,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of The Laws Against Suicides.</h3>
             <h3 id="14.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE do not find in history that the Romans ever killed themselves without a cause:
                but the English are apt to commit suicide most unaccountably; they destroy themselves
                even in the bosom of happiness. This action, among the Romans, was the effect of education,
@@ -8780,7 +8874,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Effects Arising From The Climate Of England.</h3>
             <h3 id="14.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN a nation, so distempered by the climate as to have a disrelish of every thing,
                nay, even of life, it is plain, that the government most suitable to the inhabitants
                is that in which they cannot lay their uneasiness to any single person’s charge, and
@@ -8813,7 +8907,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Other Effects Of The Climate.</h3>
             <h3 id="14.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                OUR ancestors, the ancient Germans, lived under a climate where the passions were
                extremely calm. Their laws decided only in such cases where the injury was visible
                to the eye, and went no farther. And, as they judged of the outrages done to men from
@@ -8849,7 +8943,7 @@
                Of The Different Confidence Which The Laws Have In The People, According To The Difference
                Of Climates.</h3>
             <h3 id="14.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE people of Japan are of so stubborn and perverse a temper, that neither their legislators
                nor magistrates can put any confidence in them: they set nothing before their eyes
                but judgments, menaces, and chastisements; every step they take is subject to the
@@ -8878,7 +8972,7 @@
          <h2 style="text-align:center;">BOOK XV. IN WHAT MANNER THE LAWS OF CIVIL SLAVERY ARE RELATIVE TO THE NATURE OF THE
             CLIMATE.</h2>
          <h2 id="Book_15"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -8903,7 +8997,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of Civil Slavery.</h3>
             <h3 id="15.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                SLAVERY, properly so called, is the establishment of a right which gives to one man
                such a power over another as renders him absolute master of his life and fortune.
@@ -8930,7 +9024,7 @@
                that slavery should owe its birth to pity, and that
                this should have been excited three different ways.†</h3>
             <h3 id="15.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                The law of nations, to prevent prisoners from being put to death, has allowed them
                to be made slaves. The civil law of the Romans empowered debtors, who were subject
                to be ill used by their creditors, to sell themselves. And the law of nature requires,
@@ -8982,7 +9076,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Another Origin Of The Right Of Slavery.</h3>
             <h3 id="15.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I would as soon say that the right of slavery proceeds from the contempt of one nation
                for another, founded on a difference in customs.
                Lopez¶de Gamar relates, “that the Spaniards found, near St. Martha, several baskets
@@ -8998,7 +9092,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Another Origin Of The Right Of Slavery.</h3>
             <h3 id="15.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I would as soon say that religion gives its professors a right to enslave those who
                dissent from it, in order to render its propagation more easy.
                This was the notion that encouraged the ravagers of America in their iniquity* . Under
@@ -9014,7 +9108,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Of The Slavery Of The Negroes.</h3>
             <h3 id="15.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WERE I to vindicate our right to make slaves of the Negroes, these should be my arguments.
                The Europeans, having extirpated the Americans, were obliged to make slaves of the
                Africans, for clearing such vast tracts of land.
@@ -9044,7 +9138,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                The True Origin Of The Right Of Slavery.</h3>
             <h3 id="15.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is time to enquire into the true origin of the right of slavery. It ought to be
                founded on the nature of things: let us see if there be any cases where it can be
                derived from thence.
@@ -9067,7 +9161,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Another Origin Of The Right Of Slavery.</h3>
             <h3 id="15.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is another origin of the right of slavery, and even of the most cruel slavery
                which is to be seen among men.
                There are countries where the excess of heat enervates the body, and renders men so
@@ -9090,7 +9184,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Inutility Of Slavery Among Us.</h3>
             <h3 id="15.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                NATURAL slavery, then, is to be limited to some particular parts of the world. In
                all other countries, even the most servile drudgeries may be performed by freemen.
                Experience verifies my assertion. Before Christianity had abolished civil slavery
@@ -9116,7 +9210,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Several Kinds Of Slavery.</h3>
             <h3 id="15.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SLAVERY is of two kinds, real and personal. The real annexes the slave to the land,
                which Tacitus makes† the condition of slaves among the Germans. They were not employed
                in the family: a stated tribute of corn, cattle, or other moveables, paid to their
@@ -9137,7 +9231,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Regulations Necessary In Respect To Slavery.</h3>
             <h3 id="15.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                BUT, of whatsoever kind the slavery be, the civil laws should endeavour, on the one
                hand, to abolish the abuses of it, and, on the other, to guard against its dangers.
                </p>
@@ -9146,7 +9240,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Abuses Of Slavery.</h3>
             <h3 id="15.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN Mahometan states? , not only the life and goods of female slaves, but also what
                is called their virtue or honour, are at their master’s disposal. One of the misfortunes
                of those countries is, that the greatest part of the nation are born only to be subservient
@@ -9177,7 +9271,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Danger From The Multitude Of Slaves.</h3>
             <h3 id="15.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE multitude of slaves has different effects in different governments. It is no grievance
                in a despotic state, where the political servitude of the whole body takes away the
                sense of civil slavery. Those, who are called freemen, in reality, are little more
@@ -9202,7 +9296,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Of Armed Slaves.</h3>
             <h3 id="15.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE danger of arming slaves is not so great in monarchies as in republics. In the
                former, a warlike people and a body of nobility are a sufficient check upon these
                armed slaves; whereas, the pacific members of a republic would have a hard task to
@@ -9222,7 +9316,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                The Same Subject Continued.</h3>
             <h3 id="15.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a whole nation is of a martial temper, the slaves in arms are less to be feared.
                By a law of the Allemands, a slave, who had committed a clandestine theft§ , was liable
                to the same punishment as a freeman in the like case; but, if he was found guilty
@@ -9238,7 +9332,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Precautions To Be Used In Moderate Governments.</h3>
             <h3 id="15.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LENITY and humane treatment may prevent the dangers to be apprehended from the multitude
                of slaves in a moderate government. Men grow reconciled to every thing, and even to
                servitude, if not aggravated by the severity of the master. The Athenians treated
@@ -9286,7 +9380,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Regulations Between Masters And Slaves.</h3>
             <h3 id="15.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE magistrate ought to take care that the slave has his food and raiment; and this
                should be regulated by law.
                The laws ought to provide that care be taken of them in sickness and old age. Claudius*
@@ -9328,7 +9422,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of Infranchisements.</h3>
             <h3 id="15.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is easy to perceive, that many slaves, in a republican government, create a necessity
                of making many free. The evil is, if they have too great a number of slaves, they
                cannot keep them in due bounds; if they have too many freed-men, they cannot live,
@@ -9380,7 +9474,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                Of Freed-men And Eunuchs.</h3>
             <h3 id="15.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THUS, in a republican government, it is frequently of advantage, that the situation
                of the freed-men be but little below that of the free-born, and that the laws be calculated
                to remove a dislike of their condition. But, in a despotic government, where luxury
@@ -9417,7 +9511,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK XVI. HOW THE LAWS OF DOMESTIC SLAVERY HAVE A RELATION TO THE NATURE OF THE CLIMATE.</h2>
          <h2 id="Book_16"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -9440,7 +9534,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of Domestic Servitude.</h3>
             <h3 id="16.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SLAVES are established for the family, but they are not a part of it. Thus I distinguish
                their servitude from that which the women, in some countries, suffer, and which I
                shall properly call domestic servitude.
@@ -9451,7 +9545,7 @@
                That, In The Countries Of The South, There Is A Natural Inequality Between The Two
                Sexes.</h3>
             <h3 id="16.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WOMEN, in hot climates, are* marriageable at eight, nine, or ten, years of age: thus,
                in those countries, infancy and marriage generally go together. They are old at twenty:
                their reason, therefore, never accompanies their beauty. When beauty demands the empire,
@@ -9489,7 +9583,7 @@
             <h3 style="text-align:center;">CHAP. III.
                That A Plurality Of Wives Greatly Depends On The Means Of Supporting Them.</h3>
             <h3 id="16.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THOUGH, in countries where polygamy is once established, the number of wives is principally
                determined by the opulence of the husband, yet it cannot be said that opulence established
                polygamy in those states, since poverty may produce the same effect, as I shall prove
@@ -9503,7 +9597,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                That The Law Of Polygamy Is An Affair That Depends On Calculation.</h3>
             <h3 id="16.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ACCORDING to the calculations made in several parts of Europe, there are here born
                more boys than girls§ ; on the contrary, by the accounts we have of Asia, there are
                there born more¶ girls than boys. The law, which, in Europe, allows only one wife,
@@ -9526,7 +9620,7 @@
             <h3 style="text-align:center;">CHAP. V.
                The Reason Of A Law Of Malabar.</h3>
             <h3 id="16.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the tribe of the Naires? , on the coast of Malabar, the men can have only one wife,
                while a woman, on the contrary, may have many husbands. The origin of this custom
                is not, I believe, difficult to discover. The Naires are the tribe of nobles, who
@@ -9541,7 +9635,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of Polygamy Considered In Itself.</h3>
             <h3 id="16.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WITH regard to polygamy in general, independently of the circumstances which may render
                it tolerable, it is not of the least service to mankind, nor to either of the two
                sexes, whether it be that which abuses, or that which is abused. Neither is it of
@@ -9571,7 +9665,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of An Equality Of Treatment In Case Of Many Wives.</h3>
             <h3 id="16.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                FROM the law which permitted a plurality of wives followed that of an equal behaviour
                to each. Mahomet, who allowed of four, would have every thing, as provisions, dress,
                and conjugal duty, equally divided between them. This law is also in force in the
@@ -9586,7 +9680,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Of The Separation Of Women From Men.</h3>
             <h3 id="16.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE prodigious number of wives, possessed by those who live in rich and voluptuous
                countries, is a consequence of the law of polygamy: their separation from men and
                their close confinement naturally follow from the greatness of this number. Domestic
@@ -9603,7 +9697,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of The Connexion Between Domestic And Political Government.</h3>
             <h3 id="16.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN a republic, the condition of citizens is moderate, equal, mild, and agreeable;
                every thing partakes of the benefit of public liberty. An empire over the women cannot,
                amongst them, be so well exerted; and, where the climate demands this empire, it is
@@ -9631,7 +9725,7 @@
             <h3 style="text-align:center;">CHAP. X.
                The Principle On Which The Morals Of The East Are Founded.</h3>
             <h3 id="16.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN the case of a multiplicity of wives, the more a family ceases to be united, the
                more ought the laws to re-unite its detached parts in a common center; and, the greater
                the diversity of interests, the more necessary it is for the laws to bring them back
@@ -9674,7 +9768,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of Domestic Slavery Independently Of Polygamy.</h3>
             <h3 id="16.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is not only a plurality of wives which, in certain places of the East, requires
                their confinement, but also the climate itself. Those, who consider the horrible crimes,
                the treachery, the dark villanies, the poisonings, the assassinations, which the liberty
@@ -9696,7 +9790,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of Natural Modesty.</h3>
             <h3 id="16.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ALL nations are equally agreed in fixing contempt and ignominy on the incontinence
                of women. Nature has dictated this to all: she has established the attack, and she
                has established too the resistance; and, having implanted desires in both, she has
@@ -9718,7 +9812,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Of Jealousy.</h3>
             <h3 id="16.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WITH respect to nations, we ought to distinguish between the passion of jealousy,
                and a jealousy arising from customs, manners, and laws. The one is a hot raging fever;
                the other, cold, but sometimes terrible, may be joined with indifference and contempt.
@@ -9733,7 +9827,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Of The Eastern Manner Of Domestic Government.</h3>
             <h3 id="16.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WIVES are changed so often, in the East, that they cannot have the power of domestic
                government. This care is, therefore, committed to the eunuchs, whom they intrust with
                their keys and the management of their families. “In Persia, says sir John Chardin,
@@ -9746,7 +9840,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Of Divorce And Repudiation.</h3>
             <h3 id="16.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is this difference between a divorce and a repudiation; that the former is made
                by mutual consent, arising from a mutual antipathy, while the latter is formed by
                the will, and for the advantage, of one of the two parties, independently of the will
@@ -9788,7 +9882,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Of Repudiation And Divorce Amongst The Romans.</h3>
             <h3 id="16.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ROMULUS permitted a husband to repudiate his wife, if she had committed adultery,
                prepared poison, or procured false keys. He did not grant to women the right of repudiating
                their husbands. Plutarch? calls this, a law extremely severe.
@@ -9853,7 +9947,7 @@
          <h2 style="text-align:center;">BOOK XVII. HOW THE LAWS OF POLITICAL SERVITUDE HAVE A RELATION TO THE NATURE OF THE
             CLIMATE.</h2>
          <h2 id="Book_17"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -9868,7 +9962,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of Political Servitude.</h3>
             <h3 id="17.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                POLITICAL servitude does not less depend on the nature of the climate than on that
                which is civil and domestic; and this we shall now demonstrate.
                </p>
@@ -9877,7 +9971,7 @@
             <h3 style="text-align:center;">CHAP. II.
                The Difference Between Nations In Point Of Courage.</h3>
             <h3 id="17.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have already observed, that great heat enervates the strength and courage of men;
                and that, in cold climates, they have a certain vigour of body and mind which renders
                them patient and intrepid, and qualifies them for arduous enterprizes. This remark
@@ -9897,7 +9991,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of The Climate Of Asia.</h3>
             <h3 id="17.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE relations of travellers† inform us, “that the vast continent of the North of Asia,
                which extends from forty degrees, or thereabouts, to the pole, and from the frontiers
                of Muscovy even to the eastern ocean, is in an extremely cold climate; that this immense
@@ -9965,7 +10059,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                The Consequences Resulting From This.</h3>
             <h3 id="17.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHAT we have now said is perfectly conformable to history. Asia has been subdued thirteen
                times; eleven by the northern nations, and twice by those of the South. In the early
                ages, it was conquered three times by the Scythians; afterwards it was subdued once
@@ -9990,7 +10084,7 @@
                That, When The People In The North Of Asia And Those Of The North Of Europe Made Conquests,
                The Effects Of The Conquest Were Not The Same.</h3>
             <h3 id="17.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE nations in the North of Europe conquered as freemen; the people in the North of
                Asia conquered as slaves, and subdued others only to gratify the ambition of a master.
                The reason is, that the people of Tartary, the natural conquerors of Asia, are themselves
@@ -10034,7 +10128,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                A New Physical Cause Of The Slavery Of Asia And Of The Liberty Of Europe.</h3>
             <h3 id="17.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IN Asia they have always had great empires; in Europe these could never subsist. Asia
                has larger plains; it is cut out into much more extensive divisions by mountains and
                seas; and, as it lies more to the South, its springs are more easily dried up; the
@@ -10059,7 +10153,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of Africa And America.</h3>
             <h3 id="17.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THIS is what I had to say of Asia and Europe. Africa is in a climate like that of
                the South of Asia, and is in the same servitude. America¶ , being lately destroyed,
                and re- peopled by the nations of Europe and Africa, can now scarcely display its
@@ -10071,7 +10165,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Of The Capital Of The Empire.</h3>
             <h3 id="17.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ONE of the consequences of what we have been mentioning is, that it is of the utmost
                importance to a great prince to make a proper choice of the seat of his empire. He
                who places it to the southward will be in danger of losing the North; but he who fixes
@@ -10086,7 +10180,7 @@
          <hr/>
          <h2 style="text-align:center;">BOOK XVIII. OF LAWS IN THE RELATION THEY BEAR TO THE NATURE OF THE SOIL.</h2>
          <h2 id="Book_18"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -10124,7 +10218,7 @@
             <h3 style="text-align:center;">CHAP. I.
                How The Nature Of The Soil Has An Influence On The Laws.</h3>
             <h3 id="18.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE goodness of the land, in any country, naturally establishes subjection and dependence.
                The husbandmen, who compose the principal part of the people, are not very jealous
                of their liberty; they are too busy and too intent on their own private affairs. A
@@ -10150,7 +10244,7 @@
             <h3 style="text-align:center;">CHAP. II.
                The Same Subject Continued.</h3>
             <h3 id="18.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THESE fertile provinces are always of a level surface, where the inhabitants are unable
                to dispute against a stronger power: they are then obliged to submit; and, when they
                have once submitted, the spirit of liberty cannot return; the wealth of the country
@@ -10171,7 +10265,7 @@
             <h3 style="text-align:center;">CHAP. III.
                What Countries Are Best Cultivated.</h3>
             <h3 id="18.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                COUNTRIES are not cultivated in proportion to their fertility, but to their liberty;
                and, if we make an imaginary division of the earth, we shall be astonished to see,
                in most ages, desarts in the most fruitful parts, and great nations in those where
@@ -10201,7 +10295,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                New Effects Of The Barrenness And Fertility Of Countries.</h3>
             <h3 id="18.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE barrenness of the earth renders men industrious, sober, inured to hardship, courageous,
                and fit for war: they are obliged to procure by labour what the earth refuses to bestow
                spontaneously. The fertility of a country gives ease, effeminacy, and a certain fondness
@@ -10215,7 +10309,7 @@
             <h3 style="text-align:center;">CHAP. V.
                Of The Inhabitants Of Islands.</h3>
             <h3 id="18.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE inhabitants of islands have a higher relish for liberty than those of the continent.
                Islands are commonly of a small? extent; one part of the people cannot be so easily
                employed to oppress the other; the sea separates them from great empires; tyranny
@@ -10228,7 +10322,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                Of Countries Raised By The Industry Of Man.</h3>
             <h3 id="18.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THOSE countries which the industry of man has rendered habitable, and which stand
                in need of the same industry to provide for their subsistence, require a mild and
                moderate government. There are principally three of this species; the two fine provinces
@@ -10254,7 +10348,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of Human Industry.</h3>
             <h3 id="18.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                MANKIND, by their industry, and by the influence of good laws, have rendered the earth
                more proper for their abode. We see rivers flow where there have been lakes and marshes:
                this is a benefit which nature has not bestowed; but it is a benefit maintained and
@@ -10271,7 +10365,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                The General Relation Of Laws.</h3>
             <h3 id="18.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE laws have a very great relation to the manner in which the several nations procure
                their subsistence. There should be a code of laws of a much larger extent for a nation
                attached to trade and navigation than for people who are content with cultivating
@@ -10284,7 +10378,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of The Soil Of America.</h3>
             <h3 id="18.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE cause of there being such a number of savage nations in America is, the fertility
                of the earth, which spontaneously produces many fruits capable of affording them nourishment.
                If the women cultivate a spot of land round their cottages, the maiz grows up presently;
@@ -10300,7 +10394,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of Population, In The Relation It Bears To The Manner Of Procuring Subsistence.</h3>
             <h3 id="18.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LET us see in what proportion countries are peopled where the inhabitants do not cultivate
                the earth. As the produce of uncultivated land is to that of land improved by culture,
                so the number of savages in one country is to that of husbandmen in another: and,
@@ -10319,7 +10413,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                Of Savage And Barbarous Nations.</h3>
             <h3 id="18.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE is this difference between savage and barbarous nations; the former are dispersed
                in clans, which, for some particular reason, cannot be joined in a body; and the latter
                are commonly small nations, capable of being united. The savages are generally hunters;
@@ -10336,7 +10430,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of The Law Of Nations Among People Who Do Not Cultivate The Earth.</h3>
             <h3 id="18.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS these people do not live in circumscribed territories, many causes of strife arise
                between them; they quarrel about waste land as we about inheritances. Thus they find
                frequent occasions for war, in disputes relative either to their hunting, their fishing,
@@ -10349,7 +10443,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Of The Civil Law Of Those Nations Who Do Not Cultivate The Earth.</h3>
             <h3 id="18.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE division of lands is what principally increases the civil code. Amongst nations
                where they have not made this division there are very few civil laws.
                The institutions of these people may be called manners rather than laws.
@@ -10372,7 +10466,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                Of The Political State Of The People Who Do Not Cultivate The Land.</h3>
             <h3 id="18.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THESE people enjoy great liberty. For, as they do not cultivate the earth, they are
                not fixed, they are wanderers and vagabonds; and, if a chief should deprive them of
                their liberty, they would immediately go and seek it under another, or retire into
@@ -10384,7 +10478,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                Of People Who Know The Use Of Money.</h3>
             <h3 id="18.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                ARISTIPPUS, being cast away, swam and got safe to the next shore; where, beholding
                geometrical figures traced in the sand, he was seized with a transport of joy, judging
                that he was amongst Greeks, and not in a nation of barbarians.
@@ -10403,7 +10497,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                Of Civil Laws Among People Who Know Not The Use Of Money.</h3>
             <h3 id="18.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a people have not the use of money, they are seldom acquainted with any other
                injustice than that which arises from violence; and the weak, by uniting, defend themselves
                from its effects. They have nothing there but political regulations. But, where money
@@ -10421,7 +10515,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of Political Laws Amongst Nations Who Have Not The Use Of Money.</h3>
             <h3 id="18.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE greatest security of the liberties of a people, who do not cultivate the earth,
                is, their not knowing the use of money. What is gained by hunting, fishing, or keeping
                herds of cattle, cannot be assembled in such great quantity, nor be sufficiently preserved,
@@ -10437,7 +10531,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                Of The Power Of Superstition.</h3>
             <h3 id="18.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IF what travellers tell us be true, the constitution of a nation of Louisiana, called
                the Natches, is an exception to this. Their* chief disposes of the goods of all his
                subjects, and obliges them to work and toil according to his pleasure. He has a power
@@ -10456,7 +10550,7 @@
             <h3 style="text-align:center;">CHAP. XIX.
                Of The Liberty Of The Arabs And The Servitude Of The Tartars.</h3>
             <h3 id="18.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Arabs and Tartars are nations of herdsmen and shepherds. The Arabs find themselves
                in that situation of which we have been speaking, and are therefore free; whilst the
                Tartars (the most singular people on earth) are involved in a† political slavery.
@@ -10488,7 +10582,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                Of The Law Of Nations As Practised By The Tartars.</h3>
             <h3 id="18.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Tartars appear to be mild and humane amongst themselves, and yet they are most
                cruel conquerors: when they take cities, they put the inhabitants to the sword, and
                imagine that they act humanely, if they only sell the people or distribute them amongst
@@ -10508,7 +10602,7 @@
             <h3 style="text-align:center;">CHAP. XXI.
                The Civil Law Of The Tartars.</h3>
             <h3 id="18.21"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                FATHER Du Halde says, that, amongst the Tartars, the youngest of the males is always
                the heir, by reason, that, as soon as the elder brothers are capable of leading a
                pastoral life, they leave the house, with a certain number of cattle given them by
@@ -10525,7 +10619,7 @@
             <h3 style="text-align:center;">CHAP. XXII.
                Of A Civil Law Of The German Nations.</h3>
             <h3 id="18.22"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I shall here explain how that particular passage of the Salique law, which is commonly
                distinguished by the term, The Salique Law, relates to the institutions of a people
                who do not cultivate the earth, or, at least who cultivate it but very little.
@@ -10662,7 +10756,7 @@
             <h3 style="text-align:center;">CHAP. XXIII.
                Of The Regal Ornaments Among The Franks.</h3>
             <h3 id="18.23"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                A people who do not cultivate the land have no idea of luxury. We may see, in Tacitus,
                the admirable simplicity of the German nations: they had no artificial elegancies
                of dress; their ornaments were derived from nature. If the family of their chief was
@@ -10675,7 +10769,7 @@
             <h3 style="text-align:center;">CHAP. XXIV.
                Of The Marriages Of The Kings Of The Franks.</h3>
             <h3 id="18.24"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I have already mentioned, that, with people who do not cultivate the earth, marriages
                are less fixed than with others, and that they generally take many wives. “Of‡ all
                the barbarous nations the Germans were almost the only people who were satisfied with
@@ -10691,7 +10785,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XXV. Childeric.</h3>
             <h3 id="18.25"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                “THE laws of matrimony, amongst the Germans, says Tacitus, are strictly observed.¶
                Vice is not there a subject of ridicule. To corrupt or be corrupted is not called
                fashion, or the custom of the age. There are few* examples, in this populous nation,
@@ -10704,7 +10798,7 @@
             <h3 style="text-align:center;">CHAP. XXVI.
                Of The Time When The Kings Of The Franks Became Of Age.</h3>
             <h3 id="18.26"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                BARBARIANS, who do not cultivate the earth, have, strictly speaking, no jurisdiction;
                and are, as we have already remembered, rather governed by the law of nations than
                by civil institutions. They are, therefore, always armed. Thus Tacitus tells us, “that
@@ -10740,7 +10834,7 @@
             <h3 style="text-align:center;">CHAP. XXVII.
                The Same Subject Continued.</h3>
             <h3 id="18.27"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have seen that the Germans did not appear in their assemblies before they were
                of age; they were a part of the family but not of the republic. This was the reason
                that the children of Clodomir, king of Orleans, and conqueror of Burgundy, were not
@@ -10763,7 +10857,7 @@
             <h3 style="text-align:center;">CHAP. XXVIII.
                Of Adoption Among The Germans.</h3>
             <h3 id="18.28"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AS the Germans became of age by the wielding of arms, so they were adopted by the
                same sign. Thus Gontram, willing to declare his nephew, Childebert, of age, and to
                adopt him for his son, made use of these words. “I have put‡ this javelin into thy
@@ -10781,7 +10875,7 @@
             <h3 style="text-align:center;">CHAP. XXIX.
                Of The Sanguinary Temper Of The Kings Of The Franks.</h3>
             <h3 id="18.29"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                CLOVIS was not the only prince amongst the Franks who had invaded Gaul. Many of his
                relations had penetrated into this country with particular tribes; but, as he had
                met with much greater success, and could grant considerable settlements to such as
@@ -10799,7 +10893,7 @@
             <h3 style="text-align:center;">CHAP. XXX.
                Of The National Assemblies Of The Franks.</h3>
             <h3 id="18.30_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT has been remarked, above, that nations who do not cultivate the land enjoy great
                liberty.
                This was the case of the Germans. Tacitus says, that they gave their kings, or chiefs,
@@ -10819,7 +10913,7 @@
             <h3 style="text-align:center;">CHAP. XXXI.
                Of The Authority Of The Clergy Under The First Race.</h3>
             <h3 id="18.31"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE priests of barbarous nations are commonly invested with power, because they have
                both that authority which is due to them from their religious character, and that
                influence which, amongst such a people, is the offspring of superstition. Thus we
@@ -10841,7 +10935,7 @@
          <h2 style="text-align:center;">BOOK XIX. OF LAWS, IN RELATION TO THE PRINCIPLES WHICH FORM THE GENERAL SPIRIT, THE
             MORALS, AND CUSTOMS, OF A NATION.</h2>
          <h2 id="Book_19"></h2>
-         <p>
+         <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
             
             
@@ -10875,7 +10969,7 @@
             <h3 style="text-align:center;">CHAP. I.
                Of The Subject Of This Book.</h3>
             <h3 id="19.1"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THIS subject is very extensive. In that croud of ideas, which present themselves to
                my mind, I shall be more attentive to the order of things than to the things themselves.
                I shall be obliged to wander to the right and to the left, that I may investigate
@@ -10887,7 +10981,7 @@
                That It Is Necessary People’S Minds Should Be Prepared For The Reception Of The Best
                Laws.</h3>
             <h3 id="19.2"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                NOTHING could appear more insupportable to the Germans? than the tribunal of Varus.
                That which Justinian§ erected amongst the Lazi, to proceed against the murderers of
                their king, appeared to them as an affair the most horrid and barbarous.
@@ -10907,7 +11001,7 @@
             <h3 style="text-align:center;">CHAP. III.
                Of Tyranny.</h3>
             <h3 id="19.3"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THERE are two sorts of tyranny; one real, which arises from oppression; the other
                is seated in opinion, and is sure to be felt whenever those who govern establish things
                shocking to the present ideas of a nation.
@@ -10931,7 +11025,7 @@
             <h3 style="text-align:center;">CHAP. IV.
                Of The General Spirit Of Mankind.</h3>
             <h3 id="19.4"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                MANKIND are influenced by various causes; by the climate, by the religion, by the
                laws, by the maxims of government, by precedents, morals, and customs; from whence
                is formed a general spirit of nations.
@@ -10946,7 +11040,7 @@
             <h3 style="text-align:center;">CHAP. V.
                How Far We Should Be Attentive Lest The General Spirit Of A Nation Be Changed.</h3>
             <h3 id="19.5"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                SHOULD there happen to be a country whose inhabitants were of a social temper, open-hearted,
                chearful, endowed with taste, and a facility of communicating their thoughts; who
                were sprightly and agreeable; sometimes imprudent, often indiscreet; and, besides,
@@ -10970,7 +11064,7 @@
             <h3 style="text-align:center;">CHAP. VI.
                That Every Thing Ought Not To Be Corrected.</h3>
             <h3 id="19.6"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                LET them but leave us as we are, said a gentleman of a nation which had a very great
                resemblance to that we have been describing, and nature will repair whatever is amiss.
                She has given us a vivacity capable of offending and hurrying us beyond the bounds
@@ -10984,7 +11078,7 @@
             <h3 style="text-align:center;">CHAP. VII.
                Of The Athenians And Lacedæmonians.</h3>
             <h3 id="19.7"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Athenians, this gentleman adds, were a nation that had some relation to ours.
                They mingled gaiety with business; a stroke of raillery was as agreeable in the senate
                as in the theatre. This vivacity, which discovered itself in their councils, went
@@ -10997,7 +11091,7 @@
             <h3 style="text-align:center;">CHAP. VIII.
                Effects Of A Sociable Temper.</h3>
             <h3 id="19.8"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE more communicative a people are, the more easily they change their habits, because
                each is, in a greater degree, a spectacle to the other, and the singularities of individuals
                are better observed. The climate, which influences one nation to take a pleasure in
@@ -11014,7 +11108,7 @@
             <h3 style="text-align:center;">CHAP. IX.
                Of The Vanity And Pride Of Nations.</h3>
             <h3 id="19.9"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                VANITY is as advantageous to a government as pride is dangerous. To be convinced of
                this, we need only represent, on the one hand, the numberless benefits which result
                from vanity, as industry, the arts, fashions, politeness, and taste; on the other,
@@ -11046,7 +11140,7 @@
             <h3 style="text-align:center;">CHAP. X.
                Of The Character Of The Spaniards And Chinese.</h3>
             <h3 id="19.10_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE characters of the several nations are formed of virtues and vices, of good and
                bad qualities. From the happy mixture of these great advantages result, and frequently
                where it would be least expected; there are others from whence great evils arise,
@@ -11071,7 +11165,7 @@
             <h3 style="text-align:center;">CHAP. XI.
                A Reflection.</h3>
             <h3 id="19.11"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                I have said nothing here with a view to lessen that infinite distance which must ever
                be between virtue and vice. God forbid that I should be guilty of such an attempt.
                I would only make my readers comprehend, that all political are not moral vices; and
@@ -11083,7 +11177,7 @@
             <h3 style="text-align:center;">CHAP. XII.
                Of Custom And Manners In A Despotic State.</h3>
             <h3 id="19.12"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is a capital maxim, that the manners and customs of a despotic empire ought never
                to be changed; for nothing would more speedily produce a revolution. The reason is,
                that, in these states, there are no laws; that is, none that can be properly called
@@ -11109,7 +11203,7 @@
             <h3 style="text-align:center;">CHAP. XIII.
                Of The Behaviour Of The Chinese.</h3>
             <h3 id="19.13"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                BUT China is the place where the customs of the country can never be changed. Besides,
                their women being absolutely separated from the men, their customs, like their morals,
                are taught in the schools. A man of§ letters may be known by his easy address. These
@@ -11121,7 +11215,7 @@
             <h3 style="text-align:center;">CHAP. XIV.
                What Are The Natural Means Of Changing The Manners And Customs Of A Nation.</h3>
             <h3 id="19.14"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WE have said that the laws were the particular and precise institutions of a legislator,
                and manners and customs the institutions of a nation in general. From hence it follows,
                that, when these manners and customs are to be changed, it ought not to be done by
@@ -11162,7 +11256,7 @@
             <h3 style="text-align:center;">CHAP. XV.
                The Influence Of Domestic Government On The Political.</h3>
             <h3 id="19.15"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THIS alteration in the manners of women will doubtless have a great influence on the
                government of Muscovy. One naturally follows the other: the despotic power of the
                prince is connected with the servitude of women; the liberty of women with the spirit
@@ -11173,7 +11267,7 @@
             <h3 style="text-align:center;">CHAP. XVI.
                How Some Legislators Have Confounded The Principles Which Govern Mankind.</h3>
             <h3 id="19.16"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                MANNERS and customs are those habits which are not established by legislators, either
                because they were not able, or were not willing, to establish them.
                There is this difference between laws and manners, that the laws are most adapted
@@ -11210,7 +11304,7 @@
             <h3 style="text-align:center;">CHAP. XVII.
                Of The Peculiar Quality Of The Chinese Government.</h3>
             <h3 id="19.17"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE legislators of China went farther.† They confounded together their religion, laws,
                manners, and customs; all these were morality, all these were virtue. The precepts
                relating to these four points were what they called rites; and it was in the exact
@@ -11241,7 +11335,7 @@
             <h3 style="text-align:center;">CHAP. XVIII.
                A Consequence Drawn From The Preceding Chapter.</h3>
             <h3 id="19.18"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                FROM hence it follows that the laws of China are not destroyed by conquest. Their
                customs, manners, laws, and religion, being the same thing, they cannot change all
                these at once; and, as it will happen that either the conqueror or the conquered must
@@ -11267,7 +11361,7 @@
             <h3 style="text-align:center;">CHAP. XIX.
                How This Union Of Religion, Laws, Manners, And Customs, Among The Chinese, Was Effected.</h3>
             <h3 id="19.19"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE principal object of government, which the Chinese legislators had in view, was
                the peace and tranquility of the empire: and subordination appeared to them as the
                most proper means to maintain it. Filled with this idea, they believed it their duty
@@ -11303,7 +11397,7 @@
             <h3 style="text-align:center;">CHAP. XX.
                Explication Of A Paradox Relating To The Chinese.</h3>
             <h3 id="19.20_"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is very remarkable, that the Chinese, whose lives are guided by rites, are nevertheless
                the greatest cheats upon earth. This appears chiefly in their trade, which, in spite
                of its natural tendency, has never been able to make them honest. He who buys of them
@@ -11329,7 +11423,7 @@
             <h3 style="text-align:center;">CHAP. XXI.
                How The Laws Ought To Have A Relation To Manners And Customs.</h3>
             <h3 id="19.21"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                IT is only singular institutions which thus confound laws, manners, and customs, things
                naturally distinct and separate: but, though they are in themselves different, there
                is nevertheless a great relation between them.
@@ -11345,7 +11439,7 @@
             <h3 style="text-align:center;">CHAP. XXII.
                The Same Subject Continued.</h3>
             <h3 id="19.22"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                WHEN a people have pure and regular manners, their laws become simple and natural.
                Plato† says that Rhadamanthus, who governed a nation extremely religious, finished
                every process with extraordinary dispatch, administering only the oath on each accusation.
@@ -11358,7 +11452,7 @@
             <h3 style="text-align:center;">CHAP. XXIII.
                How The Laws Are Founded On The Manners Of A People.</h3>
             <h3 id="19.23"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                AT the time when the manners of the Romans were pure, they had no particular law against
                the embezzlement of the public money. When this crime began to appear, it was thought
                so infamous, that, to be condemned to restore? what they had taken, was considered
@@ -11369,7 +11463,7 @@
             <h3 style="text-align:center;">CHAP. XXIV.
                The Same Subject Continued.</h3>
             <h3 id="19.24"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE laws, which gave the right of tutelage to the mother, were most attentive to the
                preservation of the infant’s person; those, which granted it to the next heir, were
                most attentive to the preservation of the state. When the manners of a people are
@@ -11394,7 +11488,7 @@
             <h3 style="text-align:center;">CHAP. XXV.
                The Same Subject Continued.</h3>
             <h3 id="19.25"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                THE Roman law gave the liberty of making presents before marriage; after marriage
                they were not allowed. This was founded on the manners of the Romans, who were led
                to marriage only by frugality, simplicity, and modesty, but might suffer themselves
@@ -11413,7 +11507,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XXVI.</h3>
             <h3 id="19.26"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                The Same Subject Continued.
                THE law? of Theodosius and Valentinian drew the causes of repudiation from the ancient
@@ -11431,7 +11525,7 @@
          <div class="sub_section">
             <h3 style="text-align:center;">CHAP. XXVII.</h3>
             <h3 id="19.27"></h3>
-            <p>
+            <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
                
                How The Laws Contribute To Form The Manners, Customs, And Character, Of A Nation.
                THE customs of an enslaved people are a part of their servitude; those of a free people
