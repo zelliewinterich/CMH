@@ -10,6 +10,14 @@
                     } .dropdown-content { display: none; position: absolute; background-color: #333; min-width: 160px; z-index: 1;
                     } .dropdown:hover .dropdown-content { display: block; } .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; font-family: Georgia, serif;
                     } .dropdown-content a:hover { background-color: #ddd; color: black; } .navbar { background-color: #333; display: flex; justify-content: space-evenly; align-items: center; padding: 8px 20px; font-family: Georgia, serif;}
+                      body { background: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+    background-size: 100% 2000%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
+}
+
                     
                 </style>
    </head>
@@ -82,14 +90,14 @@
                THE CONSTITUTION OF THE UNITED STATES OF AMERICA, 1787
                </i></p>
       </div>
-      By: Zellie Winterich, Anna Costello, James Paul, Ryan Pavone
+      <p style="margin: 20px;">By: Zellie Winterich, Anna Costello, James Paul, Ryan Pavone</p>
       
       <hr/> 
       <section>
          <h2 style="text-decoration:underline; text-align:center;">Preamble to the Constitution</h2>
       
       
-      <p style="text-align:center;"><i>We the people of the United States, in Order to form a more perfect Union, establish
+      <p style="text-align:center; margin: 20px;"><i>We the people of the United States, in Order to form a more perfect Union, establish
       Justice, insure domestic Tranquility, provide for the common defence,
       promote the general Welfare, and secure the Blessings of Liberty to ourselves and
       our Posterity, do ordain and establish this Constitution for the United States of
@@ -97,7 +105,7 @@
       </section>
       
       
-      <h2 style="text-align:left;">Table of Contents</h2>
+      <h2 style="text-align:left; margin: 10px;">Table of Contents</h2>
       <hr/>
       <ul>
          <li>
@@ -365,7 +373,7 @@
             <h2 style="font-style:italic;"><a href="#Amendment_27">Amendment_27.</a></h2>
          </li>
       </ul>
-      <hr/><select id="thinkerSelector" onchange="changeThinkerSelection()">
+      <hr/><div id="thinker" style="margin: 12px;"><select id="thinkerSelector" onchange="changeThinkerSelection()">
          <option value="None">None</option>
          <option value="rousseau">Rousseau</option>
          <option value="montesquieu">Montesquieu</option>
@@ -384,7 +392,7 @@
                <stop offset="75%" style="stop-color: #0099ff; stop-opacity: 1"></stop>
                <stop offset="100%" style="stop-color: #8100d0; stop-opacity: 1"></stop>
             </linearGradient>
-         </defs></svg><hr/>
+         </defs></svg></div><hr/>
       <div class="section" data-rousseau="0.26" data-montesquieu="0.09" data-decive="0.06" data-locke="0.04">
          <hr/>
          <h2 style="text-align:center;">Article One</h2>
@@ -416,14 +424,14 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="1.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             All legislative Powers herein granted shall be vested in a Congress of the United States,
             which shall consist of a Senate and House of Representatives .
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="1.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The House of Representatives shall be composed of Members chosen every second Year
             by the People of the several States , and the electors in each State shall have the qualifications requisite for electors
@@ -451,7 +459,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="1.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             The Senate of the United States shall be composed of  two Senators from each State, chosen by the legislature thereof, for six Years ; and each Senator shall have one Vote.
             Immediately after they shall be assembled in Consequence of the first Election, they
@@ -480,7 +488,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="1.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Times, Places and Manner of holding Elections for Senators and Representatives,
             shall be prescribed in each State by the Legislature thereof; 
@@ -491,7 +499,7 @@
             </p>
          <h3 style="text-align:center;">Section 5</h3>
          <h3 id="1.5"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Each House shall be the Judge of the Elections, Returns and Qualifications of its
             own Members, and a Majority of each shall constitute a Quorum to do Business; but
@@ -510,7 +518,7 @@
             </p>
          <h3 style="text-align:center;">Section 6</h3>
          <h3 id="1.6"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Senators and Representatives shall receive a Compensation for their Services,
             to be ascertained by Law, and paid out of the Treasury of the United States.They shall
@@ -527,7 +535,7 @@
             </p>
          <h3 style="text-align:center;">Section 7</h3>
          <h3 id="1.7"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              All Bills for raising Revenue shall originate in the House of Representatives; but
             the Senate may propose or concur with Amendments as on other Bills. 
@@ -556,7 +564,7 @@
             </p>
          <h3 style="text-align:center;">Section 8</h3>
          <h3 id="1.8"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress shall have Power to lay and collect Taxes, Duties, Imposts and Excises,
             to pay the Debts and provide for the common Defence and general Welfare of the United
@@ -594,7 +602,7 @@
             </p>
          <h3 style="text-align:center;">Section 9</h3>
          <h3 id="1.9"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Migration or Importation of such Persons as any of the States now existing shall
             think proper to admit, shall not be prohibited by the Congress prior to the Year one
@@ -618,7 +626,7 @@
             </p>
          <h3 style="text-align:center;">Section 10</h3>
          <h3 id="1.0_"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              No State shall enter into any Treaty, Alliance, or Confederation; grant Letters of
             Marque and Reprisal; coin Money; emit Bills of Credit; make any Thing but gold and
@@ -656,7 +664,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="2.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The executive Power shall be vested in a President of the United States of America.
              He shall hold his Office during the Term of four Years, and, together with the Vice
@@ -715,7 +723,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="2.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The President shall be Commander in Chief of the Army and Navy of the United States,
             and of the Militia of the several States, when called into the actual Service of the
@@ -738,7 +746,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="2.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              He shall from time to time give to the Congress Information of the State of the Union,
             and recommend to their Consideration such Measures as he shall judge necessary and
@@ -752,7 +760,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="2.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The President, Vice President and all civil Officers of the United States, shall be
             removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other
@@ -777,7 +785,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="3.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The judicial Power of the United States, shall be vested in one supreme Court, and
             in such inferior Courts as the Congress may from time to time ordain and establish.The
@@ -788,7 +796,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="3.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The judicial Power shall extend to all Cases, in Law and Equity, arising under this
             Constitution, the Laws of the United States, and Treaties made, or which shall be
@@ -812,7 +820,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="3.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Treason against the United States, shall consist only in levying War against them,
             or in adhering to their Enemies, giving them Aid and Comfort.No Person shall be convicted
@@ -841,7 +849,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="4.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Full Faith and Credit shall be given in each State to the public Acts, Records, and
             judicial Proceedings of every other State.  And  the Congress may by general Laws prescribe the Manner in which such Acts, Records,
@@ -850,7 +858,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="4.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             .
              The Citizens of each State shall be entitled to all Privileges and Immunities of Citizens
             in the several States.   A Person charged in any State with Treason, Felony, or other Crime,
@@ -864,7 +872,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="4.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             New States may be admitted by the Congress into this Union; but no new States shall
             be formed or erected within the Jurisdiction of any other State; nor any State be
@@ -877,7 +885,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="4.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The United States shall guarantee to every State in this Union a Republican Form of
             Government , and  shall protect each of them against Invasion; and on Application of the Legislature,
@@ -893,7 +901,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose
             Amendments to this Constitution, or, on the Application of
@@ -915,7 +923,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.17</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>1.33</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             All Debts contracted and Engagements entered into, before the Adoption of this Constitution,
             shall be as valid against the United States under this Constitution, as under the
@@ -941,7 +949,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Ratification of the Conventions of nine States, shall be sufficient for the Establishment
             of this Constitution between the States so ratifying the Same. 
@@ -970,7 +978,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.33</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>5.83</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Congress shall make no law respecting an establishment of religion, or prohibiting
             the free exercise thereof;  or  abridging the freedom of speech, 
@@ -986,7 +994,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>3.50</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.50</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             A well-regulated militia, being necessary to the security of a free State,  the right of the people to keep and bear arms, shall not be infringed. 
             </p>
@@ -1000,7 +1008,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>4.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>2.50</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              No soldier shall, in time of peace be quartered in any house, without the consent
             of the owner, nor in time of war, but in a manner to be prescribed by law. 
@@ -1015,7 +1023,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The right of the people to be secure in their persons, houses, papers, and effects,
             against unreasonable searches and seizures, shall not be violated,
@@ -1033,7 +1041,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              No person shall be held to answer for a capital, or otherwise infamous crime, unless
             on a presentment or indictment of a Grand Jury , except in cases arising
@@ -1052,7 +1060,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              In all criminal prosecutions, the accused shall enjoy the right to a speedy and public
             trial ,  by an impartial jury of the State and district 
@@ -1071,7 +1079,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             In suits at common law, where the value in controversy shall exceed twenty dollars,
              the right of trial by jury shall be preserved, and no fact tried by a jury shall be
@@ -1088,7 +1096,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.33</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Excessive bail shall not be required nor excessive fines imposed ,  nor cruel and unusual punishments inflicted. 
             </p>
@@ -1102,7 +1110,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>5.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>10.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>2.50</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The enumeration in the Constitution, of certain rights, shall not be construed to
             deny or disparage others retained by the people. 
@@ -1117,7 +1125,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The powers not delegated to the United States by the Constitution, nor prohibited
             by it to the States, are reserved to the States respectively , or to the people.
@@ -1132,7 +1140,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.67</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.50</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress March 4, 1794. Ratified February 7, 1795. (Note: A portion of Article
             III, sub_section 2 of the Constitution was modifiedbythe11th Amendment.) The
@@ -1150,7 +1158,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.10</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.33</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.06</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress December 9, 1803. Ratified June 15, 1804. (Note: A portion of Article
             II, sub_section 1 of the Constitution was changed by the 12th
@@ -1192,7 +1200,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress January 31, 1865. Ratified December 6, 1865. (Note: A portion of
             Article IV, sub_section 2 of the Constitution was changed by the 13th Amendment.)
@@ -1201,7 +1209,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="13.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Neither slavery nor involuntary servitude, except as a punishment for crime whereof
             the party shall have been duly convicted, shall exist within the United States, or
@@ -1209,7 +1217,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="13.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Congress shall have power to enforce this article by appropriate legislation.
             </p>
@@ -1223,7 +1231,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.13</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>1.37</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.12</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress June 13, 1866. Ratified July 9, 1868. (Note: Article I, sub_section
             2 ofthe Constitution was modified by sub_section 2 of the 14th Amendment.) 
@@ -1239,7 +1247,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="14.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              All persons born or naturalized in the United States and subject to the jurisdiction
             thereof, are citizens of the United States and of the State wherein they reside.   No State shall make or enforce
@@ -1250,7 +1258,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="14.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Representatives shall be apportioned among the several States according to their respective
             numbers, counting the whole number of persons in each State, excluding Indians not
@@ -1266,7 +1274,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="14.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              No person shall be a Senator or Representative in Congress, or elector of President
             and Vice President, or hold any office, civil or military, under the United States,
@@ -1279,7 +1287,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="14.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The validity of the public debt of the United States, authorized by law, including
             debts incurred for payment of pensions and bounties for services in suppressing insurrection
@@ -1290,7 +1298,7 @@
             </p>
          <h3 style="text-align:center;">Section 5</h3>
          <h3 id="14.5"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             The Congress shall have the power to enforce, by appropriate legislation, the provisions
             of this article. *Changed by sub_section 1 of the 26th Amendment.
@@ -1305,7 +1313,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress February 26, 1869. Ratified February 3, 1870. 
             
@@ -1314,7 +1322,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="15.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The right of citizens of the United States to vote shall not be denied or abridged
             by the United States or by any State on account of race, color, or previous condition
@@ -1322,7 +1330,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="15.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             The Congress shall have the power to enforce this article by appropriate legislation.
             </p>
@@ -1336,7 +1344,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress July 2, 1909. Ratified February 3, 1913. (Note: Article I, sub_section
             9 ofthe Constitution was modified by the 16 h Amendment.)  The Congress shall have power to lay and collect taxes on incomes, from
@@ -1353,7 +1361,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.09</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress May 13, 1912. Ratified April 8, 1913. (Note: Article I, sub_section
             3 ofthe Constitution was modified by the 17th Amendment.)  The Senate of the United States shall be composed of
@@ -1376,7 +1384,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress December 18, 1917. Ratified January 16, 1919. Repealed by the 21
             Amendment, December 5, 1933.
@@ -1386,7 +1394,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="18.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             After one year from the ratification of this article the manufacture, sale, or transportation
             of intoxicating liquors within, the importation thereof into, or the exportation
@@ -1395,14 +1403,14 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="18.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress and the several States shall have concurrent power to enforce this article
             by appropriate legislation. 
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="18.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              This article shall be inoperative unless it shall have been ratified as an amendment
             to the Constitution by the legislatures of the several States, as provided in the
@@ -1419,7 +1427,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.19</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.04</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress June 4, 1919. Ratified August 18, 1920.  The right of citizens of the United States to vote shall not be denied or abridged
             by the United States or by any State on account of sex.   Congress shall have power to enforce this article by appropriate legislation. 
@@ -1434,7 +1442,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.03</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.01</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress March 2, 1932. Ratified January 23, 1933. (Note: Article I, sub_section
             4 of the Constitution was modified by sub_section 2 of this Amendment. In addition,
@@ -1448,7 +1456,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="20.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The terms of the President and the Vice President shall end at noon on the 20th day
             of January, and the terms of Senators and Representatives at noon on the 3d day of
@@ -1458,14 +1466,14 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="20.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             The Congress shall assemble at least once in every year, and such meeting shall begin
             at noon on the 3d day of January, unless they shall by law appoint a different day.
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="20.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              If, at the time fixed for the beginning of the term of the President, the President
             elect shall have died, the Vice President elect shall become President. If a President
@@ -1480,7 +1488,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="20.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress may by law provide for the case of the death of any of the persons from
             whom the House of Representatives may choose a President whenever the right of choice
@@ -1490,14 +1498,14 @@
             </p>
          <h3 style="text-align:center;">Section 5</h3>
          <h3 id="20.5"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             subsections 1 and 2 shall take effect on the 15th day of October following the ratification
             of this article. 
             </p>
          <h3 style="text-align:center;">Section 6</h3>
          <h3 id="20.6"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              This article shall be inoperative unless it shall have been ratified as an amendment
             to the Constitution by the legislatures of three-fourths of the several States within
@@ -1513,7 +1521,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.12</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress February 20, 1933. Ratified December 5, 933.
             
@@ -1522,14 +1530,14 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="21.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The eighteenth article of amendment to the Constitution of the United States is hereby
             repealed. 
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="21.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             The transportation or importation into any State, Territory, or possession of the
             United States for delivery or use therein of intoxicating liquors, in violation of
@@ -1537,7 +1545,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="21.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             This article shall be inoperative unless it shall have been ratified as an amendment
             to the Constitution by conventions in the several States,
@@ -1554,7 +1562,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress March 21, 1947. Ratified February 27, 951.
             
@@ -1562,7 +1570,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="22.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              No person shall be elected to the office of the President more than twice, and no
             person who has held the office of President, or acted as President, for more than
@@ -1576,7 +1584,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="22.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              This article shall be inoperative unless it shall have been ratified as an amendment
             to the Constitution by the legislatures of three-fourths of the several States within
@@ -1592,7 +1600,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.30</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>3.14</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.07</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress June 16, 1960. Ratified March 29, 1961. 
             
@@ -1600,7 +1608,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="23.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The District constituting the seat of Government of the United States shall appoint
             in such manner as Congress may direct: A number of electors of President and Vice
@@ -1614,7 +1622,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="23.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress shall have power to enforce this article by appropriate legislation.
             </p>
@@ -1628,7 +1636,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress August 27, 1962. Ratified January 23, 1964.
             
@@ -1636,7 +1644,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="24.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The right of citizens of the United States to vote in any primary or other election
             for President or Vice President, for electors for President or Vice President, or
@@ -1645,7 +1653,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="24.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress shall have power to enforce this article by appropriate legislation. 
             </p>
@@ -1659,7 +1667,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.18</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.08</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress July 6, 1965. Ratified February 10, 1967. (Note: Article II, sub_section
             1 of the Constitution was modified by the 25th Amendment.)
@@ -1670,14 +1678,14 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="25.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              In case of the removal of the President from office or of his death or resignation,
             the Vice President shall become President. 
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="25.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Whenever there is a vacancy in the office of the Vice President, the President shall
             nominate a Vice President who shall take office upon confirmation by a majority vote
@@ -1685,7 +1693,7 @@
             </p>
          <h3 style="text-align:center;">Section 3</h3>
          <h3 id="25.3"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Whenever the President transmits to the President pro tempore of the Senate and the
             Speaker of the House of Representatives his written declaration that he is unable
@@ -1695,7 +1703,7 @@
             </p>
          <h3 style="text-align:center;">Section 4</h3>
          <h3 id="25.4"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              Whenever the Vice President and a majority of either the principal officers of the
             executive departments or of such other body as Congress may by law provide, transmit
@@ -1728,7 +1736,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.07</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Passed by Congress March 23, 1971. Ratified July 1, 1971. (Note: Amendment 14, sub_section
             2 ofthe Constitution was modified by sub_section 1 of the 26th Amendment.) 
@@ -1737,7 +1745,7 @@
             </p>
          <h3 style="text-align:center;">Section 1</h3>
          <h3 id="26.1"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The right of citizens of the United States, who are eighteen years of age or older,
             to vote shall not be denied or abridged by the United States or by any State on account
@@ -1745,7 +1753,7 @@
             </p>
          <h3 style="text-align:center;">Section 2</h3>
          <h3 id="26.2"></h3>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
              The Congress shall have power to enforce this article by appropriate legislation. 
             </p>
@@ -1759,7 +1767,7 @@
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
          <p style="text-align:center;"><strong>DeCive Significance:</strong>0.50</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.25</p>
-         <p>
+         <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
             Originally proposed Sept. 25, 1789. Ratified May 7, 1992.  No law, varying the compensation for the services of the Senators and Representatives,
             shall take effect, until an election of representatives shall have intervened.  
