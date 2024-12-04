@@ -25,6 +25,32 @@
     } @media screen and (max-width: 480px) { .polaroid { width: 90%; } } #quote-generator { margin-top: 40px; padding: 20px; background-color: #f0f8ff;  border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 60%; margin-left: auto; margin-right: auto;
     } #quote-generator h2 { font-size: 24px; margin-bottom: 15px; } #quote-generator p { font-size: 20px; margin-top: 10px; } button { margin-top: 20px; padding: 10px 20px; background-color: #333; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;
     } button:hover { background-color: #444; }
+    #backToTopBtn {
+  position: fixed;       
+  bottom: 20px;          
+  right: 20px;            
+  background-color: #333; 
+  font-family: Georgia, serif;
+  color: white;           
+  border: none;          
+  padding: 15px;          
+  border-radius: 25%;    
+  font-size: 20px;        
+  cursor: pointer;      
+  transition: 0.3s;       
+  opacity: 0;            
+  z-index: 1000;          
+}
+
+
+#backToTopBtn.show {
+  opacity: 1;             
+}
+
+
+#backToTopBtn:hover {
+  background-color: #444; 
+}
         </style>
     </head>
     <body>
@@ -255,5 +281,25 @@
         document.getElementById("quote-text").innerHTML = `"${selectedQuote.text}"`;
         document.getElementById("quote-author").innerHTML = `- ${selectedQuote.author}`;}
         </script>
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
+        <script type="text/javascript">
+        
+var mybutton = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.classList.add("show");  
+  } else {
+    mybutton.classList.remove("show");  
+  }
+};
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+      </script>
     </body>
 </html>

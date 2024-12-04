@@ -15,30 +15,105 @@
                                 #a1d7e5,    
                                 #8fbce0,   
                                 #b2e3d9);   
-    background-size: 100% 3975%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; }  
+    background-size: 100% 14975%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; }  
     ul.toc {
             list-style-type: none;
             padding: 0;
-            background-image: linear-gradient(to bottom, 
-                                #7ec8d5,    
-                                #a1d7e5,    
-                                #8fbce0,   
-                                #b2e3d9);   
-                                background-size: 100% 100%; } ul.toc li {
+            background-color: #f4f4f4;
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 8px;
+           
+            
+        }
+        ul.toc li {
             padding: 8px;
             margin: 4px 0;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0;
             cursor: pointer;
-            background-image: linear-gradient(to bottom, 
-                                #7ec8d5,    
-                                #a1d7e5,    
-                                #8fbce0,   
-                                #b2e3d9);   
-                                background-size: 100% 100%;
-                                border: 2px solid black; } ul.toc ul {
+            border: 1px solid black;
+           border-radius: 8px;
+            font-family: Georgia, serif;
+          
+        }
+        ul.toc ul {
             display: none;
-            margin-left: 20px; } ul.toc li:hover {
-            background-color: #e0e0e0; }
+            margin-left: 20px;
+           
+        }
+        ul.toc li:hover {
+            background-color: #d1d1d1;
+        }
+            .sidenav {
+  height: 98%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden;
+  padding-top: 15px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.toc-button { font-size: 30px; padding: 15px 45px; border: 2px solid black; border-radius: 8px; background-color: #f1f1f1; color: #333; cursor: pointer; tranisition: all 0.3s ease; }
+#backToTopBtn {
+  position: fixed;       
+  bottom: 20px;          
+  right: 20px;            
+  background-color: #333; 
+  font-family: Georgia, serif;
+  color: white;           
+  border: none;          
+  padding: 15px;          
+  border-radius: 25%;    
+  font-size: 20px;        
+  cursor: pointer;      
+  transition: 0.3s;       
+  opacity: 0;            
+  z-index: 1000;          
+}
+
+
+#backToTopBtn.show {
+  opacity: 1;             
+}
+
+
+#backToTopBtn:hover {
+  background-color: #444; 
+}
       </style>
          <script type="text/javascript">
         // dropdown buttons for toc
@@ -119,9 +194,46 @@
      <p style="margin: 20px;">Edited By: Ryan Pavone</p>
       
       <hr/>
+         <div id="mySidenav" class="sidenav">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#215;</a>
+               <a href="#Chapter_1">Chapter 1</a>
+               <a href="#Chapter_2">Chapter 2</a>
+               <a href="#Chapter_3">Chapter 3</a>
+               <a href="#Chapter_4">Chapter 4</a>
+               <a href="#Chapter_5">Chapter 5</a>
+               <a href="#Chapter_6">Chapter 6</a>
+               <a href="#Chapter_7">Chapter 7</a>
+               <a href="#Chapter_8">Chapter 8</a>
+               <a href="#Chapter_9">Chapter 9</a>
+               <a href="#Chapter_10">Chapter 10</a>
+               <a href="#Chapter_11">Chapter 11</a>
+               <a href="#Chapter_11">Chapter 12</a>
+               <a href="#Chapter_13">Chapter 13</a>
+               <a href="#Chapter_14">Chapter 14</a>
+               <a href="#Chapter_15">Chapter 15</a>
+               <a href="#Chapter_16">Chapter 16</a>
+               <a href="#Chapter_17">Chapter 17</a>
+               <a href="#Chapter_18">Chapter 18</a>
+               <a href="#Chapter_19">Chapter 19</a>
+         </div>
+         <span onclick="openNav()" class="toc-button" style="border: 2px solid black; border-radius: 8px; padding: 3px; margin: 10px;">
+               Table of Contents (click to expand)
+         </span>
+         <script type="text/javascript">
+          
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
+
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+        </script>
+         
       <div class="preamble">
          <hr/>
-         <h2 style="text-align:center;"></h2>
+         <h2 style="text-align:center;">Preface.</h2>
          <div class="sub_section">
             <h3 style="text-align:center;"></h3>
             <h3></h3>
@@ -195,860 +307,33 @@
                of his Patriarcha, Edition 1680.
                </p>
          </div>
-         <hr/>
+    
       </div>
-      <h2 style="text-align:left; margin: 20px;">Table of Contents</h2>
-      <hr/>
-      <ul class="toc">
+      
+      
+            
+            
+     
+      <div class="section">
+         <hr/>
+            <ul class="toc">
             <!-- chapter 1 dropdown -->
             <li onclick="toggleChapter('Chapter1')">
                   <h2 style="font-style:italic;"><a href="#Chapter_1">Chapter_1.</a></h2> (click here for sections)
-         <ul id="Chapter1" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.1">1.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.2">1.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.3">1.3</a></i></li>
-         </ul>
-            </li>
-            
-            <!-- chapter 2 dropdown -->
-            <li onclick="toggleChapter('Chapter2')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_2">Chapter_2.</a></h2> (click here for sections)
-         <ul id="Chapter2" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.1">2.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.2">2.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.3">2.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.4">2.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.5">2.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.6">2.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.7">2.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.8">2.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.9">2.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.10_">2.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.11">2.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.12">2.12</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 3 dropdown -->
-            <li onclick="toggleChapter('Chapter3')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_3">Chapter_3.</a></h2> (click here for sections)
-         <ul id="Chapter3" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.1">3.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.2">3.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.3">3.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.4">3.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.5">3.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.6">3.6</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 4 dropdown -->
-            <li onclick="toggleChapter('Chapter4')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_4">Chapter_4.</a></h2> (click here for sections)
-         <ul id="Chapter4" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.1">4.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.2">4.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.3">4.3</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 5 dropdown -->
-            <li onclick="toggleChapter('Chapter5')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_5">Chapter_5.</a></h2> (click here for sections)
-         <ul id="Chapter5" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.1">5.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.2">5.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.3">5.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.4">5.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.5">5.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.6">5.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.7">5.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.8">5.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.9">5.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.10_">5.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.11">5.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.12">5.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.13">5.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.14">5.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.15">5.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.16">5.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.17">5.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.18">5.18</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.19">5.19</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.20_">5.20_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.21">5.21</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.22">5.22</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.23">5.23</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.24">5.24</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.25">5.25</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.26">5.26</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#5.27">5.27</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 6 dropdown -->
-            <li onclick="toggleChapter('Chapter6')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_6">Chapter_6.</a></h2> (click here for sections)
-         <ul id="Chapter6" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.1">6.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.2">6.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.3">6.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.4">6.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.5">6.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.6">6.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.7">6.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.8">6.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.9">6.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.10_">6.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.11">6.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.12">6.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.13">6.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.14">6.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.15">6.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.16">6.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.17">6.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.18">6.18</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.19">6.19</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.20_">6.20_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.21">6.21</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.22">6.22</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.23">6.23</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.24">6.24</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#6.25">6.25</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 7 dropdown -->
-            <li onclick="toggleChapter('Chapter7')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_7">Chapter_7.</a></h2> (click here for sections)
-         <ul id="Chapter7" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.1">7.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.2">7.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.3">7.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.4">7.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.5">7.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.6">7.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.7">7.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.8">7.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.9">7.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.10_">7.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.11">7.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.12">7.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.13">7.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.14">7.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.15">7.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.16">7.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.17">7.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#7.18">7.18</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 8 dropdown -->
-            <li onclick="toggleChapter('Chapter8')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_8">Chapter_8.</a></h2> (click here for sections)
-         <ul id="Chapter8" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.1">8.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.2">8.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.3">8.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.4">8.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.5">8.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.6">8.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.7">8.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.8">8.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.9">8.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.10_">8.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.11">8.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.12">8.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.13">8.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.14">8.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.15">8.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.16">8.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.17">8.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.18">8.18</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.19">8.19</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.20_">8.20_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.21">8.21</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.22">8.22</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.23">8.23</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.24">8.24</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.25">8.25</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.26">8.26</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.27">8.27</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#8.28">8.28</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 9 dropdown -->
-            <li onclick="toggleChapter('Chapter9')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_9">Chapter_9.</a></h2> (click here for sections)
-         <ul id="Chapter9" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.1">9.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.2">9.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.3">9.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.4">9.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.5">9.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.6">9.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.7">9.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.8">9.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#9.9">9.9</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 19 dropdown -->
-            <li onclick="toggleChapter('Chapter10')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_10">Chapter_10.</a></h2> (click here for sections)
-         <ul id="Chapter10" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#10.1">10.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#10.2">10.2</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 11 dropdown -->
-            <li onclick="toggleChapter('Chapter11')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_11">Chapter_11.</a></h2> (click here for sections)
-         <ul id="Chapter11" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.1">11.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.2">11.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.3">11.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.4">11.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.5">11.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.6">11.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.7">11.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.8">11.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#11.9">11.9</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 12 dropdown -->
-            <li onclick="toggleChapter('Chapter12')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_12">Chapter_12.</a></h2> (click here for sections)
-         <ul id="Chapter12" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.1">12.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.2">12.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.3">12.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.4">12.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.5">12.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#12.6">12.6</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 13 dropdown -->
-            <li onclick="toggleChapter('Chapter13')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_13">Chapter_13.</a></h2> (click here for sections)
-         <ul id="Chapter13" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.1">13.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.2">13.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.3">13.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.4">13.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.5">13.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.6">13.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.7">13.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.8">13.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.9">13.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.10_">13.10_</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 14 dropdown -->
-            <li onclick="toggleChapter('Chapter14')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_14">Chapter_14.</a></h2> (click here for sections)
-         <ul id="Chapter14" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.1">14.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.2">14.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.3">14.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.4">14.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.5">14.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.6">14.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.7">14.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.8">14.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.9">14.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.10_">14.10_</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 15 dropdown -->
-            <li onclick="toggleChapter('Chapter15')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_15">Chapter_15.</a></h2> (click here for sections)
-         <ul id="Chapter15" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.1">15.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.2">15.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.3">15.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.4">15.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.5">15.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.6">15.6</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 16 dropdown -->
-            <li onclick="toggleChapter('Chapter16')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_16">Chapter_16.</a></h2> (click here for sections)
-         <ul id="Chapter16" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.1">16.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.2">16.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.3">16.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.4">16.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.5">16.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.6">16.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.7">16.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.8">16.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.9">16.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.10_">16.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.11">16.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.12">16.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.13">16.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.14">16.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.15">16.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.16">16.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.17">16.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.18">16.18</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.19">16.19</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.20_">16.20_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.21">16.21</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#16.22">16.22</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 17 dropdown -->
-            <li onclick="toggleChapter('Chapter17')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_17">Chapter_17.</a></h2> (click here for sections)
-         <ul id="Chapter17" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#17.1">17.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#17.2">17.2</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 18 dropdown -->
-            <li onclick="toggleChapter('Chapter18')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_18">Chapter_18.</a></h2> (click here for sections)
-         <ul id="Chapter18" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.1">18.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.2">18.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.3">18.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.4">18.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.5">18.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.6">18.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.7">18.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.8">18.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.9">18.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.10_">18.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.11">18.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.12">18.12</a></i></li>
-         </ul></li>
-            
-            <!-- chapter 19 dropdown -->
-            <li onclick="toggleChapter('Chapter19')">
-                  <h2 style="font-style:italic;"><a href="#Chapter_19">Chapter_19.</a></h2> (click here for sections)
-         <ul id="Chapter19" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.1">19.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.2">19.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.3">19.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.4">19.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.5">19.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.6">19.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.7">19.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.8">19.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.9">19.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.10_">19.10_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.11">19.11</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.12">19.12</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.13">19.13</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.14">19.14</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.15">19.15</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.16">19.16</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.17">19.17</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.18">19.18</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.19">19.19</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.20_">19.20_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.21">19.21</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.22">19.22</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.23">19.23</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.24">19.24</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.25">19.25</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.26">19.26</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.27">19.27</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.28">19.28</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.29">19.29</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.30_">19.30_</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.31">19.31</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.32">19.32</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#19.33">19.33</a></i></li>
-         </ul></li>
-      </ul>
-      <hr/>
-      <div class="section">
-         <hr/>
+                  <ul id="Chapter1" style="display:none;">
+                        <li><i style="font-weight:bold;">
+                              Section:
+                        </i><i><a href="#1.1">1.1</a></i></li>
+                        <li><i style="font-weight:bold;">
+                              Section:
+                        </i><i><a href="#1.2">1.2</a></i></li>
+                        <li><i style="font-weight:bold;">
+                              Section:
+                        </i><i><a href="#1.3">1.3</a></i></li>
+                  </ul>
+            </li></ul>
             <!-- chapter 1 -->
-         <h2 style="text-align:center;">CHAPTER. I: AN ESSAY CONCERNING THE TRUE ORIGINAL, EXTENT AND END OF CIVIL GOVERNMENT
+         <h2 style="text-align:center;">I: AN ESSAY CONCERNING THE TRUE ORIGINAL, EXTENT AND END OF CIVIL GOVERNMENT
             </h2>
          <h2 id="Chapter_1"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
@@ -1123,8 +408,51 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <!-- chapter 2 dropdown -->
+                  <li onclick="toggleChapter('Chapter2')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_2">Chapter_2.</a></h2> (click here for sections)
+                        <ul id="Chapter2" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.1">2.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.2">2.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.3">2.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.4">2.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.5">2.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.6">2.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.7">2.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.8">2.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.9">2.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.10_">2.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.11">2.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#2.12">2.12</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 2 -->
-         <h2 style="text-align:center;">CHAPTER. II: OF THE STATE OF NATURE.</h2>
+         <h2 style="text-align:center;"> II: OF THE STATE OF NATURE.</h2>
          <h2 id="Chapter_2"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1463,8 +791,32 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter3')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_3">Chapter_3.</a></h2> (click here for sections)
+                        <ul id="Chapter3" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.1">3.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.2">3.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.3">3.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.4">3.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.5">3.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#3.6">3.6</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 3 -->
-         <h2 style="text-align:center;">CHAPTER. III: OF THE STATE OF WAR.</h2>
+         <h2 style="text-align:center;"> III: OF THE STATE OF WAR.</h2>
          <h2 id="Chapter_3"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;"> 
             
@@ -1673,8 +1025,23 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter4')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_4">Chapter_4.</a></h2> (click here for sections)
+                        <ul id="Chapter4" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#4.1">4.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#4.2">4.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#4.3">4.3</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 4 -->
-         <h2 style="text-align:center;">CHAPTER. IV: OF SLAVERY</h2>
+         <h2 style="text-align:center;"> IV: OF SLAVERY</h2>
          <h2 id="Chapter_4"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             . 
@@ -1762,8 +1129,95 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter5')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_5">Chapter_5.</a></h2> (click here for sections)
+                        <ul id="Chapter5" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.1">5.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.2">5.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.3">5.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.4">5.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.5">5.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.6">5.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.7">5.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.8">5.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.9">5.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.10_">5.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.11">5.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.12">5.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.13">5.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.14">5.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.15">5.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.16">5.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.17">5.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.18">5.18</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.19">5.19</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.20_">5.20_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.21">5.21</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.22">5.22</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.23">5.23</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.24">5.24</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.25">5.25</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.26">5.26</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#5.27">5.27</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 5 -->
-         <h2 style="text-align:center;">CHAPTER. V: OF PROPERTY.</h2>
+         <h2 style="text-align:center;"> V: OF PROPERTY.</h2>
          <h2 id="Chapter_5"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -2588,8 +2042,89 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter6')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_6">Chapter_6.</a></h2> (click here for sections)
+                        <ul id="Chapter6" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.1">6.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.2">6.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.3">6.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.4">6.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.5">6.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.6">6.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.7">6.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.8">6.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.9">6.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.10_">6.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.11">6.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.12">6.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.13">6.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.14">6.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.15">6.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.16">6.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.17">6.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.18">6.18</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.19">6.19</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.20_">6.20_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.21">6.21</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.22">6.22</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.23">6.23</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.24">6.24</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#6.25">6.25</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 6 -->
-         <h2 style="text-align:center;">CHAPTER. VI: OF PATERNAL POWER.</h2>
+         <h2 style="text-align:center;"> VI: OF PATERNAL POWER.</h2>
          <h2 id="Chapter_6"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -3383,8 +2918,68 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter7')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_7">Chapter_7.</a></h2> (click here for sections)
+                        <ul id="Chapter7" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.1">7.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.2">7.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.3">7.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.4">7.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.5">7.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.6">7.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.7">7.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.8">7.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.9">7.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.10_">7.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.11">7.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.12">7.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.13">7.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.14">7.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.15">7.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.16">7.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.17">7.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#7.18">7.18</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 7 -->
-         <h2 style="text-align:center;">CHAPTER. VII: OF POLITICAL OR CIVIL SOCIETY.</h2>
+         <h2 style="text-align:center;"> VII: OF POLITICAL OR CIVIL SOCIETY.</h2>
          <h2 id="Chapter_7"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -3971,8 +3566,98 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter8')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_8">Chapter_8.</a></h2> (click here for sections)
+                        <ul id="Chapter8" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.1">8.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.2">8.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.3">8.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.4">8.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.5">8.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.6">8.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.7">8.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.8">8.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.9">8.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.10_">8.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.11">8.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.12">8.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.13">8.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.14">8.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.15">8.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.16">8.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.17">8.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.18">8.18</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.19">8.19</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.20_">8.20_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.21">8.21</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.22">8.22</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.23">8.23</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.24">8.24</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.25">8.25</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.26">8.26</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.27">8.27</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#8.28">8.28</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 8 -->
-         <h2 style="text-align:center;">CHAPTER. VIII: OF THE BEGINNING OF POLITICAL SOCIETIES.</h2>
+         <h2 style="text-align:center;"> VIII: OF THE BEGINNING OF POLITICAL SOCIETIES.</h2>
          <h2 id="Chapter_8"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -4857,8 +4542,41 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter9')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_9">Chapter_9.</a></h2> (click here for sections)
+                        <ul id="Chapter9" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.1">9.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.2">9.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.3">9.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.4">9.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.5">9.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.6">9.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.7">9.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.8">9.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#9.9">9.9</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 9 -->
-         <h2 style="text-align:center;">CHAPTER. IX: OF THE ENDS OF POLITICAL SOCIETY AND GOVERNMENT.</h2>
+         <h2 style="text-align:center;"> IX: OF THE ENDS OF POLITICAL SOCIETY AND GOVERNMENT.</h2>
          <h2 id="Chapter_9"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -5052,8 +4770,20 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter10')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_10">Chapter_10.</a></h2> (click here for sections)
+                        <ul id="Chapter10" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#10.1">10.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#10.2">10.2</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 10 -->
-         <h2 style="text-align:center;">CHAPTER. X: OF THE FORMS OF A COMMON-WEALTH.</h2>
+         <h2 style="text-align:center;"> X: OF THE FORMS OF A COMMON-WEALTH.</h2>
          <h2 id="Chapter_10"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -5117,8 +4847,41 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter11')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_11">Chapter_11.</a></h2> (click here for sections)
+                        <ul id="Chapter11" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.1">11.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.2">11.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.3">11.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.4">11.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.5">11.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.6">11.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.7">11.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.8">11.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#11.9">11.9</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 11 -->
-         <h2 style="text-align:center;">CHAPTER. XI: OF THE EXTENT OF THE LEGISLATIVE POWER. </h2>
+         <h2 style="text-align:center;"> XI: OF THE EXTENT OF THE LEGISLATIVE POWER. </h2>
          <h2 id="Chapter_11"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -5525,8 +5288,32 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter12')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_12">Chapter_12.</a></h2> (click here for sections)
+                        <ul id="Chapter12" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.1">12.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.2">12.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.3">12.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.4">12.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.5">12.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#12.6">12.6</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 12 -->
-         <h2 style="text-align:center;">CHAPTER. XII: OF THE LEGISLATIVE, EXECUTIVE, AND FEDERATIVE POWER OF
+         <h2 style="text-align:center;"> XII: OF THE LEGISLATIVE, EXECUTIVE, AND FEDERATIVE POWER OF
             THE COMMON-WEALTH.</h2>
          <h2 id="Chapter_12"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;"> 
@@ -5659,8 +5446,44 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter13')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_13">Chapter_13.</a></h2> (click here for sections)
+                        <ul id="Chapter13" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.1">13.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.2">13.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.3">13.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.4">13.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.5">13.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.6">13.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.7">13.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.8">13.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.9">13.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#13.10_">13.10_</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 13 -->
-         <h2 style="text-align:center;">CHAPTER. XIII: OF THE SUBORDINATION OF THE POWERS OF THE COMMON-WEALTH.</h2>
+         <h2 style="text-align:center;"> XIII: OF THE SUBORDINATION OF THE POWERS OF THE COMMON-WEALTH.</h2>
          <h2 id="Chapter_13"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -6047,8 +5870,44 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter14')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_14">Chapter_14.</a></h2> (click here for sections)
+                        <ul id="Chapter14" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.1">14.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.2">14.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.3">14.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.4">14.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.5">14.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.6">14.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.7">14.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.8">14.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.9">14.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#14.10_">14.10_</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 14 -->
-         <h2 style="text-align:center;">CHAPTER. XIV: OF PREROGATIVE.</h2>
+         <h2 style="text-align:center;"> XIV: OF PREROGATIVE.</h2>
          <h2 id="Chapter_14"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -6358,8 +6217,32 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter15')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_15">Chapter_15.</a></h2> (click here for sections)
+                        <ul id="Chapter15" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.1">15.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.2">15.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.3">15.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.4">15.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.5">15.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#15.6">15.6</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 15 -->
-         <h2 style="text-align:center;">CHAPTER. XV: OF PATERNAL, POLITICAL, AND
+         <h2 style="text-align:center;"> XV: OF PATERNAL, POLITICAL, AND
             DESPOTICAL POWER, CONSIDERED TOGETHER.</h2>
          <h2 id="Chapter_15"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
@@ -6538,8 +6421,80 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter16')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_16">Chapter_16.</a></h2> (click here for sections)
+                        <ul id="Chapter16" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.1">16.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.2">16.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.3">16.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.4">16.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.5">16.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.6">16.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.7">16.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.8">16.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.9">16.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.10_">16.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.11">16.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.12">16.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.13">16.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.14">16.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.15">16.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.16">16.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.17">16.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.18">16.18</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.19">16.19</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.20_">16.20_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.21">16.21</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#16.22">16.22</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 16 -->
-         <h2 style="text-align:center;">CHAPTER. XVI: OF CONQUEST.</h2>
+         <h2 style="text-align:center;"> XVI: OF CONQUEST.</h2>
          <h2 id="Chapter_16"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -7197,8 +7152,20 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter17')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_17">Chapter_17.</a></h2> (click here for sections)
+                        <ul id="Chapter17" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#17.1">17.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#17.2">17.2</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 17 -->
-         <h2 style="text-align:center;">CHAPTER. XVII: OF USURPATION.</h2>
+         <h2 style="text-align:center;"> XVII: OF USURPATION.</h2>
          <h2 id="Chapter_17"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -7256,8 +7223,50 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter18')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_18">Chapter_18.</a></h2> (click here for sections)
+                        <ul id="Chapter18" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.1">18.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.2">18.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.3">18.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.4">18.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.5">18.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.6">18.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.7">18.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.8">18.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.9">18.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.10_">18.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.11">18.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#18.12">18.12</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 18 -->
-         <h2 style="text-align:center;">CHAPTER. XVIII: OF TYRANNY.</h2>
+         <h2 style="text-align:center;"> XVIII: OF TYRANNY.</h2>
          <h2 id="Chapter_18"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -7628,8 +7637,113 @@
       </div>
       <div class="section">
          <hr/>
+            <ul class="toc">
+                  <li onclick="toggleChapter('Chapter19')">
+                        <h2 style="font-style:italic;"><a href="#Chapter_19">Chapter_19.</a></h2> (click here for sections)
+                        <ul id="Chapter19" style="display:none;">
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.1">19.1</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.2">19.2</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.3">19.3</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.4">19.4</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.5">19.5</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.6">19.6</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.7">19.7</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.8">19.8</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.9">19.9</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.10_">19.10_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.11">19.11</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.12">19.12</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.13">19.13</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.14">19.14</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.15">19.15</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.16">19.16</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.17">19.17</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.18">19.18</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.19">19.19</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.20_">19.20_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.21">19.21</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.22">19.22</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.23">19.23</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.24">19.24</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.25">19.25</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.26">19.26</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.27">19.27</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.28">19.28</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.29">19.29</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.30_">19.30_</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.31">19.31</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.32">19.32</a></i></li>
+                              <li><i style="font-weight:bold;">
+                                    Section:
+                              </i><i><a href="#19.33">19.33</a></i></li>
+                        </ul></li>
+            </ul>
             <!-- chapter 19 -->
-         <h2 style="text-align:center;">CHAPTER. XIX: OF THE DISSOLUTION OF GOVERNMENT.</h2>
+         <h2 style="text-align:center;"> XIX: OF THE DISSOLUTION OF GOVERNMENT.</h2>
          <h2 id="Chapter_19"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -8744,5 +8858,25 @@
          </div>
          <hr/>
       </div>
+         <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
+         <script type="text/javascript">
+        
+var mybutton = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.classList.add("show");  
+  } else {
+    mybutton.classList.remove("show");  
+  }
+};
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+      </script>
    </body>
 </html>

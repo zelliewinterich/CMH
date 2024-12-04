@@ -16,29 +16,105 @@
                                 #8fbce0,   
                                 #b2e3d9);   
     background-size: 100% 2225%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
-} ul.toc {
+}  ul.toc {
             list-style-type: none;
             padding: 0;
-            background-image: linear-gradient(to bottom, 
-                                #7ec8d5,    
-                                #a1d7e5,    
-                                #8fbce0,   
-                                #b2e3d9);   
-                                background-size: 100% 100%; } ul.toc li {
+            background-color: #f4f4f4;
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 8px;
+           
+            
+        }
+        ul.toc li {
             padding: 8px;
             margin: 4px 0;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0;
             cursor: pointer;
-            background-image: linear-gradient(to bottom, 
-                                #7ec8d5,    
-                                #a1d7e5,    
-                                #8fbce0,   
-                                #b2e3d9);   
-                                background-size: 100% 100%;
-                                border: 2px solid black; } ul.toc ul {
+            border: 1px solid black;
+           border-radius: 8px;
+            font-family: Georgia, serif;
+          
+        }
+        ul.toc ul {
             display: none;
-            margin-left: 20px; } ul.toc li:hover {
-            background-color: #e0e0e0; }
+            margin-left: 20px;
+           
+        }
+        ul.toc li:hover {
+            background-color: #d1d1d1;
+        }
+            .sidenav {
+  height: 98%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden;
+  padding-top: 15px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.toc-button { font-size: 30px; padding: 15px 45px; border: 2px solid black; border-radius: 8px; background-color: #f1f1f1; color: #333; cursor: pointer; tranisition: all 0.3s ease;
+  }
+            #backToTopBtn {
+  position: fixed;       
+  bottom: 20px;          
+  right: 20px;            
+  background-color: #333; 
+  font-family: Georgia, serif;
+  color: white;           
+  border: none;          
+  padding: 15px;          
+  border-radius: 25%;    
+  font-size: 20px;        
+  cursor: pointer;      
+  transition: 0.3s;       
+  opacity: 0;            
+  z-index: 1000;          
+}
+
+
+#backToTopBtn.show {
+  opacity: 1;             
+}
+
+
+#backToTopBtn:hover {
+  background-color: #444; 
+}
       </style>
       <script type="text/javascript">
         // dropdown buttons for toc
@@ -124,6 +200,58 @@
       <p style="margin: 20px;">Edited By: Zellie Winterich, Anna Costello, James Paul, Ryan Pavone</p>
       
       <hr/> 
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#215;</a>
+         <a href="#Article_1">Article 1</a>
+         <a href="#Article_2">Article 2</a>
+         <a href="#Article_3">Article 3</a>
+         <a href="#Article_4">Article 4</a>
+         <a href="#Article_5">Article 5</a>
+         <a href="#Article_6">Article 6</a>
+         <a href="#Article_7">Article 7</a>
+         <a href="#Amendment_1">Amendment 1</a>
+         <a href="#Amendment_2">Amendment 2</a>
+         <a href="#Amendment_3">Amendment 3</a>
+         <a href="#Amendment_4">Amendment 4</a>
+         <a href="#Amendment_5">Amendment 5</a>
+         <a href="#Amendment_6">Amendment 6</a>
+         <a href="#Amendment_7">Amendment 7</a>
+         <a href="#Amendment_8">Amendment 8</a>
+         <a href="#Amendment_9">Amendment 9</a>
+         <a href="#Amendment_10">Amendment 10</a>
+         <a href="#Amendment_11">Amendment 11</a>
+         <a href="#Amendment_12">Amendment 12</a>
+         <a href="#Amendment_13">Amendment 13</a>
+         <a href="#Amendment_14">Amendment 14</a>
+         <a href="#Amendment_15">Amendment 15</a>
+         <a href="#Amendment_16">Amendment 16</a>
+         <a href="#Amendment_17">Amendment 17</a>
+         <a href="#Amendment_18">Amendment 18</a>
+         <a href="#Amendment_19">Amendment 19</a>
+         <a href="#Amendment_20">Amendment 20</a>
+         <a href="#Amendment_21">Amendment 21</a>
+         <a href="#Amendment_22">Amendment 22</a>
+         <a href="#Amendment_23">Amendment 23</a>
+         <a href="#Amendment_24">Amendment 24</a>
+         <a href="#Amendment_25">Amendment 25</a>
+         <a href="#Amendment_26">Amendment 26</a>
+         <a href="#Amendment_27">Amendment 27</a>
+      </div>
+      <span onclick="openNav()" class="toc-button" style="border: 2px solid black; border-radius: 8px; padding: 3px; margin: 10px;">
+         Table of Contents (click to expand)
+      </span>
+      <hr/>
+      <script type="text/javascript">
+          
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+        </script>
       <section>
          <h2 style="text-decoration:underline; text-align:center;">Preamble to the Constitution</h2>
       
@@ -134,364 +262,9 @@
       our Posterity, do ordain and establish this Constitution for the United States of
       America.</i></p>
       </section>
+      <hr/>
       
       
-      <h2 style="text-align:left; margin: 10px;">Table of Contents</h2>
-      <hr/>
-      <ul class="toc">
-         <!-- Article 1 dropdown -->
-         <li onclick="toggleSection('Article1')">
-            <h2 style="font-style:italic;"><a href="#Article_1">Article_1.</a></h2>
-            (click here for sections)
-         <ul id="Article1" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.1">1.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.2">1.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.3">1.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.4">1.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.5">1.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.6">1.6</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.7">1.7</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.8">1.8</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.9">1.9</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#1.0_">1.0_</a></i></li></ul></li>
-         
-         <!-- Article 2 dropdown -->
-         <li onclick="toggleSection('Article2')">
-            <h2 style="font-style:italic;"><a href="#Article_2">Article_2.</a></h2> (click here for sections)
-            <ul id="Article2" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.1">2.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.2">2.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.3">2.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#2.4">2.4</a></i></li></ul></li>
-         
-         <!-- Article 3 dropdown -->
-         <li onclick="toggleSection('Article3')">
-            <h2 style="font-style:italic;"><a href="#Article_3">Article_3.</a></h2> (click here for sections)
-            <ul id="Article3" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.1">3.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.2">3.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#3.3">3.3</a></i></li></ul></li>
-        
-         <!-- Article 4 dropdown -->
-         <li onclick="toggleSection('Article4')">
-            <h2 style="font-style:italic;"><a href="#Article_4">Article_4.</a></h2> (click here for sections)
-            <ul id="Article4" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.1">4.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.2">4.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.3">4.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#4.4">4.4</a></i></li></ul></li>
-        
-         <!-- Article 5 dropdown -->
-         <li onclick="toggleSection('Article5')">
-            <h2 style="font-style:italic;"><a href="#Article_5">Article_5.</a></h2>
-            <ul id="Article5" style="display:none;"></ul>
-         </li>
-         
-         <!-- Article 6 dropdown -->
-         <li onclick="toggleSection('Article6')">
-            <h2 style="font-style:italic;"><a href="#Article_6">Article_6.</a></h2>
-            <ul id="Article6" style="display:none;"></ul>
-         </li>
-         
-         <!-- Article 7 dropdown -->
-         <li onclick="toggleSection('Article7')">
-            <h2 style="font-style:italic;"><a href="#Article_7">Article_7.</a></h2>
-            <ul id="Article7" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 1 dropdown -->
-         <li onclick="toggleSection('Amendment1')">
-            <h2 style="font-style:italic;"><a href="#Amendment_1">Amendment_1.</a></h2>
-            <ul id="Amendment1" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 2 dropdown -->
-         <li onclick="toggleSection('Amendment2')">
-            <h2 style="font-style:italic;"><a href="#Amendment_2">Amendment_2.</a></h2>
-            <ul id="Amendment2" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 3 dropdown -->
-         <li onclick="toggleSection('Amendment3')">
-            <h2 style="font-style:italic;"><a href="#Amendment_3">Amendment_3.</a></h2>
-            <ul id="Amendment3" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 4 dropdown -->
-         <li onclick="toggleSection('Amendment4')">
-            <h2 style="font-style:italic;"><a href="#Amendment_4">Amendment_4.</a></h2>
-            <ul id="Amendment4" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 5 dropdown -->
-         <li onclick="toggleSection('Amendment5')">
-            <h2 style="font-style:italic;"><a href="#Amendment_5">Amendment_5.</a></h2>
-            <ul id="Amendment5" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 6 dropdown -->
-         <li onclick="toggleSection('Amendment6')">
-            <h2 style="font-style:italic;"><a href="#Amendment_6">Amendment_6.</a></h2>
-            <ul id="Amendment6" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 7 dropdown -->
-         <li onclick="toggleSection('Amendment7')">
-            <h2 style="font-style:italic;"><a href="#Amendment_7">Amendment_7.</a></h2>
-            <ul id="Amendment7" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 8 dropdown -->
-         <li onclick="toggleSection('Amendment8')">
-            <h2 style="font-style:italic;"><a href="#Amendment_8">Amendment_8.</a></h2>
-            <ul id="Amendment8" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 9 dropdown -->
-         <li onclick="toggleSection('Amendment9')">
-            <h2 style="font-style:italic;"><a href="#Amendment_9">Amendment_9.</a></h2>
-            <ul id="Amendment9" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 10 dropdown -->
-         <li onclick="toggleSection('Amendment10')">
-            <h2 style="font-style:italic;"><a href="#Amendment_10">Amendment_10.</a></h2>
-            <ul id="Amendment10" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 11 dropdown -->
-         <li onclick="toggleSection('Amendment11')">
-            <h2 style="font-style:italic;"><a href="#Amendment_11">Amendment_11.</a></h2>
-            <ul id="Amendment11" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 12 dropdown -->
-         <li onclick="toggleSection('Amendment12')">
-            <h2 style="font-style:italic;"><a href="#Amendment_12">Amendment_12.</a></h2>
-            <ul id="Amendment12" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 13 dropdown -->
-         <li onclick="toggleSection('Amendment13')">
-            <h2 style="font-style:italic;"><a href="#Amendment_13">Amendment_13.</a></h2> (click here for sections)
-            <ul id="Amendment13" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.1">13.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#13.2">13.2</a></i></li></ul></li>
-       
-         <!-- Amendment 14 dropdown -->
-         <li onclick="toggleSection('Amendment14')">
-            <h2 style="font-style:italic;"><a href="#Amendment_14">Amendment_14.</a></h2> (click here for sections)
-            <ul id="Amendment14" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.1">14.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.2">14.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.3">14.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.4">14.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#14.5">14.5</a></i></li></ul></li>
-         
-         <!-- Amendment 15 dropdown -->
-         <li onclick="toggleSection('Amendment15')">
-            <h2 style="font-style:italic;"><a href="#Amendment_15">Amendment_15.</a></h2> (click here for sections)
-            <ul id="Amendment15" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.1">15.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#15.2">15.2</a></i></li></ul></li>
-         
-         <!-- Amendment 16 dropdown -->
-         <li onclick="toggleSection('Amendment16')">
-            <h2 style="font-style:italic;"><a href="#Amendment_16">Amendment_16.</a></h2>
-            <ul id="Amendment16" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 17 dropdown -->
-         <li onclick="toggleSection('Amendment17')">
-            <h2 style="font-style:italic;"><a href="#Amendment_17">Amendment_17.</a></h2>
-            <ul id="Amendment17" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 18 dropdown -->
-         <li onclick="toggleSection('Amendment18')">
-            <h2 style="font-style:italic;"><a href="#Amendment_18">Amendment_18.</a></h2> (click here for sections)
-            <ul id="Amendment18" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.1">18.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.2">18.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#18.3">18.3</a></i></li></ul></li>
-         
-         <!-- Amendment 19 dropdown -->
-         <li onclick="toggleSection('Amendment19')">
-            <h2 style="font-style:italic;"><a href="#Amendment_19">Amendment_19.</a></h2>
-            <ul id="Amendment19" style="display:none;"></ul>
-         </li>
-         
-         <!-- Amendment 20 dropdown -->
-         <li onclick="toggleSection('Amendment20')">
-            <h2 style="font-style:italic;"><a href="#Amendment_20">Amendment_20.</a></h2> (click here for sections)
-            <ul id="Amendment20" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.1">20.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.2">20.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.3">20.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.4">20.4</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.5">20.5</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#20.6">20.6</a></i></li></ul></li>
-         
-         <!-- Amendment 21 dropdown -->
-         <li onclick="toggleSection('Amendment21')">
-            <h2 style="font-style:italic;"><a href="#Amendment_21">Amendment_21.</a></h2> (click here for sections)
-            <ul id="Amendment21" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#21.1">21.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#21.2">21.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#21.3">21.3</a></i></li></ul></li>
-         
-         <!-- Amendment 22 dropdown -->
-         <li onclick="toggleSection('Amendment22')">
-            <h2 style="font-style:italic;"><a href="#Amendment_22">Amendment_22.</a></h2> (click here for sections)
-            <ul id="Amendment22" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#22.1">22.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#22.2">22.2</a></i></li></ul></li>
-         
-         <!-- Amendment 23 dropdown -->
-         <li onclick="toggleSection('Amendment23')">
-            <h2 style="font-style:italic;"><a href="#Amendment_23">Amendment_23.</a></h2> (click here for sections)
-            <ul id="Amendment23" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#23.1">23.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#23.2">23.2</a></i></li></ul></li>
-         
-         <!-- Amendment 24 dropdown -->
-         <li onclick="toggleSection('Amendment24')">
-            <h2 style="font-style:italic;"><a href="#Amendment_24">Amendment_24.</a></h2> (click here for sections)
-            <ul id="Amendment24" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#24.1">24.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#24.2">24.2</a></i></li></ul></li>
-         
-         <!-- Amendment 25 dropdown -->
-         <li onclick="toggleSection('Amendment25')">
-            <h2 style="font-style:italic;"><a href="#Amendment_25">Amendment_25.</a></h2> (click here for sections)
-            <ul id="Amendment25" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#25.1">25.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#25.2">25.2</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#25.3">25.3</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#25.4">25.4</a></i></li></ul></li>
-         
-         <!-- Amendment 26 dropdown -->
-         <li onclick="toggleSection('Amendment26')">
-            <h2 style="font-style:italic;"><a href="#Amendment_26">Amendment_26.</a></h2> (click here for sections)
-            <ul id="Amendment26" style="display:none;">
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#26.1">26.1</a></i></li>
-         <li><i style="font-weight:bold;">
-               Section:
-               </i><i><a href="#26.2">26.2</a></i></li></ul></li>
-         
-         <!-- Amendment 27 dropdown -->
-         <li onclick="toggleSection('Amendment27')">
-            <h2 style="font-style:italic;"><a href="#Amendment_27">Amendment_27.</a></h2>
-            <ul id="Amendment27" style="display:none;"></ul>
-         </li>
-      </ul>
-      <hr/>
       
       <!-- thinker selector -->
       <div id="thinker" style="margin: 12px;"><select id="thinkerSelector" onchange="changeThinkerSelection()">
@@ -518,7 +291,44 @@
       <hr/>
       <div class="section" data-rousseau="0.26" data-montesquieu="0.09" data-decive="0.06" data-locke="0.04">
          <hr/>
-         <h2 style="text-align:center;">Article One</h2>
+         <ul class="toc">
+            <!-- Article 1 dropdown -->
+            <li onclick="toggleSection('Article1')">
+               <h2 style="font-style:italic;"><a href="#Article_1">Article_1.</a></h2>
+               (click here for sections)
+               <ul id="Article1" style="display:none;">
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.1">1.1</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.2">1.2</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.3">1.3</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.4">1.4</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.5">1.5</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.6">1.6</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.7">1.7</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.8">1.8</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.9">1.9</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#1.0_">1.0_</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_1"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.26</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.09</p>
@@ -770,7 +580,25 @@
       </div>
       <div class="section" data-rousseau="0.71" data-montesquieu="0.28" data-decive="0.08" data-locke="0.03">
          <hr/>
-         <h2 style="text-align:center;">Article Two</h2>
+         <ul class="toc">
+            <!-- Article 2 dropdown -->
+            <li onclick="toggleSection('Article2')">
+               <h2 style="font-style:italic;"><a href="#Article_2">Article_2.</a></h2> (click here for sections)
+               <ul id="Article2" style="display:none;">
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#2.1">2.1</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#2.2">2.2</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#2.3">2.3</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#2.4">2.4</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_2"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.71</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.28</p>
@@ -893,7 +721,22 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.56" data-decive="1.10" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Article Three</h2>
+         <ul class="toc">
+            <!-- Article 3 dropdown -->
+            <li onclick="toggleSection('Article3')">
+               <h2 style="font-style:italic;"><a href="#Article_3">Article_3.</a></h2> (click here for sections)
+               <ul id="Article3" style="display:none;">
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#3.1">3.1</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#3.2">3.2</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#3.3">3.3</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_3"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.56</p>
@@ -957,7 +800,25 @@
       </div>
       <div class="section" data-rousseau="0.72" data-montesquieu="0.02" data-decive="2.28" data-locke="0.12">
          <hr/>
-         <h2 style="text-align:center;">Article Four</h2>
+         <ul class="toc">
+            <!-- Article 4 dropdown -->
+            <li onclick="toggleSection('Article4')">
+               <h2 style="font-style:italic;"><a href="#Article_4">Article_4.</a></h2> (click here for sections)
+               <ul id="Article4" style="display:none;">
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#4.1">4.1</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#4.2">4.2</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#4.3">4.3</a></i></li>
+                  <li><i style="font-weight:bold;">
+                     Section:
+                  </i><i><a href="#4.4">4.4</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_4"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.72</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.02</p>
@@ -1018,7 +879,14 @@
       </div>
       <div class="section" data-rousseau="0.03" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Article Five</h2>
+         <ul class="toc">
+            <!-- Article 5 dropdown -->
+            <li onclick="toggleSection('Article5')">
+               <h2 style="font-style:italic;"><a href="#Article_5">Article_5.</a></h2>
+               <ul id="Article5" style="display:none;"></ul>
+            </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_5"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.03</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1040,7 +908,12 @@
       </div>
       <div class="section" data-rousseau="1.00" data-montesquieu="0.17" data-decive="1.33" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Article Six</h2>
+         <ul class="toc"><!-- Article 6 dropdown -->
+         <li onclick="toggleSection('Article6')">
+            <h2 style="font-style:italic;"><a href="#Article_6">Article_6.</a></h2>
+            <ul id="Article6" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_6"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.17</p>
@@ -1066,7 +939,12 @@
       </div>
       <div class="section" data-rousseau="1.25" data-montesquieu="0.25" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Article Seven</h2>
+         <ul class="toc"><!-- Article 7 dropdown -->
+         <li onclick="toggleSection('Article7')">
+            <h2 style="font-style:italic;"><a href="#Article_7">Article_7.</a></h2>
+            <ul id="Article7" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Article_7"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.25</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
@@ -1095,7 +973,12 @@
       </div>
       <div class="section" data-rousseau="0.08" data-montesquieu="0.33" data-decive="5.83" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment I</h2>
+         <ul class="toc"><!-- Amendment 1 dropdown -->
+         <li onclick="toggleSection('Amendment1')">
+            <h2 style="font-style:italic;"><a href="#Amendment_1">Amendment_1.</a></h2>
+            <ul id="Amendment1" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_1"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.33</p>
@@ -1111,7 +994,14 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="1.00" data-decive="3.50" data-locke="0.50">
          <hr/>
-         <h2 style="text-align:center;">Amendment II</h2>
+         <ul class="toc">
+            <!-- Amendment 2 dropdown -->
+            <li onclick="toggleSection('Amendment2')">
+               <h2 style="font-style:italic;"><a href="#Amendment_2">Amendment_2.</a></h2>
+               <ul id="Amendment2" style="display:none;"></ul>
+            </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_2"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
@@ -1125,7 +1015,14 @@
       </div>
       <div class="section" data-rousseau="3.50" data-montesquieu="0.50" data-decive="4.00" data-locke="2.50">
          <hr/>
-         <h2 style="text-align:center;">Amendment III</h2>
+         <ul class="toc">
+            <!-- Amendment 3 dropdown -->
+            <li onclick="toggleSection('Amendment3')">
+               <h2 style="font-style:italic;"><a href="#Amendment_3">Amendment_3.</a></h2>
+               <ul id="Amendment3" style="display:none;"></ul>
+            </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_3"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>3.50</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
@@ -1140,7 +1037,14 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment IV</h2>
+         <ul class="toc">
+            <!-- Amendment 4 dropdown -->
+            <li onclick="toggleSection('Amendment4')">
+               <h2 style="font-style:italic;"><a href="#Amendment_4">Amendment_4.</a></h2>
+               <ul id="Amendment4" style="display:none;"></ul>
+            </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_4"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1158,7 +1062,14 @@
       </div>
       <div class="section" data-rousseau="0.47" data-montesquieu="1.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment V</h2>
+         <ul class="toc">
+            <!-- Amendment 5 dropdown -->
+            <li onclick="toggleSection('Amendment5')">
+               <h2 style="font-style:italic;"><a href="#Amendment_5">Amendment_5.</a></h2>
+               <ul id="Amendment5" style="display:none;"></ul>
+            </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_5"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.47</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
@@ -1177,7 +1088,12 @@
       </div>
       <div class="section" data-rousseau="0.08" data-montesquieu="0.50" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment VI</h2>
+         <ul class="toc"><!-- Amendment 6 dropdown -->
+         <li onclick="toggleSection('Amendment6')">
+            <h2 style="font-style:italic;"><a href="#Amendment_6">Amendment_6.</a></h2>
+            <ul id="Amendment6" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_6"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
@@ -1196,7 +1112,12 @@
       </div>
       <div class="section" data-rousseau="0.17" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment VII</h2>
+         <ul class="toc"><!-- Amendment 7 dropdown -->
+         <li onclick="toggleSection('Amendment7')">
+            <h2 style="font-style:italic;"><a href="#Amendment_7">Amendment_7.</a></h2>
+            <ul id="Amendment7" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_7"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.17</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1213,7 +1134,12 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="1.33" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment VIII</h2>
+         <ul class="toc"><!-- Amendment 8 dropdown -->
+         <li onclick="toggleSection('Amendment8')">
+            <h2 style="font-style:italic;"><a href="#Amendment_8">Amendment_8.</a></h2>
+            <ul id="Amendment8" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_8"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.33</p>
@@ -1227,7 +1153,12 @@
       </div>
       <div class="section" data-rousseau="8.00" data-montesquieu="5.00" data-decive="10.00" data-locke="2.50">
          <hr/>
-         <h2 style="text-align:center;">Amendment IX</h2>
+        <ul class="toc"> <!-- Amendment 9 dropdown -->
+         <li onclick="toggleSection('Amendment9')">
+            <h2 style="font-style:italic;"><a href="#Amendment_9">Amendment_9.</a></h2>
+            <ul id="Amendment9" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_9"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>8.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>5.00</p>
@@ -1242,7 +1173,12 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment X</h2>
+         <ul class="toc"><!-- Amendment 10 dropdown -->
+         <li onclick="toggleSection('Amendment10')">
+            <h2 style="font-style:italic;"><a href="#Amendment_10">Amendment_10.</a></h2>
+            <ul id="Amendment10" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_10"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1257,7 +1193,12 @@
       </div>
       <div class="section" data-rousseau="0.33" data-montesquieu="0.67" data-decive="0.00" data-locke="0.50">
          <hr/>
-         <h2 style="text-align:center;">Amendment XI</h2>
+         <ul class="toc"><!-- Amendment 11 dropdown -->
+         <li onclick="toggleSection('Amendment11')">
+            <h2 style="font-style:italic;"><a href="#Amendment_11">Amendment_11.</a></h2>
+            <ul id="Amendment11" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_11"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.33</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.67</p>
@@ -1275,7 +1216,12 @@
       </div>
       <div class="section" data-rousseau="1.41" data-montesquieu="0.10" data-decive="0.33" data-locke="0.06">
          <hr/>
-         <h2 style="text-align:center;">Amendment XII</h2>
+         <ul class="toc"><!-- Amendment 12 dropdown -->
+         <li onclick="toggleSection('Amendment12')">
+            <h2 style="font-style:italic;"><a href="#Amendment_12">Amendment_12.</a></h2>
+            <ul id="Amendment12" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_12"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.41</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.10</p>
@@ -1317,7 +1263,18 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.17">
          <hr/>
-         <h2 style="text-align:center;"> Amendment XIII</h2>
+         <ul class="toc"><!-- Amendment 13 dropdown -->
+         <li onclick="toggleSection('Amendment13')">
+            <h2 style="font-style:italic;"><a href="#Amendment_13">Amendment_13.</a></h2> (click here for sections)
+            <ul id="Amendment13" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#13.1">13.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#13.2">13.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_13"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1348,7 +1305,27 @@
       </div>
       <div class="section" data-rousseau="0.59" data-montesquieu="0.13" data-decive="1.37" data-locke="0.12">
          <hr/>
-         <h2 style="text-align:center;">Amendment XIV</h2>
+         <ul class="toc"><!-- Amendment 14 dropdown -->
+         <li onclick="toggleSection('Amendment14')">
+            <h2 style="font-style:italic;"><a href="#Amendment_14">Amendment_14.</a></h2> (click here for sections)
+            <ul id="Amendment14" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#14.1">14.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#14.2">14.2</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#14.3">14.3</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#14.4">14.4</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#14.5">14.5</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_14"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.59</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.13</p>
@@ -1430,7 +1407,18 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XV</h2>
+         <ul class="toc"><!-- Amendment 15 dropdown -->
+         <li onclick="toggleSection('Amendment15')">
+            <h2 style="font-style:italic;"><a href="#Amendment_15">Amendment_15.</a></h2> (click here for sections)
+            <ul id="Amendment15" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#15.1">15.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#15.2">15.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_15"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1461,7 +1449,12 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XVI</h2>
+         <ul class="toc"><!-- Amendment 16 dropdown -->
+         <li onclick="toggleSection('Amendment16')">
+            <h2 style="font-style:italic;"><a href="#Amendment_16">Amendment_16.</a></h2>
+            <ul id="Amendment16" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_16"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1478,7 +1471,12 @@
       </div>
       <div class="section" data-rousseau="0.22" data-montesquieu="0.00" data-decive="0.09" data-locke="0.17">
          <hr/>
-         <h2 style="text-align:center;">Amendment XVII</h2>
+         <ul class="toc"><!-- Amendment 17 dropdown -->
+         <li onclick="toggleSection('Amendment17')">
+            <h2 style="font-style:italic;"><a href="#Amendment_17">Amendment_17.</a></h2>
+            <ul id="Amendment17" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_17"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.22</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1501,7 +1499,21 @@
       </div>
       <div class="section" data-rousseau="0.02" data-montesquieu="0.00" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XVIII</h2>
+         <ul class="toc"><!-- Amendment 18 dropdown -->
+         <li onclick="toggleSection('Amendment18')">
+            <h2 style="font-style:italic;"><a href="#Amendment_18">Amendment_18.</a></h2> (click here for sections)
+            <ul id="Amendment18" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#18.1">18.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#18.2">18.2</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#18.3">18.3</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_18"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1544,7 +1556,13 @@
       </div>
       <div class="section" data-rousseau="0.12" data-montesquieu="0.19" data-decive="0.04" data-locke="0.17">
          <hr/>
-         <h2 style="text-align:center;">Amendment XIX</h2>
+         <ul class="toc"><!-- Amendment 19 dropdown -->
+         <li onclick="toggleSection('Amendment19')">
+            <h2 style="font-style:italic;"><a href="#Amendment_19">Amendment_19.</a></h2>
+            <ul id="Amendment19" style="display:none;"></ul>
+         </li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_19"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.12</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.19</p>
@@ -1559,7 +1577,30 @@
       </div>
       <div class="section" data-rousseau="0.02" data-montesquieu="0.03" data-decive="0.01" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XX</h2>
+         <ul class="toc"><!-- Amendment 20 dropdown -->
+         <li onclick="toggleSection('Amendment20')">
+            <h2 style="font-style:italic;"><a href="#Amendment_20">Amendment_20.</a></h2> (click here for sections)
+            <ul id="Amendment20" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.1">20.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.2">20.2</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.3">20.3</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.4">20.4</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.5">20.5</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#20.6">20.6</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_20"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.03</p>
@@ -1638,7 +1679,21 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.00" data-decive="0.00" data-locke="0.12">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXI</h2>
+         <ul class="toc"><!-- Amendment 21 dropdown -->
+         <li onclick="toggleSection('Amendment21')">
+            <h2 style="font-style:italic;"><a href="#Amendment_21">Amendment_21.</a></h2> (click here for sections)
+            <ul id="Amendment21" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#21.1">21.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#21.2">21.2</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#21.3">21.3</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_21"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1679,7 +1734,18 @@
       </div>
       <div class="section" data-rousseau="0.06" data-montesquieu="0.00" data-decive="0.02" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXII</h2>
+         <ul class="toc"><!-- Amendment 22 dropdown -->
+         <li onclick="toggleSection('Amendment22')">
+            <h2 style="font-style:italic;"><a href="#Amendment_22">Amendment_22.</a></h2> (click here for sections)
+            <ul id="Amendment22" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#22.1">22.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#22.2">22.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_22"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.06</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
@@ -1717,7 +1783,18 @@
       </div>
       <div class="section" data-rousseau="0.43" data-montesquieu="0.30" data-decive="3.14" data-locke="0.07">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXIII</h2>
+         <ul class="toc"><!-- Amendment 23 dropdown -->
+         <li onclick="toggleSection('Amendment23')">
+            <h2 style="font-style:italic;"><a href="#Amendment_23">Amendment_23.</a></h2> (click here for sections)
+            <ul id="Amendment23" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#23.1">23.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#23.2">23.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_23"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.43</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.30</p>
@@ -1753,7 +1830,18 @@
       </div>
       <div class="section" data-rousseau="0.00" data-montesquieu="0.08" data-decive="0.00" data-locke="0.00">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXIV</h2>
+         <ul class="toc"><!-- Amendment 24 dropdown -->
+         <li onclick="toggleSection('Amendment24')">
+            <h2 style="font-style:italic;"><a href="#Amendment_24">Amendment_24.</a></h2> (click here for sections)
+            <ul id="Amendment24" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#24.1">24.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#24.2">24.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_24"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
@@ -1784,7 +1872,24 @@
       </div>
       <div class="section" data-rousseau="0.05" data-montesquieu="0.18" data-decive="0.00" data-locke="0.08">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXV</h2>
+         <ul class="toc"><!-- Amendment 25 dropdown -->
+         <li onclick="toggleSection('Amendment25')">
+            <h2 style="font-style:italic;"><a href="#Amendment_25">Amendment_25.</a></h2> (click here for sections)
+            <ul id="Amendment25" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#25.1">25.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#25.2">25.2</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#25.3">25.3</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#25.4">25.4</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_25"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.05</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.18</p>
@@ -1853,7 +1958,18 @@
       </div>
       <div class="section" data-rousseau="0.05" data-montesquieu="0.08" data-decive="0.02" data-locke="0.07">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXVI</h2>
+         <ul class="toc"><!-- Amendment 26 dropdown -->
+         <li onclick="toggleSection('Amendment26')">
+            <h2 style="font-style:italic;"><a href="#Amendment_26">Amendment_26.</a></h2> (click here for sections)
+            <ul id="Amendment26" style="display:none;">
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#26.1">26.1</a></i></li>
+               <li><i style="font-weight:bold;">
+                  Section:
+               </i><i><a href="#26.2">26.2</a></i></li></ul></li>
+         </ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_26"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.05</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
@@ -1884,7 +2000,12 @@
       </div>
       <div class="section" data-rousseau="2.75" data-montesquieu="0.25" data-decive="0.50" data-locke="0.25">
          <hr/>
-         <h2 style="text-align:center;">Amendment XXVII</h2>
+         <ul class="toc"><!-- Amendment 27 dropdown -->
+         <li onclick="toggleSection('Amendment27')">
+            <h2 style="font-style:italic;"><a href="#Amendment_27">Amendment_27.</a></h2>
+            <ul id="Amendment27" style="display:none;"></ul>
+         </li></ul>
+         <h2 style="text-align:center;"></h2>
          <h2 id="Amendment_27"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>2.75</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
@@ -1897,5 +2018,25 @@
             </p>
          <hr/>
       </div>
+      <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
+      <script type="text/javascript">
+        
+var mybutton = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.classList.add("show");  
+  } else {
+    mybutton.classList.remove("show");  
+  }
+};
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+      </script>
    </body>
 </html>
