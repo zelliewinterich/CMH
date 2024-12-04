@@ -15,11 +15,42 @@
                                 #a1d7e5,    
                                 #8fbce0,   
                                 #b2e3d9);   
-    background-size: 100% 2000%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
-}
-
-                    
-                </style>
+    background-size: 100% 2225%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
+} ul.toc {
+            list-style-type: none;
+            padding: 0;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 100%; } ul.toc li {
+            padding: 8px;
+            margin: 4px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, 
+                                #7ec8d5,    
+                                #a1d7e5,    
+                                #8fbce0,   
+                                #b2e3d9);   
+                                background-size: 100% 100%;
+                                border: 2px solid black; } ul.toc ul {
+            display: none;
+            margin-left: 20px; } ul.toc li:hover {
+            background-color: #e0e0e0; }
+      </style>
+      <script type="text/javascript">
+        // dropdown buttons for toc
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
    </head>
    
    <body>
@@ -90,7 +121,7 @@
                THE CONSTITUTION OF THE UNITED STATES OF AMERICA, 1787
                </i></p>
       </div>
-      <p style="margin: 20px;">By: Zellie Winterich, Anna Costello, James Paul, Ryan Pavone</p>
+      <p style="margin: 20px;">Edited By: Zellie Winterich, Anna Costello, James Paul, Ryan Pavone</p>
       
       <hr/> 
       <section>
@@ -107,10 +138,12 @@
       
       <h2 style="text-align:left; margin: 10px;">Table of Contents</h2>
       <hr/>
-      <ul>
-         <li>
+      <ul class="toc">
+         <!-- Article 1 dropdown -->
+         <li onclick="toggleSection('Article1')">
             <h2 style="font-style:italic;"><a href="#Article_1">Article_1.</a></h2>
-         </li>
+            (click here for sections)
+         <ul id="Article1" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#1.1">1.1</a></i></li>
@@ -140,10 +173,12 @@
                </i><i><a href="#1.9">1.9</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#1.0_">1.0_</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Article_2">Article_2.</a></h2>
-         </li>
+               </i><i><a href="#1.0_">1.0_</a></i></li></ul></li>
+         
+         <!-- Article 2 dropdown -->
+         <li onclick="toggleSection('Article2')">
+            <h2 style="font-style:italic;"><a href="#Article_2">Article_2.</a></h2> (click here for sections)
+            <ul id="Article2" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#2.1">2.1</a></i></li>
@@ -155,10 +190,12 @@
                </i><i><a href="#2.3">2.3</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#2.4">2.4</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Article_3">Article_3.</a></h2>
-         </li>
+               </i><i><a href="#2.4">2.4</a></i></li></ul></li>
+         
+         <!-- Article 3 dropdown -->
+         <li onclick="toggleSection('Article3')">
+            <h2 style="font-style:italic;"><a href="#Article_3">Article_3.</a></h2> (click here for sections)
+            <ul id="Article3" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#3.1">3.1</a></i></li>
@@ -167,10 +204,12 @@
                </i><i><a href="#3.2">3.2</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#3.3">3.3</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Article_4">Article_4.</a></h2>
-         </li>
+               </i><i><a href="#3.3">3.3</a></i></li></ul></li>
+        
+         <!-- Article 4 dropdown -->
+         <li onclick="toggleSection('Article4')">
+            <h2 style="font-style:italic;"><a href="#Article_4">Article_4.</a></h2> (click here for sections)
+            <ul id="Article4" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#4.1">4.1</a></i></li>
@@ -182,64 +221,113 @@
                </i><i><a href="#4.3">4.3</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#4.4">4.4</a></i></li>
-         <li>
+               </i><i><a href="#4.4">4.4</a></i></li></ul></li>
+        
+         <!-- Article 5 dropdown -->
+         <li onclick="toggleSection('Article5')">
             <h2 style="font-style:italic;"><a href="#Article_5">Article_5.</a></h2>
+            <ul id="Article5" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Article 6 dropdown -->
+         <li onclick="toggleSection('Article6')">
             <h2 style="font-style:italic;"><a href="#Article_6">Article_6.</a></h2>
+            <ul id="Article6" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Article 7 dropdown -->
+         <li onclick="toggleSection('Article7')">
             <h2 style="font-style:italic;"><a href="#Article_7">Article_7.</a></h2>
+            <ul id="Article7" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 1 dropdown -->
+         <li onclick="toggleSection('Amendment1')">
             <h2 style="font-style:italic;"><a href="#Amendment_1">Amendment_1.</a></h2>
+            <ul id="Amendment1" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 2 dropdown -->
+         <li onclick="toggleSection('Amendment2')">
             <h2 style="font-style:italic;"><a href="#Amendment_2">Amendment_2.</a></h2>
+            <ul id="Amendment2" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 3 dropdown -->
+         <li onclick="toggleSection('Amendment3')">
             <h2 style="font-style:italic;"><a href="#Amendment_3">Amendment_3.</a></h2>
+            <ul id="Amendment3" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 4 dropdown -->
+         <li onclick="toggleSection('Amendment4')">
             <h2 style="font-style:italic;"><a href="#Amendment_4">Amendment_4.</a></h2>
+            <ul id="Amendment4" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 5 dropdown -->
+         <li onclick="toggleSection('Amendment5')">
             <h2 style="font-style:italic;"><a href="#Amendment_5">Amendment_5.</a></h2>
+            <ul id="Amendment5" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 6 dropdown -->
+         <li onclick="toggleSection('Amendment6')">
             <h2 style="font-style:italic;"><a href="#Amendment_6">Amendment_6.</a></h2>
+            <ul id="Amendment6" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 7 dropdown -->
+         <li onclick="toggleSection('Amendment7')">
             <h2 style="font-style:italic;"><a href="#Amendment_7">Amendment_7.</a></h2>
+            <ul id="Amendment7" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 8 dropdown -->
+         <li onclick="toggleSection('Amendment8')">
             <h2 style="font-style:italic;"><a href="#Amendment_8">Amendment_8.</a></h2>
+            <ul id="Amendment8" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 9 dropdown -->
+         <li onclick="toggleSection('Amendment9')">
             <h2 style="font-style:italic;"><a href="#Amendment_9">Amendment_9.</a></h2>
+            <ul id="Amendment9" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 10 dropdown -->
+         <li onclick="toggleSection('Amendment10')">
             <h2 style="font-style:italic;"><a href="#Amendment_10">Amendment_10.</a></h2>
+            <ul id="Amendment10" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 11 dropdown -->
+         <li onclick="toggleSection('Amendment11')">
             <h2 style="font-style:italic;"><a href="#Amendment_11">Amendment_11.</a></h2>
+            <ul id="Amendment11" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 12 dropdown -->
+         <li onclick="toggleSection('Amendment12')">
             <h2 style="font-style:italic;"><a href="#Amendment_12">Amendment_12.</a></h2>
+            <ul id="Amendment12" style="display:none;"></ul>
          </li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_13">Amendment_13.</a></h2>
-         </li>
+         
+         <!-- Amendment 13 dropdown -->
+         <li onclick="toggleSection('Amendment13')">
+            <h2 style="font-style:italic;"><a href="#Amendment_13">Amendment_13.</a></h2> (click here for sections)
+            <ul id="Amendment13" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#13.1">13.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#13.2">13.2</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_14">Amendment_14.</a></h2>
-         </li>
+               </i><i><a href="#13.2">13.2</a></i></li></ul></li>
+       
+         <!-- Amendment 14 dropdown -->
+         <li onclick="toggleSection('Amendment14')">
+            <h2 style="font-style:italic;"><a href="#Amendment_14">Amendment_14.</a></h2> (click here for sections)
+            <ul id="Amendment14" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#14.1">14.1</a></i></li>
@@ -254,25 +342,35 @@
                </i><i><a href="#14.4">14.4</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#14.5">14.5</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_15">Amendment_15.</a></h2>
-         </li>
+               </i><i><a href="#14.5">14.5</a></i></li></ul></li>
+         
+         <!-- Amendment 15 dropdown -->
+         <li onclick="toggleSection('Amendment15')">
+            <h2 style="font-style:italic;"><a href="#Amendment_15">Amendment_15.</a></h2> (click here for sections)
+            <ul id="Amendment15" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#15.1">15.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#15.2">15.2</a></i></li>
-         <li>
+               </i><i><a href="#15.2">15.2</a></i></li></ul></li>
+         
+         <!-- Amendment 16 dropdown -->
+         <li onclick="toggleSection('Amendment16')">
             <h2 style="font-style:italic;"><a href="#Amendment_16">Amendment_16.</a></h2>
+            <ul id="Amendment16" style="display:none;"></ul>
          </li>
-         <li>
+         
+         <!-- Amendment 17 dropdown -->
+         <li onclick="toggleSection('Amendment17')">
             <h2 style="font-style:italic;"><a href="#Amendment_17">Amendment_17.</a></h2>
+            <ul id="Amendment17" style="display:none;"></ul>
          </li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_18">Amendment_18.</a></h2>
-         </li>
+         
+         <!-- Amendment 18 dropdown -->
+         <li onclick="toggleSection('Amendment18')">
+            <h2 style="font-style:italic;"><a href="#Amendment_18">Amendment_18.</a></h2> (click here for sections)
+            <ul id="Amendment18" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#18.1">18.1</a></i></li>
@@ -281,13 +379,18 @@
                </i><i><a href="#18.2">18.2</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#18.3">18.3</a></i></li>
-         <li>
+               </i><i><a href="#18.3">18.3</a></i></li></ul></li>
+         
+         <!-- Amendment 19 dropdown -->
+         <li onclick="toggleSection('Amendment19')">
             <h2 style="font-style:italic;"><a href="#Amendment_19">Amendment_19.</a></h2>
+            <ul id="Amendment19" style="display:none;"></ul>
          </li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_20">Amendment_20.</a></h2>
-         </li>
+         
+         <!-- Amendment 20 dropdown -->
+         <li onclick="toggleSection('Amendment20')">
+            <h2 style="font-style:italic;"><a href="#Amendment_20">Amendment_20.</a></h2> (click here for sections)
+            <ul id="Amendment20" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#20.1">20.1</a></i></li>
@@ -305,10 +408,12 @@
                </i><i><a href="#20.5">20.5</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#20.6">20.6</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_21">Amendment_21.</a></h2>
-         </li>
+               </i><i><a href="#20.6">20.6</a></i></li></ul></li>
+         
+         <!-- Amendment 21 dropdown -->
+         <li onclick="toggleSection('Amendment21')">
+            <h2 style="font-style:italic;"><a href="#Amendment_21">Amendment_21.</a></h2> (click here for sections)
+            <ul id="Amendment21" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#21.1">21.1</a></i></li>
@@ -317,37 +422,45 @@
                </i><i><a href="#21.2">21.2</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#21.3">21.3</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_22">Amendment_22.</a></h2>
-         </li>
+               </i><i><a href="#21.3">21.3</a></i></li></ul></li>
+         
+         <!-- Amendment 22 dropdown -->
+         <li onclick="toggleSection('Amendment22')">
+            <h2 style="font-style:italic;"><a href="#Amendment_22">Amendment_22.</a></h2> (click here for sections)
+            <ul id="Amendment22" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#22.1">22.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#22.2">22.2</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_23">Amendment_23.</a></h2>
-         </li>
+               </i><i><a href="#22.2">22.2</a></i></li></ul></li>
+         
+         <!-- Amendment 23 dropdown -->
+         <li onclick="toggleSection('Amendment23')">
+            <h2 style="font-style:italic;"><a href="#Amendment_23">Amendment_23.</a></h2> (click here for sections)
+            <ul id="Amendment23" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#23.1">23.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#23.2">23.2</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_24">Amendment_24.</a></h2>
-         </li>
+               </i><i><a href="#23.2">23.2</a></i></li></ul></li>
+         
+         <!-- Amendment 24 dropdown -->
+         <li onclick="toggleSection('Amendment24')">
+            <h2 style="font-style:italic;"><a href="#Amendment_24">Amendment_24.</a></h2> (click here for sections)
+            <ul id="Amendment24" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#24.1">24.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#24.2">24.2</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_25">Amendment_25.</a></h2>
-         </li>
+               </i><i><a href="#24.2">24.2</a></i></li></ul></li>
+         
+         <!-- Amendment 25 dropdown -->
+         <li onclick="toggleSection('Amendment25')">
+            <h2 style="font-style:italic;"><a href="#Amendment_25">Amendment_25.</a></h2> (click here for sections)
+            <ul id="Amendment25" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#25.1">25.1</a></i></li>
@@ -359,25 +472,33 @@
                </i><i><a href="#25.3">25.3</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#25.4">25.4</a></i></li>
-         <li>
-            <h2 style="font-style:italic;"><a href="#Amendment_26">Amendment_26.</a></h2>
-         </li>
+               </i><i><a href="#25.4">25.4</a></i></li></ul></li>
+         
+         <!-- Amendment 26 dropdown -->
+         <li onclick="toggleSection('Amendment26')">
+            <h2 style="font-style:italic;"><a href="#Amendment_26">Amendment_26.</a></h2> (click here for sections)
+            <ul id="Amendment26" style="display:none;">
          <li><i style="font-weight:bold;">
                Section:
                </i><i><a href="#26.1">26.1</a></i></li>
          <li><i style="font-weight:bold;">
                Section:
-               </i><i><a href="#26.2">26.2</a></i></li>
-         <li>
+               </i><i><a href="#26.2">26.2</a></i></li></ul></li>
+         
+         <!-- Amendment 27 dropdown -->
+         <li onclick="toggleSection('Amendment27')">
             <h2 style="font-style:italic;"><a href="#Amendment_27">Amendment_27.</a></h2>
+            <ul id="Amendment27" style="display:none;"></ul>
          </li>
       </ul>
-      <hr/><div id="thinker" style="margin: 12px;"><select id="thinkerSelector" onchange="changeThinkerSelection()">
+      <hr/>
+      
+      <!-- thinker selector -->
+      <div id="thinker" style="margin: 12px;"><select id="thinkerSelector" onchange="changeThinkerSelection()">
          <option value="None">None</option>
          <option value="rousseau">Rousseau</option>
          <option value="montesquieu">Montesquieu</option>
-         <option value="decive">DeCive</option>
+         <option value="decive">Hobbes</option>
          <option value="locke">Locke</option></select><svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
          <rect x="10" y="10" width="280" height="40" fill="white" stroke="black" stroke-width="2" rx="10" ry="10"></rect>
          <text x="20" y="30" font-family="Arial" font-size="14" fill="black">Significance Range</text>
@@ -392,14 +513,16 @@
                <stop offset="75%" style="stop-color: #0099ff; stop-opacity: 1"></stop>
                <stop offset="100%" style="stop-color: #8100d0; stop-opacity: 1"></stop>
             </linearGradient>
-         </defs></svg></div><hr/>
+         </defs></svg>
+      </div>
+      <hr/>
       <div class="section" data-rousseau="0.26" data-montesquieu="0.09" data-decive="0.06" data-locke="0.04">
          <hr/>
          <h2 style="text-align:center;">Article One</h2>
          <h2 id="Article_1"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.26</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.09</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.06</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.06</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.04</p>
          <p>
             
@@ -651,7 +774,7 @@
          <h2 id="Article_2"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.71</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.28</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.08</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.03</p>
          <p>
             
@@ -774,7 +897,7 @@
          <h2 id="Article_3"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.56</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>1.10</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>1.10</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p>
             
@@ -838,7 +961,7 @@
          <h2 id="Article_4"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.72</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.02</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>2.28</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>2.28</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.12</p>
          <p>
             
@@ -899,7 +1022,7 @@
          <h2 id="Article_5"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.03</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -921,7 +1044,7 @@
          <h2 id="Article_6"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.17</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>1.33</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>1.33</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -947,7 +1070,7 @@
          <h2 id="Article_7"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.25</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -976,7 +1099,7 @@
          <h2 id="Amendment_1"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.33</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>5.83</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>5.83</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -992,7 +1115,7 @@
          <h2 id="Amendment_2"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>3.50</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>3.50</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.50</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1006,7 +1129,7 @@
          <h2 id="Amendment_3"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>3.50</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>4.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>4.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>2.50</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1021,7 +1144,7 @@
          <h2 id="Amendment_4"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1039,7 +1162,7 @@
          <h2 id="Amendment_5"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.47</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1058,7 +1181,7 @@
          <h2 id="Amendment_6"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.08</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.50</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1077,7 +1200,7 @@
          <h2 id="Amendment_7"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.17</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1094,7 +1217,7 @@
          <h2 id="Amendment_8"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>1.33</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1108,7 +1231,7 @@
          <h2 id="Amendment_9"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>8.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>5.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>10.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>10.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>2.50</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1123,7 +1246,7 @@
          <h2 id="Amendment_10"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1138,7 +1261,7 @@
          <h2 id="Amendment_11"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.33</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.67</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.50</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1156,7 +1279,7 @@
          <h2 id="Amendment_12"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>1.41</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.10</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.33</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.33</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.06</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1198,7 +1321,7 @@
          <h2 id="Amendment_13"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1229,7 +1352,7 @@
          <h2 id="Amendment_14"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.59</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.13</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>1.37</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>1.37</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.12</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1311,7 +1434,7 @@
          <h2 id="Amendment_15"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1342,7 +1465,7 @@
          <h2 id="Amendment_16"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1359,7 +1482,7 @@
          <h2 id="Amendment_17"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.22</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.09</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.09</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1382,7 +1505,7 @@
          <h2 id="Amendment_18"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1425,7 +1548,7 @@
          <h2 id="Amendment_19"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.12</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.19</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.04</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.04</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.17</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1440,7 +1563,7 @@
          <h2 id="Amendment_20"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.03</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.01</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.01</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1519,7 +1642,7 @@
          <h2 id="Amendment_21"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.12</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1560,7 +1683,7 @@
          <h2 id="Amendment_22"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.06</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.00</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.02</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1598,7 +1721,7 @@
          <h2 id="Amendment_23"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.43</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.30</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>3.14</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>3.14</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.07</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1634,7 +1757,7 @@
          <h2 id="Amendment_24"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.00</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1665,7 +1788,7 @@
          <h2 id="Amendment_25"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.05</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.18</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.00</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.00</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.08</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1734,7 +1857,7 @@
          <h2 id="Amendment_26"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>0.05</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.08</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.02</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.02</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.07</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             
@@ -1765,7 +1888,7 @@
          <h2 id="Amendment_27"></h2>
          <p style="text-align:center;"><strong>Rousseau Significance:</strong>2.75</p>
          <p style="text-align:center;"><strong>Montesquieu Significance:</strong>0.25</p>
-         <p style="text-align:center;"><strong>DeCive Significance:</strong>0.50</p>
+         <p style="text-align:center;"><strong>Hobbes Significance:</strong>0.50</p>
          <p style="text-align:center;"><strong>Locke Significance:</strong>0.25</p>
          <p style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
             

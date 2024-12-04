@@ -21,7 +21,7 @@
                
                 <h1 style="text-align:center;">DeCive</h1>
                 <xsl:apply-templates select="//meta_data"/>
-                By: Anna Costello
+                Edited By: Anna Costello
                 <hr/>
                 <h2 style="text-align:left;">Table of Contents</h2>
                 <hr/>
@@ -50,6 +50,20 @@
                 </xsl:for-each>
             </h2>
         </li>
+        <xsl:for-each select="sub_section">
+            <li>
+                <i style="font-weight:bold;">
+                    Chapter:
+                </i>
+                <xsl:for-each select="subsection_name">
+                    <i>
+                        <a href="#{@number}">
+                            <xsl:value-of select="@number"/>
+                        </a> 
+                    </i>
+                </xsl:for-each>
+            </li>
+        </xsl:for-each>
     </xsl:template>
     <!-- table of contents linkage to chapters -->
     
@@ -75,15 +89,24 @@
                     <xsl:value-of select="section_name[@type='article' or @type='amendment' or @type='preamble']"/>
                 </h2>
             </xsl:for-each>
-            <div class="sub_section">
-                <h3 style="text-align:center;">
-                    <xsl:value-of select="subsection_name"/>
-                </h3>
-                
-            </div>
             <p> 
                 <xsl:value-of select="text() | (consent_of_governed | inherent_rights | criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power)"/>
             </p>
+            <xsl:for-each select="sub_section">
+                <div class="sub_section">
+                    <h3 style="text-align:center;">
+                        <xsl:value-of select="subsection_name"/>
+                    </h3>
+                    <xsl:for-each select="subsection_name">
+                        <h3 id="{@number}">
+                            <xsl:value-of select="subsection_name"/>
+                        </h3>
+                    </xsl:for-each>
+                    <p>
+                        <xsl:value-of select="text() | (consent_of_governed | inherent_rights | criminal_justice | purposes_of_law | legal_documents | legislative_body | judicial_body | executive_body | limits_of_power)"/>
+                    </p>
+                </div>
+            </xsl:for-each>
             <hr/>
         </div>
     </xsl:template>

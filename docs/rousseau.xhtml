@@ -24,7 +24,7 @@
                                 #a1d7e5,    
                                 #8fbce0,   
                                 #b2e3d9);   
-                                background-size: 100% 20%;
+                                background-size: 100% 100%;
         }
         ul.toc li {
             padding: 8px;
@@ -49,7 +49,7 @@
         }
          </style>
          <script type="text/javascript">
-        // Function to toggle the visibility of the chapter list under each book
+        // dropdown buttons for toc
         function toggleSection(sectionId) {
             var section = document.getElementById(sectionId);
             if (section.style.display === "none") {
@@ -134,8 +134,9 @@
       <h2 style="text-align:left; margin: 20px;">Table of Contents</h2>
       <hr/>
       <ul class="toc">
+            <!-- section 1 dropdown -->
          <li onclick="toggleSection('Section1')">
-            <h2 style="font-style:italic;"><a href="#Section_1">Section_1.</a></h2>
+            <h2 style="font-style:italic;"><a href="#Section_1">Section_1.</a></h2> (click here for chapters)
          <ul id="Section1" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
@@ -164,8 +165,10 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#1.9">1.9</a></i></li></ul></li>
+            
+            <!-- section 2 dropdown -->
          <li onclick="toggleSection('Section2')">
-            <h2 style="font-style:italic;"><a href="#Section_2">Section_2.</a></h2>
+               <h2 style="font-style:italic;"><a href="#Section_2">Section_2.</a></h2> (click here for chapters)
          <ul id="Section2" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
@@ -203,8 +206,10 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#2.12">2.12</a></i></li></ul></li>
+            
+            <!-- section 3 dropdown -->
          <li onclick="toggleSection('Section3')">
-            <h2 style="font-style:italic;"><a href="#Section_3">Section_3.</a></h2>
+               <h2 style="font-style:italic;"><a href="#Section_3">Section_3.</a></h2> (click here for chapters)
          <ul id="Section3" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
@@ -260,8 +265,10 @@
          <li><i style="font-weight:bold;">
                Chapter:
                </i><i><a href="#3.18">3.18</a></i></li></ul></li>
+            
+            <!-- section 4 dropdown -->
          <li onclick="toggleSection('Section4')">
-            <h2 style="font-style:italic;"><a href="#Section_4">Section_4.</a></h2>
+               <h2 style="font-style:italic;"><a href="#Section_4">Section_4.</a></h2> (click here for chapters)
          <ul id="Section4" style="display:none;">
          <li><i style="font-weight:bold;">
                Chapter:
@@ -294,6 +301,7 @@
       <hr/>
       <div class="section">
          <hr/>
+            <!-- section 1 -->
          <h2 style="text-align:center;">Section I</h2>
          <h2 id="Section_1"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
@@ -837,6 +845,7 @@
       </div>
       <div class="section">
          <hr/>
+            <!-- section 2 -->
          <h2 style="text-align:center;">Section II</h2>
          <h2 id="Section_2"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
@@ -1704,6 +1713,7 @@
       </div>
       <div class="section">
          <hr/>
+            <!-- section 3 -->
          <h2 style="text-align:center;">Section III</h2>
          <h2 id="Section_3"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
@@ -3260,6 +3270,7 @@
       </div>
       <div class="section">
          <hr/>
+            <!-- section 4 -->
          <h2 style="text-align:center;">Section IV</h2>
          <h2 id="Section_4"></h2>
          <p style="margin-left: 25px; margin-right: 25px; margin-top: 5px; margin-bottom: 5px;">
