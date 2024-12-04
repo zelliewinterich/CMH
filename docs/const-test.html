@@ -18,6 +18,32 @@
                                 #b2e3d9);   
     background-size: 100% 465%; font-family: 'Georgia', serif; color: black; margin: 0; padding: 0; height: 100vh; 
 }
+ #backToTopBtn {
+  position: fixed;       
+  bottom: 20px;          
+  right: 20px;            
+  background-color: #333; 
+  font-family: Georgia, serif;
+  color: white;           
+  border: none;          
+  padding: 15px;          
+  border-radius: 25%;    
+  font-size: 20px;        
+  cursor: pointer;      
+  transition: 0.3s;       
+  opacity: 0;            
+  z-index: 1000;          
+}
+
+
+#backToTopBtn.show {
+  opacity: 1;             
+}
+
+
+#backToTopBtn:hover {
+  background-color: #444; 
+}
       </style>
    </head>
    <body>
@@ -1145,5 +1171,25 @@
             </tr>
          </tbody>
       </table>
+      <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
+      <script type="text/javascript">
+        
+var mybutton = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.classList.add("show");  
+  } else {
+    mybutton.classList.remove("show");  
+  }
+};
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+      </script>
    </body>
 </html>
