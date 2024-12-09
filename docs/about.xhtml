@@ -139,12 +139,21 @@
         <div style="border: 5px solid darkblue; border-radius: 10px; margin-top: 10px; margin-left: 125px; margin-right: 10px; margin-bottom: 10px;">
         <h2 style="text-align: right; margin-right: 20px;">Our process</h2>
             <section style="text-align: right; margin-right: 20px; margin-left: 40px; margin-bottom: 10px;">
-                We started off by selecting the United States Constitution and its following Amendments. Then, we divided it up between the four of us and each marked up our sections in XML. As a group, we created a schema that had certain element tags that would best represent the most important topics of the Constitution, such as inherent rights. We then came up with attributes as examples for each of our elements. After this, we marked up our own seminal works where we used the same Constitutional schema with element and attribute tags so that we could then link similar ideas of thought. After this was done, we got to work designing our website, formulating our data, and presenting our results. Anna and Zellie worked on creating XSLT's from our XML markups and designing our webpage. Together they worked on making it a more interactive site, implementing imagery, and writing our work cited, about, and thinkers pages. They implemented CSS to style the pages and make it more dynamic. James worked on creating a relative significance page and heat map to showcase our data and its relations. Using JavaScript and HTML, we were able to show which pieces of information appeared most frequently. Ryan worked on forming an SVG graph to quantify our results. We also made individual pie charts through SVG to outline specific attribute and element counts and relevance percentages. After this was all done, we created a cohesive website and linked them all together. We made sure to check our code in our separate documents, ensuring it was all valid. Then we published this to our GitHub repo so that it was web-ready.
+                We started off by selecting the United States Constitution and its following Amendments. Then, we divided it up between the four of us and each marked up our sections in XML. As a group, we created a schema that had certain element tags that would best represent the most important topics of the Constitution, such as inherent rights. We then came up with attributes as examples for each of our elements. After this, we marked up our own seminal works where we used the same Constitutional schema with element and attribute tags so that we could then link similar ideas of thought. After this was done, we got to work designing our website, formulating our data, and presenting our results. Anna and Zellie worked on creating XSLT's from our XML markups and designing our webpage. Together they worked on making it a more interactive site, implementing imagery, and writing our work cited, about, and thinkers pages. They implemented CSS to style the pages and make it more dynamic. James worked on creating a relative significance page and heat map to showcase our data and its relations. He ran an XSLT transformation with functions to calculate the relative and overall significance of the thinkers on the Constitution by comparing the frequency of element-attribute pairs across their works and the Constitution. For relative significance, the function divided the count of a specific element-attribute pair in a thinker's document by its count in the Constitution. Overall significance for each thinker was determined by summing the relative significance of all pairs and averaging them across the total number of pairs. Section-specific significance was calculated by summing relative significance scores for all pairs within a given section of the Constitution.
+                Using JavaScript and HTML, we were able to show which pieces of information appeared most frequently. Ryan worked on forming an SVG graph to quantify our results. We also made individual pie charts through SVG to outline specific attribute and element counts and relevance percentages. After this was all done, we created a cohesive website and linked them all together. We made sure to check our code in our separate documents, ensuring it was all valid. Then we published this to our GitHub repo so that it was web-ready.
             </section>
         </div>
         
         <div style="border: 5px solid darkblue; border-radius: 10px; margin-top: 10px; margin-left: 10px; margin-right: 125px; margin-bottom: 10px;">
-        <h2>Our creators</h2>
+            <h2>Findings</h2>
+        <section style="margin-left: 20px; margin-right: 150px; margin-bottom: 10px;">
+            Our analysis highlighted the varied influences of Enlightenment thinkers on the U.S. Constitution. Hobbes emerged as the most significant contributor, with a strong influence on sections emphasizing authority and order, such as Amendments 5 and 9. Rousseau’s impact was prominent in areas tied to equality and participatory governance, particularly in Amendments 13 and 15, reflecting his ideals of the general will. Montesquieu’s contributions were evident in the structural aspects of governance, such as separation of powers, with notable significance in Articles 1 and 4. Surprisingly, Locke, despite his prominence in political theory, had the least direct textual influence, with his ideas on natural rights and property appearing only modestly in areas like Amendment 12. These findings provide insight into how different thinkers shaped specific constitutional principles, revealing Hobbes’ unexpectedly strong influence and Locke’s relatively limited textual resonance.
+        </section>
+        </div>
+        
+        
+        <div style="border: 5px solid darkblue; border-radius: 10px; margin-top: 10px; margin-left: 125px; margin-right: 10px; margin-bottom: 10px;">
+        <h2 style="text-align: right; margin-right: 20px;">Our creators</h2>
             <ul>
                 <li>
                     <h3>Anna Costello</h3>
@@ -165,10 +174,17 @@
                     <h3>James Paul</h3>
                     <ul>
                         <li>
-                            <p>Junior at Pitt studying English and Political Science</p>
+                            <p>Junior at Pitt studying Enlgish writing and political science with a journalism focus.</p>
+                        </li>
+                        <li>
+                            <p><u>Fun Fact:</u> "I'm South African."</p>
+                        </li>
+                        <li>
+                            <p><u>Reason for taking this course:</u> "I recently got into coding and wanted to pick up another programming language."</p>
                         </li>
                     </ul>
                 </li>
+                
                    
                 <li>
                     <h3>Ryan Pavone</h3>
@@ -203,6 +219,7 @@
                 </li>
             </ul>
         </div>
+      <div class="javascript">  
         <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑ Back to Top</button>
         <script type="text/javascript">
         
@@ -221,7 +238,7 @@ function topFunction() {
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0; 
 }
-
       </script>
+        </div>
     </body>
 </html>
