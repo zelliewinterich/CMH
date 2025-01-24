@@ -1,9 +1,0 @@
-Computational Methods in the Humanities   
-Response Paper 6  
-Zellie Winterich
-
-TEI 
-
-14 Names, Dates, People, and Places
-
-I chose to read about this particular chapter since I believed it would help with our project. Since we’re doing a project focused on the Constitution and Bill of Rights from a philosophy standpoint, we are going to have a lot of different ideas and writings from a lot of different people. And we’re going to have to sort between different thought processes and writings so that everything is organized and clear to follow. So we’re ultimately going to be using a lot of element tags highlighting names, dates, people, and places. I liked how the TEI chapter outlined how to use certain tags and tricks to simplify a markdown of a text. I think I’ll definitely come back to this when actually marking up our documents for the project and refer back to it. One of the things that stood out to me the most was how to highlight the dates since we will be pulling from a lot of different authors and so the dates will be varying and we will need to categorize them. I also like how the website has it broken down into different sections for each type of tag and gives different examples and ways of how to label them. Not only that but shows off specific ways to type a certain tag or label so that it is easy to follow along and try for yourself. All the attribute tags were given individually but also within other tags so we can see how they would actually be used in practice which is very helpful. Overall, like I said previously, I’ll definitely come back to this specific page and be using it as reference for when we start marking up documents in XML. It really shows off tags and labels that I didn’t even think to consider. 
